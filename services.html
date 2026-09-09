@@ -1,17 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+<meta http-equiv="Pragma" content="no-cache">
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Services — Axtra Labs</title>
+<link rel="icon" href="assets/img/favicon.png" type="image/png">
+
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
 <style>
-  :root{
-    --ink:#0F1830; --navy:#1B2A4A; --navy-dark:#0F1830; --slate:#5C6478;
-    --ochre:#FF6B4A; --ochre-dark:#E5502E;
-    --paper:#FFFFFF; --line:#E4E7EE; --white:#FFFFFF;
-  }
+
   *{box-sizing:border-box;margin:0;padding:0;}
   body{font-family:'Inter',sans-serif;font-size:18px;color:var(--ink);background:var(--paper);line-height:1.6;-webkit-font-smoothing:antialiased;}
   h1,h2,h3,h4{font-family:'Plus Jakarta Sans',sans-serif;font-weight:800;letter-spacing:-0.02em;color:var(--ink);line-height:1.08;}
@@ -30,30 +30,7 @@
   .btn span{display:inline-block;transition:transform .2s ease;}
   .btn:hover span{transform:translateX(3px);}
 
-  header{position:sticky;top:0;z-index:50;background:rgba(247,245,240,0.94);backdrop-filter:blur(10px);border-bottom:1px solid var(--line);}
-  .nav{display:flex;align-items:center;justify-content:space-between;padding:18px 32px;max-width:1240px;margin:0 auto;}
-  .logo{font-family:'Plus Jakarta Sans',sans-serif;font-weight:800;font-size:21px;}
-  .logo span{color:var(--ochre-dark);}
-  .navlinks{display:flex;gap:32px;align-items:center;}
-  .navlinks>a{font-size:16.5px;font-weight:600;color:var(--ink);position:relative;padding-bottom:4px;}
-  .navlinks>a::after{content:'';position:absolute;left:0;bottom:0;width:0;height:1.5px;background:var(--ink);transition:width .25s ease;}
-  .navlinks>a:hover::after{width:100%;}
-  @media (max-width:900px){.navlinks{display:none;}}
 
-  .nav-item{position:relative;}
-  .nav-item>span{font-size:16.5px;font-weight:600;color:var(--ink);cursor:pointer;display:flex;align-items:center;gap:5px;padding:8px 0;}
-  .caret{font-size:12px;color:var(--slate);}
-  .dropdown{position:absolute;top:100%;left:50%;transform:translateX(-50%) translateY(4px);background:#fff;border:1px solid var(--line);border-radius:14px;box-shadow:0 24px 48px rgba(15,24,48,0.14);padding:20px;margin-top:14px;opacity:0;visibility:hidden;pointer-events:none;transition:opacity .2s ease, transform .2s ease;z-index:60;}
-  .nav-item:hover .dropdown{opacity:1;visibility:visible;transform:translateX(-50%) translateY(0);pointer-events:auto;}
-  .dropdown.wide{width:560px;display:grid;grid-template-columns:1fr 1fr;gap:4px;}
-  .dropdown.grid4{width:640px;display:grid;grid-template-columns:repeat(2,1fr);gap:4px;}
-  .dd-link{display:flex;flex-direction:column;gap:2px;padding:12px 14px;border-radius:10px;transition:background .18s ease;}
-  .dd-link:hover{background:var(--line);}
-  .dd-link .dd-num{font-family:'IBM Plex Mono',monospace;font-size:10.5px;color:var(--navy);margin-bottom:2px;}
-  .dd-link .dd-title{font-size:14px;font-weight:700;color:var(--ink);}
-  .dd-link .dd-sub{font-size:12px;color:var(--slate);}
-  .dd-foot{grid-column:1/-1;border-top:1px solid var(--line);margin-top:8px;padding-top:12px;display:flex;justify-content:space-between;align-items:center;}
-  .dd-foot a{font-size:13px;font-weight:700;color:var(--navy);}
 
   .page-hero{position:relative;min-height:300px;display:flex;align-items:flex-end;overflow:hidden;margin:0 -32px;color:#fff;padding-bottom:44px;}
   .page-hero .photo{position:absolute;inset:0;border-radius:0;margin:0;}
@@ -94,67 +71,76 @@
   @media (max-width:900px){.svc-grid{grid-template-columns:1fr 1fr;}.svc-card.long{grid-column:span 2;}}
   @media (max-width:600px){.svc-grid{grid-template-columns:1fr;}.svc-card.short,.svc-card.long{grid-column:span 1;}}
 
-  .cta-banner{background:var(--navy-dark);color:#fff;width:100vw;margin-left:calc(50% - 50vw);margin-right:calc(50% - 50vw);padding:60px 32px;}
-  .cta-banner-inner{max-width:900px;margin:0 auto;text-align:center;}
-  .cta-banner h2{color:#fff;font-size:32px;margin-bottom:14px;}
-  .cta-banner p{color:#C7D2E3;font-size:17.5px;font-weight:500;margin-bottom:26px;}
-
-  footer{padding:52px 0 0;background:#F5F5F2;}
-  .footer-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr 1fr;gap:26px;padding-bottom:36px;}
-  .footer-col h5{font-family:'IBM Plex Mono',monospace;font-size:14.5px;text-transform:uppercase;letter-spacing:0.06em;color:var(--slate);margin-bottom:16px;}
-  .footer-col a,.footer-col span{display:block;font-size:16px;color:var(--ink);margin-bottom:11px;}
-  .footer-col a:hover{color:var(--ochre-dark);}
-  .footer-bottom{border-top:1px solid var(--line);padding:22px 0;display:flex;justify-content:space-between;font-size:15px;color:var(--slate);flex-wrap:wrap;gap:10px;}
-  @media (max-width:860px){.footer-grid{grid-template-columns:1fr 1fr;}}
 </style>
-<link rel="stylesheet" href="assets/css/responsive.css">
+<link rel="stylesheet" href="assets/css/site-tokens.css?v=3">
+<link rel="stylesheet" href="assets/css/responsive.css?v=43">
+<link rel="stylesheet" href="assets/css/site-header.css?v=18">
+<link rel="stylesheet" href="assets/css/nav-drawer-v3.css?v=2">
 </head>
 <body>
 
-<header class="header-light">
+<header>
   <div class="nav">
-    <a href="index.html" class="logo">Axtra<span>Labs</span></a>
+    <a href="index.html" class="logo" aria-label="Axtra Labs"><img class="logo-img logo-img--light" src="assets/img/axtra-logo-white.png" alt="" width="148" height="14"><img class="logo-img logo-img--dark" src="assets/img/axtra-logo-dark.png" alt="Axtra Labs" width="148" height="14"></a>
     <nav class="navlinks">
       <div class="nav-item">
         <span>Services <span class="caret">▾</span></span>
         <div class="dropdown wide">
-          <a href="ai-services.html" class="dd-link"><span class="dd-num">01</span><span class="dd-title">AI Services</span><span class="dd-sub">Gen AI, agents, RAG, LLM fine-tuning</span></a>
-          <a href="data-bi.html" class="dd-link"><span class="dd-num">02</span><span class="dd-title">Data &amp; BI</span><span class="dd-sub">Pipelines, dashboards, decision intelligence</span></a>
-          <a href="embedded-software.html" class="dd-link"><span class="dd-num">03</span><span class="dd-title">Embedded Software Engineering</span><span class="dd-sub">Firmware, RTOS, embedded Linux</span></a>
-          <a href="ai-robotics.html" class="dd-link"><span class="dd-num">04</span><span class="dd-title">AI for Robotics</span><span class="dd-sub">Perception, navigation, edge AI</span></a>
-          <a href="devops.html" class="dd-link"><span class="dd-num">05</span><span class="dd-title">DevOps</span><span class="dd-sub">CI/CD, Kubernetes, MLOps</span></a>
-          <a href="ai-software-development.html" class="dd-link"><span class="dd-num">06</span><span class="dd-title">AI-Software Development</span><span class="dd-sub">Full-stack, AI-native products</span></a>
-          <div class="dd-foot"><span style="font-size:15px;color:var(--slate);">6 practices, one delivery team</span><a href="services.html">View all services →</a></div>
+          <a href="ai-services.html" class="dd-link"><span class="dd-title">AI Services</span><span class="dd-sub">Gen AI, agents, RAG, LLM fine-tuning</span></a>
+          <a href="data-bi.html" class="dd-link"><span class="dd-title">Data &amp; BI</span><span class="dd-sub">Pipelines, dashboards, decision intelligence</span></a>
+          <a href="embedded-software.html" class="dd-link"><span class="dd-title">Embedded Software Engineering</span><span class="dd-sub">Firmware, RTOS, embedded Linux</span></a>
+          <a href="ai-robotics.html" class="dd-link"><span class="dd-title">AI for Robotics</span><span class="dd-sub">Perception, navigation, edge AI</span></a>
+          <a href="devops.html" class="dd-link"><span class="dd-title">DevOps</span><span class="dd-sub">CI/CD, Kubernetes, MLOps</span></a>
+          <a href="ai-software-development.html" class="dd-link"><span class="dd-title">AI-Software Development</span><span class="dd-sub">Full-stack, AI-native products</span></a>
+          <div class="dd-foot"><span style="font-size:15px;color:var(--slate);">6 services, one team</span><a href="services.html">View all services <span>→</span></a></div>
         </div>
       </div>
-            <div class="nav-item">
+      <div class="nav-item">
+        <span>AI Agent Solution <span class="caret">▾</span></span>
+        <div class="dropdown wide">
+          <a href="voice-ai-agent.html" class="dd-link"><span class="dd-title">Voice AI Agent</span><span class="dd-sub">White-label voice AI in your infrastructure</span></a>
+          <a href="document-knowledge-ai-agent.html" class="dd-link"><span class="dd-title">Document and Knowledge AI Agent</span><span class="dd-sub">RAG, docs, enterprise knowledge</span></a>
+          <a href="workflow-ai-agent.html" class="dd-link"><span class="dd-title">Workflow AI Agent</span><span class="dd-sub">Process automation &amp; orchestration</span></a>
+          <a href="sales-ai-agent.html" class="dd-link"><span class="dd-title">Sales AI Agent</span><span class="dd-sub">Outreach, qualification, follow-up</span></a>
+          <a href="multi-agent-system.html" class="dd-link"><span class="dd-title">Multi Agent System</span><span class="dd-sub">Coordinated multi-agent teams</span></a>
+          <div class="dd-foot"><span style="font-size:15px;color:var(--slate);">5 agent solutions</span><a href="voice-ai-agent.html">Explore Voice AI <span>→</span></a></div>
+        </div>
+      </div>
+      <a href="ai-robotics.html">AI for Robotics</a>
+      <div class="nav-item">
         <span>Industries <span class="caret">▾</span></span>
         <div class="dropdown grid4">
           <a href="manufacturing.html" class="dd-link"><span class="dd-title">Manufacturing</span></a>
           <a href="retail.html" class="dd-link"><span class="dd-title">Retail &amp; E-commerce</span></a>
           <a href="travel.html" class="dd-link"><span class="dd-title">Travel &amp; Hospitality</span></a>
           <a href="home-services.html" class="dd-link"><span class="dd-title">Home Services</span></a>
-          <a href="#" class="dd-link"><span class="dd-title">Fintech</span></a>
-          <a href="#" class="dd-link"><span class="dd-title">Agriculture</span></a>
-          <a href="#" class="dd-link"><span class="dd-title">Logistics</span></a>
-          <a href="#" class="dd-link"><span class="dd-title">Healthcare</span></a>
-          <div class="dd-foot"><span style="font-size:15px;color:var(--slate);">8 industries served</span><a href="index.html#industries">View all industries →</a></div>
+          <a href="fintech.html" class="dd-link"><span class="dd-title">Fintech</span></a>
+          <a href="agriculture.html" class="dd-link"><span class="dd-title">Agriculture</span></a>
+          <a href="logistics.html" class="dd-link"><span class="dd-title">Logistics</span></a>
+          <a href="healthcare.html" class="dd-link"><span class="dd-title">Healthcare</span></a>
+          <div class="dd-foot"><span style="font-size:15px;color:var(--slate);">8 industries served</span><a href="index.html#industries">View all industries <span>→</span></a></div>
         </div>
       </div>
-      <a href="index.html#work">Work</a>
-      <a href="index.html#insights">Insights</a>
-      <a href="index.html#about">About</a>
+      <a href="case-study.html">Work</a>
+      <div class="nav-item">
+        <span>About <span class="caret">▾</span></span>
+        <div class="dropdown company">
+          <a href="about.html" class="dd-link"><span class="dd-title">About Us</span><span class="dd-sub">Who we are and how we work</span></a>
+          <a href="insights.html" class="dd-link"><span class="dd-title">Insights</span><span class="dd-sub">Articles, ideas, and industry notes</span></a>
+          <a href="careers.html" class="dd-link"><span class="dd-title">Careers</span><span class="dd-sub">Growth path, roles, and culture</span></a>
+          <a href="our-rd.html" class="dd-link"><span class="dd-title">Our R&amp;D</span><span class="dd-sub">PTIT lab, research, and applied AI</span></a>
+        </div>
+      </div>
     </nav>
-    <a href="index.html#contact" class="btn" style="padding:10px 20px;font-size:16px;">Contact Us</a>
+    <a href="contact.html" class="btn" style="padding:10px 20px;font-size:16px;">Contact Us</a>
   </div>
 </header>
 
 <section class="page-hero">
-  <div class="photo"><img src="https://images.pexels.com/photos/3912478/pexels-photo-3912478.jpeg?auto=compress&cs=tinysrgb&w=1600&h=800&dpr=1" alt="Axtra Labs services"></div>
+  <div class="photo"><img src="https://images.pexels.com/photos/1181467/pexels-photo-1181467.jpeg?auto=compress&cs=tinysrgb&w=1600&h=800&dpr=1" alt="Axtra Labs services"></div>
   <div class="page-hero-overlay"></div>
   <div class="wrap page-hero-inner">
     <h1>Services</h1>
-    <p>Six practices, one delivery team — from AI and data to embedded systems and DevOps.</p>
   </div>
 </section>
 
@@ -165,14 +151,13 @@
 <section>
   <div class="wrap">
     <div class="section-head">
-      <div class="eyebrow">What we do</div>
       <h2>Six practices, one delivery team</h2>
       <p>All six service pages are live. Explore each practice below.</p>
     </div>
 
     <div class="svc-grid">
       <a href="ai-services.html" class="svc-card long">
-        <div class="svc-bg"><img src="https://images.pexels.com/photos/3862603/pexels-photo-3862603.jpeg?auto=compress&cs=tinysrgb&w=1000&h=700&dpr=1" alt="AI Services"></div>
+        <div class="svc-bg"><img src="https://images.pexels.com/photos/8386440/pexels-photo-8386440.jpeg?auto=compress&cs=tinysrgb&w=1000&h=700&dpr=1" alt="AI Services"></div>
         <div class="svc-content">
           <span class="svc-num">01</span>
           <h3>AI Services</h3>
@@ -182,7 +167,7 @@
       </a>
 
       <a href="data-bi.html" class="svc-card short">
-        <div class="svc-bg"><img src="https://images.pexels.com/photos/12969403/pexels-photo-12969403.jpeg?auto=compress&cs=tinysrgb&w=700&h=700&dpr=1" alt="Data and BI"></div>
+        <div class="svc-bg"><img src="https://images.pexels.com/photos/590022/pexels-photo-590022.jpeg?auto=compress&cs=tinysrgb&w=700&h=700&dpr=1" alt="Data and BI"></div>
         <div class="svc-content">
           <span class="svc-num">02</span>
           <h3>Data &amp; BI</h3>
@@ -202,7 +187,7 @@
       </a>
 
       <a href="ai-robotics.html" class="svc-card short">
-        <div class="svc-bg"><img src="https://images.pexels.com/photos/34207359/pexels-photo-34207359.jpeg?auto=compress&cs=tinysrgb&w=700&h=700&dpr=1" alt="AI for Robotics"></div>
+        <div class="svc-bg"><img src="https://images.unsplash.com/photo-1647427060118-4911c9821b82?auto=format&fit=crop&w=700&h=700&q=80" alt="AI for Robotics"></div>
         <div class="svc-content">
           <span class="svc-num">04</span>
           <h3>AI for Robotics</h3>
@@ -212,7 +197,7 @@
       </a>
 
       <a href="devops.html" class="svc-card short">
-        <div class="svc-bg"><img src="https://images.pexels.com/photos/5480781/pexels-photo-5480781.jpeg?auto=compress&cs=tinysrgb&w=700&h=700&dpr=1" alt="DevOps"></div>
+        <div class="svc-bg"><img src="https://images.pexels.com/photos/325229/pexels-photo-325229.jpeg?auto=compress&cs=tinysrgb&w=700&h=700&dpr=1" alt="DevOps"></div>
         <div class="svc-content">
           <span class="svc-num">05</span>
           <h3>DevOps</h3>
@@ -222,7 +207,7 @@
       </a>
 
       <a href="ai-software-development.html" class="svc-card long">
-        <div class="svc-bg"><img src="https://images.pexels.com/photos/3912478/pexels-photo-3912478.jpeg?auto=compress&cs=tinysrgb&w=1000&h=700&dpr=1" alt="AI software development"></div>
+        <div class="svc-bg"><img src="https://images.pexels.com/photos/1181467/pexels-photo-1181467.jpeg?auto=compress&cs=tinysrgb&w=1000&h=700&dpr=1" alt="AI software development"></div>
         <div class="svc-content">
           <span class="svc-num">06</span>
           <h3>AI-Software Development</h3>
@@ -239,7 +224,7 @@
     <div class="cta-banner-inner">
       <h2>Not sure which practice fits your project?</h2>
       <p>Talk to an engineer — we'll help you map the right team and scope.</p>
-      <a href="mailto:hello@axtralabs.com" class="btn" style="background:#fff;border-color:#fff;">Contact Us <span>→</span></a>
+      <a href="contact.html" class="btn" style="background:#fff;border-color:#fff;">Contact Us <span>→</span></a>
     </div>
   </div>
 </section>
@@ -248,8 +233,9 @@
   <div class="wrap">
     <div class="footer-grid">
       <div class="footer-col">
-        <div class="logo" style="margin-bottom:16px;">Axtra<span>Labs</span></div>
+        <a href="index.html" class="logo logo--footer" aria-label="Axtra Labs" style="margin-bottom:16px;display:inline-block;"><img class="logo-img logo-img--light" src="assets/img/axtra-logo-white.png" alt="Axtra Labs" width="148" height="14"></a>
         <p style="font-size:15.5px;color:var(--slate);margin-bottom:18px;">AI-augmented software engineering from Vietnam.</p>
+        <div class="social-row"><a class="social-dot" href="https://www.linkedin.com/company/axtralabs/" target="_blank" rel="noopener noreferrer" aria-label="Axtra Labs on LinkedIn">in</a><div class="social-dot">X</div><div class="social-dot">f</div></div>
       </div>
       <div class="footer-col">
         <h5>Services</h5>
@@ -260,16 +246,42 @@
         <a href="devops.html"><span>DevOps</span></a>
         <a href="ai-software-development.html"><span>AI-Software Development</span></a>
       </div>
-      <div class="footer-col"><h5>Industries</h5><a href="manufacturing.html"><span>Manufacturing</span></a><a href="retail.html"><span>Retail &amp; E-commerce</span></a><a href="travel.html"><span>Travel</span></a><a href="home-services.html"><span>Home Services</span></a><span>Fintech</span><span>+ 3 more</span></div>
-      <div class="footer-col"><h5>Company</h5><a href="index.html#about"><span>About</span></a><a href="index.html#work"><span>Case Studies</span></a><a href="index.html#insights"><span>Insights</span></a></div>
-      <div class="footer-col"><h5>Contact</h5><a href="index.html#contact"><span>Contact Us</span></a><a href="mailto:hello@axtralabs.com"><span>hello@axtralabs.com</span></a><span>Hanoi, Vietnam</span></div>
+      <div class="footer-col">
+        <h5>Industries</h5>
+        <a href="manufacturing.html"><span>Manufacturing</span></a>
+        <a href="retail.html"><span>Retail &amp; E-commerce</span></a>
+        <a href="travel.html"><span>Travel</span></a>
+        <a href="home-services.html"><span>Home Services</span></a>
+        <a href="fintech.html"><span>Fintech</span></a>
+        <a href="agriculture.html"><span>Agriculture</span></a>
+        <a href="logistics.html"><span>Logistics</span></a>
+        <a href="healthcare.html"><span>Healthcare</span></a>
+      </div>
+      <div class="footer-col">
+        <h5>AI Agent Solution</h5>
+        <a href="voice-ai-agent.html"><span>Voice AI Agent</span></a>
+        <a href="document-knowledge-ai-agent.html"><span>Document &amp; Knowledge</span></a>
+        <a href="workflow-ai-agent.html"><span>Workflow AI Agent</span></a>
+        <a href="sales-ai-agent.html"><span>Sales AI Agent</span></a>
+        <a href="multi-agent-system.html"><span>Multi Agent System</span></a>
+      </div>
+      <div class="footer-col">
+        <h5>Company</h5>
+        <a href="about.html"><span>About Us</span></a>
+        <a href="insights.html"><span>Insights</span></a>
+        <a href="careers.html"><span>Careers</span></a>
+        <a href="our-rd.html"><span>Our R&amp;D</span></a>
+        <a href="case-study.html"><span>Case Studies</span></a>
+        <a href="contact.html"><span>Contact</span></a>
+      </div>
     </div>
     <div class="footer-bottom">
       <div>© 2026 Axtra Labs. All rights reserved.</div>
+      <div style="display:flex;gap:18px;"><span>Privacy Policy</span><span>Terms of Service</span></div>
     </div>
   </div>
 </footer>
 
-<script src="assets/js/site.js"></script>
+<script src="assets/js/site.js?v=25"></script>
 </body>
 </html>

@@ -1,17 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+<meta http-equiv="Pragma" content="no-cache">
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>AI for Robotics — Axtra Labs</title>
+<link rel="icon" href="assets/img/favicon.png" type="image/png">
+
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
 <style>
-  :root{
-    --ink:#0F1830; --navy:#1B2A4A; --navy-dark:#0F1830; --slate:#5C6478;
-    --ochre:#FF6B4A; --ochre-dark:#E5502E;
-    --paper:#FFFFFF; --line:#E4E7EE; --white:#FFFFFF;
-  }
+
   *{box-sizing:border-box;margin:0;padding:0;}
   body{font-family:'Inter',sans-serif;font-size:18px;color:var(--ink);background:var(--paper);line-height:1.6;-webkit-font-smoothing:antialiased;}
   h1,h2,h3,h4{font-family:'Plus Jakarta Sans',sans-serif;font-weight:800;letter-spacing:-0.02em;color:var(--ink);line-height:1.1;}
@@ -35,50 +35,19 @@
   .btn span{display:inline-block;transition:transform .2s ease;}
   .btn:hover span{transform:translateX(3px);}
 
-  header{position:absolute;top:0;left:0;right:0;z-index:50;background:transparent;border-bottom:1px solid transparent;transition:background .3s ease, border-color .3s ease;}
-  header.scrolled{position:fixed;background:rgba(247,245,240,0.94);backdrop-filter:blur(10px);border-bottom:1px solid var(--line);}
-  .nav{display:flex;align-items:center;justify-content:space-between;padding:18px 32px;max-width:1240px;margin:0 auto;}
-  .logo{font-family:'Plus Jakarta Sans',sans-serif;font-weight:800;font-size:21px;color:#fff;transition:color .3s ease;}
-  header.scrolled .logo{color:var(--ink);}
-  .logo span{color:var(--ochre-dark);}
-  .navlinks{display:flex;gap:32px;align-items:center;}
-  .navlinks>a{font-size:16.5px;font-weight:600;color:#fff;position:relative;padding-bottom:4px;transition:color .3s ease;}
-  .navlinks>a::after{content:'';position:absolute;left:0;bottom:0;width:0;height:1.5px;background:#fff;transition:width .25s ease;}
-  header.scrolled .navlinks>a{color:var(--ink);}
-  header.scrolled .navlinks>a::after{background:var(--ink);}
-  .navlinks>a:hover::after{width:100%;}
-  @media (max-width:900px){.navlinks{display:none;}}
 
-  .nav-item{position:relative;}
-  .nav-item>span{font-size:16.5px;font-weight:600;color:#fff;cursor:pointer;display:flex;align-items:center;gap:5px;padding:8px 0;transition:color .3s ease;}
-  header.scrolled .nav-item>span{color:var(--ink);}
-  .nav-item>span::after{content:'';position:absolute;left:0;bottom:0;width:0;height:1.5px;background:#fff;transition:width .25s ease, background .3s ease;}
-  header.scrolled .nav-item>span::after{background:var(--ink);}
-  .nav-item:hover>span::after{width:100%;}
-  .caret{font-size:12px;transition:transform .2s ease, color .3s ease;color:rgba(255,255,255,0.7);}
-  header.scrolled .caret{color:var(--slate);}
-  .nav-item:hover .caret{transform:rotate(180deg);}
-  .dropdown{position:absolute;top:100%;left:50%;transform:translateX(-50%) translateY(4px);background:#fff;border:1px solid var(--line);border-radius:14px;box-shadow:0 24px 48px rgba(15,24,48,0.14);padding:20px;margin-top:14px;opacity:0;visibility:hidden;pointer-events:none;transition:opacity .2s ease, transform .2s ease;z-index:60;}
-  .dropdown::before{content:'';position:absolute;top:-14px;left:0;right:0;height:14px;background:transparent;}
-  .nav-item:hover .dropdown{opacity:1;visibility:visible;transform:translateX(-50%) translateY(0);pointer-events:auto;}
-  .dropdown.wide{width:560px;display:grid;grid-template-columns:1fr 1fr;gap:4px;}
-  .dropdown.grid4{width:640px;display:grid;grid-template-columns:repeat(2,1fr);gap:4px;}
-  .dd-link{display:flex;flex-direction:column;gap:2px;padding:12px 14px;border-radius:10px;transition:background .18s ease;}
-  .dd-link:hover{background:var(--line);}
-  .dd-link .dd-num{font-family:'IBM Plex Mono',monospace;font-size:13.5px;color:var(--navy);margin-bottom:2px;}
-  .dd-link .dd-title{font-size:15.5px;font-weight:700;color:var(--ink);}
-  .dd-link .dd-sub{font-size:16px;color:var(--slate);font-weight:500;}
-  .dd-foot{grid-column:1/-1;border-top:1px solid var(--line);margin-top:8px;padding-top:12px;display:flex;justify-content:space-between;align-items:center;}
-  .dd-foot a{font-size:15.5px;font-weight:700;color:var(--navy);}
 
   /* HERO — short */
-  .page-hero{position:relative;min-height:400px;display:flex;align-items:flex-end;overflow:hidden;margin:0 -32px;color:#fff;padding-bottom:48px;}
+  .page-hero{position:relative;min-height:min(52vh,560px);display:flex;align-items:flex-end;overflow:hidden;margin:0 -32px;color:#fff;padding-bottom:44px;}
   .page-hero .photo{position:absolute;inset:0;border-radius:0;margin:0;}
+  .page-hero .photo img{width:100%;height:100%;object-fit:cover;object-position:center 48%;}
   .page-hero-overlay{position:absolute;inset:0;background:linear-gradient(135deg,rgba(15,24,48,0.65) 0%,rgba(15,24,48,0.92) 100%);z-index:1;}
-  .page-hero-inner{position:relative;z-index:2;max-width:880px;padding:0 64px;}
+  .page-hero-inner{position:relative;z-index:2;max-width:760px;padding:0 64px;}
   .page-hero .sn{font-family:'IBM Plex Mono',monospace;font-size:15.5px;color:#FFB199;margin-bottom:12px;display:block;}
-  .page-hero h1{font-size:clamp(34px, 4.6vw, 58px);line-height:1.08;color:#fff;margin-bottom:16px;}
-  .page-hero p{font-size:19px;color:#D8DEE9;font-weight:500;max-width:600px;margin-bottom:18px;}
+  .page-hero h1{font-size:64px;color:#fff;margin-bottom:16px;}
+  .page-hero p{display:none;}
+  .page-hero .sn{display:none;}
+  .page-hero h1{margin-bottom:0;}
 
   .breadcrumb{padding:16px 0;font-size:15.5px;color:var(--slate);font-weight:500;border-bottom:1px solid var(--line);}
   .breadcrumb a{color:var(--slate);}
@@ -224,76 +193,102 @@
   .related-card .related-arrow{bottom:24px;right:24px;}
   @media (max-width:860px){.related-featured{grid-template-columns:1fr;}.related-photo{height:220px;}.related-grid{grid-template-columns:1fr;}}
 
-  .cta-banner{background:var(--navy-dark);color:#fff;width:100vw;margin-left:calc(50% - 50vw);margin-right:calc(50% - 50vw);padding:60px 32px;}
-  .cta-banner-inner{max-width:900px;margin:0 auto;width:100%;text-align:center;}
-  .cta-banner h2{color:#fff;font-size:32px;margin-bottom:14px;text-wrap:balance;}
-  .cta-banner p{color:#C7D2E3;font-size:17.5px;font-weight:500;margin-bottom:26px;max-width:560px;margin-left:auto;margin-right:auto;}
-
-  .other-services{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;margin-top:22px;}
-  .other-pill{font-family:'IBM Plex Mono',monospace;font-size:15px;padding:8px 14px;border-radius:999px;border:1px solid rgba(255,255,255,0.25);color:#C7D2E3;transition:all .2s ease;}
-  .other-pill:hover{border-color:#fff;background:#fff;color:var(--navy);}
-
-  footer{padding:52px 0 0;background:#F5F5F2;}
-  .footer-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr 1fr;gap:26px;padding-bottom:36px;}
-  .footer-col h5{font-family:'IBM Plex Mono',monospace;font-size:14.5px;text-transform:uppercase;letter-spacing:0.06em;color:var(--slate);margin-bottom:16px;}
-  .footer-col a,.footer-col span{display:block;font-size:16px;color:var(--ink);margin-bottom:11px;cursor:pointer;transition:color .2s ease;}
-  .footer-col span:hover,.footer-col a:hover{color:var(--ochre-dark);}
-  .footer-bottom{border-top:1px solid var(--line);padding:22px 0;display:flex;justify-content:space-between;font-size:15px;color:var(--slate);flex-wrap:wrap;gap:10px;}
-  .social-row{display:flex;gap:10px;}
-  .social-dot{width:30px;height:30px;border:1px solid var(--line);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:14px;color:var(--slate);transition:all .2s ease;cursor:pointer;}
-  .social-dot:hover{background:var(--ink);color:#fff;border-color:var(--ink);}
-  @media (max-width:860px){.footer-grid{grid-template-columns:1fr 1fr;}}
 </style>
-<link rel="stylesheet" href="assets/css/responsive.css">
+<link rel="stylesheet" href="assets/css/site-tokens.css?v=3">
+<link rel="stylesheet" href="assets/css/responsive.css?v=43">
+<link rel="stylesheet" href="assets/css/site-header.css?v=18">
 <link rel="stylesheet" href="assets/css/tech-icons.css">
+<link rel="stylesheet" href="assets/css/agent-layouts.css">
+<style>
+
+  /* Robotics page extras */
+  .robo-challenges{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;}
+  .robo-chal{border:1px solid var(--line);border-radius:16px;padding:26px 22px;background:#fff;transition:all .25s ease;}
+  .robo-chal:hover{border-color:var(--navy);transform:translateY(-4px);box-shadow:0 14px 28px rgba(15,24,48,0.08);}
+  .robo-chal .rc-n{font-family:'IBM Plex Mono',monospace;font-size:12px;color:var(--ochre-dark);margin-bottom:10px;}
+  .robo-chal h4{font-size:18px;margin-bottom:8px;}
+  .robo-chal p{font-size:14.5px;color:var(--slate);line-height:1.5;}
+  @media (max-width:860px){.robo-challenges{grid-template-columns:1fr;}}
+  .stack-arch{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;}
+  .stack-arch-col{border-radius:14px;padding:22px 18px;background:var(--navy-dark);color:#fff;min-height:200px;}
+  .stack-arch-col:nth-child(2){background:#152238;}
+  .stack-arch-col:nth-child(3){background:#1A2A44;}
+  .stack-arch-col:nth-child(4){background:#203354;}
+  .stack-arch-col .sa-n{font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:0.06em;text-transform:uppercase;color:#FFB199;margin-bottom:10px;}
+  .stack-arch-col h4{color:#fff;font-size:17px;margin-bottom:12px;}
+  .stack-arch-col ul{list-style:none;display:flex;flex-direction:column;gap:7px;}
+  .stack-arch-col li{font-size:13.5px;color:#A8B6C9;padding-left:12px;position:relative;line-height:1.4;}
+  .stack-arch-col li::before{content:'';position:absolute;left:0;top:7px;width:5px;height:5px;border-radius:50%;background:var(--ochre);}
+  @media (max-width:900px){.stack-arch{grid-template-columns:1fr 1fr;}}
+  @media (max-width:560px){.stack-arch{grid-template-columns:1fr;}}
+
+</style>
+<link rel="stylesheet" href="assets/css/nav-drawer-v3.css?v=2">
 </head>
 <body>
 
 <header>
   <div class="nav">
-    <a href="index.html" class="logo">Axtra<span>Labs</span></a>
+    <a href="index.html" class="logo" aria-label="Axtra Labs"><img class="logo-img logo-img--light" src="assets/img/axtra-logo-white.png" alt="" width="148" height="14"><img class="logo-img logo-img--dark" src="assets/img/axtra-logo-dark.png" alt="Axtra Labs" width="148" height="14"></a>
     <nav class="navlinks">
       <div class="nav-item">
         <span>Services <span class="caret">▾</span></span>
         <div class="dropdown wide">
-          <a href="ai-services.html" class="dd-link"><span class="dd-num">01</span><span class="dd-title">AI Services</span><span class="dd-sub">Gen AI, agents, RAG, LLM fine-tuning</span></a>
-          <a href="data-bi.html" class="dd-link"><span class="dd-num">02</span><span class="dd-title">Data &amp; BI</span><span class="dd-sub">Pipelines, dashboards, decision intelligence</span></a>
-          <a href="embedded-software.html" class="dd-link"><span class="dd-num">03</span><span class="dd-title">Embedded Software Engineering</span><span class="dd-sub">Firmware, RTOS, embedded Linux</span></a>
-          <a href="ai-robotics.html" class="dd-link"><span class="dd-num">04</span><span class="dd-title">AI for Robotics</span><span class="dd-sub">Perception, navigation, edge AI</span></a>
-          <a href="devops.html" class="dd-link"><span class="dd-num">05</span><span class="dd-title">DevOps</span><span class="dd-sub">CI/CD, Kubernetes, MLOps</span></a>
-          <a href="ai-software-development.html" class="dd-link"><span class="dd-num">06</span><span class="dd-title">AI-Software Development</span><span class="dd-sub">Full-stack, AI-native products</span></a>
-          <div class="dd-foot"><span style="font-size:15px;color:var(--slate);">6 practices, one delivery team</span><a href="services.html">View all services →</a></div>
+          <a href="ai-services.html" class="dd-link"><span class="dd-title">AI Services</span><span class="dd-sub">Gen AI, agents, RAG, LLM fine-tuning</span></a>
+          <a href="data-bi.html" class="dd-link"><span class="dd-title">Data &amp; BI</span><span class="dd-sub">Pipelines, dashboards, decision intelligence</span></a>
+          <a href="embedded-software.html" class="dd-link"><span class="dd-title">Embedded Software Engineering</span><span class="dd-sub">Firmware, RTOS, embedded Linux</span></a>
+          <a href="ai-robotics.html" class="dd-link"><span class="dd-title">AI for Robotics</span><span class="dd-sub">Perception, navigation, edge AI</span></a>
+          <a href="devops.html" class="dd-link"><span class="dd-title">DevOps</span><span class="dd-sub">CI/CD, Kubernetes, MLOps</span></a>
+          <a href="ai-software-development.html" class="dd-link"><span class="dd-title">AI-Software Development</span><span class="dd-sub">Full-stack, AI-native products</span></a>
+          <div class="dd-foot"><span style="font-size:15px;color:var(--slate);">6 services, one team</span><a href="services.html">View all services <span>→</span></a></div>
         </div>
       </div>
-            <div class="nav-item">
+      <div class="nav-item">
+        <span>AI Agent Solution <span class="caret">▾</span></span>
+        <div class="dropdown wide">
+          <a href="voice-ai-agent.html" class="dd-link"><span class="dd-title">Voice AI Agent</span><span class="dd-sub">White-label voice AI in your infrastructure</span></a>
+          <a href="document-knowledge-ai-agent.html" class="dd-link"><span class="dd-title">Document and Knowledge AI Agent</span><span class="dd-sub">RAG, docs, enterprise knowledge</span></a>
+          <a href="workflow-ai-agent.html" class="dd-link"><span class="dd-title">Workflow AI Agent</span><span class="dd-sub">Process automation &amp; orchestration</span></a>
+          <a href="sales-ai-agent.html" class="dd-link"><span class="dd-title">Sales AI Agent</span><span class="dd-sub">Outreach, qualification, follow-up</span></a>
+          <a href="multi-agent-system.html" class="dd-link"><span class="dd-title">Multi Agent System</span><span class="dd-sub">Coordinated multi-agent teams</span></a>
+          <div class="dd-foot"><span style="font-size:15px;color:var(--slate);">5 agent solutions</span><a href="voice-ai-agent.html">Explore Voice AI <span>→</span></a></div>
+        </div>
+      </div>
+      <a href="ai-robotics.html">AI for Robotics</a>
+      <div class="nav-item">
         <span>Industries <span class="caret">▾</span></span>
         <div class="dropdown grid4">
           <a href="manufacturing.html" class="dd-link"><span class="dd-title">Manufacturing</span></a>
           <a href="retail.html" class="dd-link"><span class="dd-title">Retail &amp; E-commerce</span></a>
           <a href="travel.html" class="dd-link"><span class="dd-title">Travel &amp; Hospitality</span></a>
           <a href="home-services.html" class="dd-link"><span class="dd-title">Home Services</span></a>
-          <a href="#" class="dd-link"><span class="dd-title">Fintech</span></a>
-          <a href="#" class="dd-link"><span class="dd-title">Agriculture</span></a>
-          <a href="#" class="dd-link"><span class="dd-title">Logistics</span></a>
-          <a href="#" class="dd-link"><span class="dd-title">Healthcare</span></a>
-          <div class="dd-foot"><span style="font-size:15px;color:var(--slate);">8 industries served</span><a href="index.html#industries">View all industries →</a></div>
+          <a href="fintech.html" class="dd-link"><span class="dd-title">Fintech</span></a>
+          <a href="agriculture.html" class="dd-link"><span class="dd-title">Agriculture</span></a>
+          <a href="logistics.html" class="dd-link"><span class="dd-title">Logistics</span></a>
+          <a href="healthcare.html" class="dd-link"><span class="dd-title">Healthcare</span></a>
+          <div class="dd-foot"><span style="font-size:15px;color:var(--slate);">8 industries served</span><a href="index.html#industries">View all industries <span>→</span></a></div>
         </div>
       </div>
-      <a href="index.html#work">Work</a>
-      <a href="index.html#insights">Insights</a>
-      <a href="index.html#about">About</a>
+      <a href="case-study.html">Work</a>
+      <div class="nav-item">
+        <span>About <span class="caret">▾</span></span>
+        <div class="dropdown company">
+          <a href="about.html" class="dd-link"><span class="dd-title">About Us</span><span class="dd-sub">Who we are and how we work</span></a>
+          <a href="insights.html" class="dd-link"><span class="dd-title">Insights</span><span class="dd-sub">Articles, ideas, and industry notes</span></a>
+          <a href="careers.html" class="dd-link"><span class="dd-title">Careers</span><span class="dd-sub">Growth path, roles, and culture</span></a>
+          <a href="our-rd.html" class="dd-link"><span class="dd-title">Our R&amp;D</span><span class="dd-sub">PTIT lab, research, and applied AI</span></a>
+        </div>
+      </div>
     </nav>
-    <a href="index.html#contact" class="btn" style="padding:10px 20px;font-size:16px;">Contact Us</a>
+    <a href="contact.html" class="btn" style="padding:10px 20px;font-size:16px;">Contact Us</a>
   </div>
 </header>
 
 <section class="page-hero" style="padding:0;">
-  <div class="photo"><img src="https://images.pexels.com/photos/34207359/pexels-photo-34207359.jpeg?auto=compress&cs=tinysrgb&w=1600&h=800&dpr=1" alt="AI for Robotics"></div>
+  <div class="photo"><img src="https://images.unsplash.com/photo-1777383975764-bec6f5cabf00?auto=format&fit=crop&w=2000&q=80" alt="Robotic arms assembling a vehicle chassis on a factory line"></div>
   <div class="page-hero-overlay"></div>
   <div class="wrap page-hero-inner">
-    <span class="sn">04 / Services</span>
     <h1>AI for Robotics</h1>
-    <p>Perception, navigation and embedded inference for autonomous systems that operate in the real world.</p>
   </div>
 </section>
 
@@ -301,16 +296,32 @@
   <div class="breadcrumb"><a href="index.html">Home</a> / <a href="services.html">Services</a> / AI for Robotics</div>
 </div>
 
+<section style="background:#FAFAF8;">
+  <div class="wrap">
+    <div class="section-head">
+      <h2>Lab autonomy often fails in the field</h2>
+      <p>Lighting changes, layout drift, sensor noise, latency budgets, and safety constraints break demos. We engineer perception, navigation, and control for production conditions — not staged videos.</p>
+    </div>
+    <div class="robo-challenges">
+      <div class="robo-chal reveal"><div class="rc-n">01</div><h4>Perception under noise</h4><p>Dust, glare, occlusion, and domain shift crush models trained only on clean datasets. We design for sensor fusion and continuous evaluation.</p></div>
+      <div class="robo-chal reveal"><div class="rc-n">02</div><h4>Edge latency &amp; power</h4><p>Cloud round-trips are too slow for closed-loop control. Models must meet hard latency and thermal budgets on Jetson and custom SoCs.</p></div>
+      <div class="robo-chal reveal"><div class="rc-n">03</div><h4>Integration risk</h4><p>Vision, planning, firmware, and fleet software rarely ship as one product. We own the stack from ROS nodes to operator dashboards.</p></div>
+      <div class="robo-chal reveal"><div class="rc-n">04</div><h4>Safety &amp; human proximity</h4><p>Cobots and AMRs share floors with people. Zones, failsafes, and monitoring are engineered in — not bolted on after go-live.</p></div>
+      <div class="robo-chal reveal"><div class="rc-n">05</div><h4>Sim-to-real gap</h4><p>Simulation accelerates iteration only if scenarios match the site. We close the loop with synthetic data, HIL, and field telemetry.</p></div>
+      <div class="robo-chal reveal"><div class="rc-n">06</div><h4>Fleet &amp; drift</h4><p>One robot is a prototype. A fleet needs monitoring, model updates, and layout resilience as the warehouse or line changes.</p></div>
+    </div>
+  </div>
+</section>
+
 <section>
   <div class="wrap">
     <div class="section-head">
-      <div class="eyebrow">What we build</div>
-      <h2>Robotics intelligence from lab prototype to field deployment</h2>
+      <h2>From lab prototype to field deployment</h2>
       <p>Instead of demos that only work in controlled environments, we help organizations ship perception, navigation and control systems that survive production conditions.</p>
     </div>
     <div class="build-grid">
       <div class="build-card reveal">
-        <div class="build-card-photo photo"><img src="https://images.pexels.com/photos/3862603/pexels-photo-3862603.jpeg?auto=compress&cs=tinysrgb&w=700&h=400&dpr=1" alt="Computer Vision and Perception"></div>
+        <div class="build-card-photo photo"><img src="https://images.pexels.com/photos/34207359/pexels-photo-34207359.jpeg?auto=compress&cs=tinysrgb&w=700&h=400&dpr=1" alt="Computer Vision and Perception"></div>
         <div class="build-card-body">
           <h4>Computer Vision &amp; Perception</h4>
           <p>Real-time sensing pipelines that let robots see, classify and react in dynamic environments.</p>
@@ -318,7 +329,7 @@
         </div>
       </div>
       <div class="build-card reveal">
-        <div class="build-card-photo photo"><img src="https://images.pexels.com/photos/3862129/pexels-photo-3862129.jpeg?auto=compress&cs=tinysrgb&w=700&h=400&dpr=1" alt="Navigation and SLAM"></div>
+        <div class="build-card-photo photo"><img src="https://images.unsplash.com/photo-1647427060118-4911c9821b82?auto=format&fit=crop&w=700&h=400&q=80" alt="Navigation and SLAM"></div>
         <div class="build-card-body">
           <h4>Navigation &amp; SLAM</h4>
           <p>Localization and mapping systems for mobile robots operating in warehouses, factories and outdoor sites.</p>
@@ -326,7 +337,7 @@
         </div>
       </div>
       <div class="build-card reveal">
-        <div class="build-card-photo photo"><img src="https://images.pexels.com/photos/34207359/pexels-photo-34207359.jpeg?auto=compress&cs=tinysrgb&w=700&h=400&dpr=1" alt="Motion Planning and Control"></div>
+        <div class="build-card-photo photo"><img src="https://images.unsplash.com/photo-1716191299980-a6e8827ba10b?auto=format&fit=crop&w=700&h=400&q=80" alt="Motion Planning and Control"></div>
         <div class="build-card-body">
           <h4>Motion Planning &amp; Control</h4>
           <p>Algorithms that translate perception into safe, precise movement for arms, AMRs and autonomous vehicles.</p>
@@ -334,7 +345,7 @@
         </div>
       </div>
       <div class="build-card reveal">
-        <div class="build-card-photo photo"><img src="https://images.pexels.com/photos/34804005/pexels-photo-34804005.jpeg?auto=compress&cs=tinysrgb&w=700&h=400&dpr=1" alt="Edge AI and Embedded Inference"></div>
+        <div class="build-card-photo photo"><img src="https://images.pexels.com/photos/546819/pexels-photo-546819.jpeg?auto=compress&cs=tinysrgb&w=700&h=400&dpr=1" alt="Edge AI and Embedded Inference"></div>
         <div class="build-card-body">
           <h4>Edge AI &amp; Embedded Inference</h4>
           <p>Models optimized to run on constrained hardware with low latency and predictable power budgets.</p>
@@ -342,7 +353,7 @@
         </div>
       </div>
       <div class="build-card reveal">
-        <div class="build-card-photo photo"><img src="https://images.pexels.com/photos/7651733/pexels-photo-7651733.jpeg?auto=compress&cs=tinysrgb&w=700&h=400&dpr=1" alt="Simulation and Digital Twins"></div>
+        <div class="build-card-photo photo"><img src="https://images.pexels.com/photos/574071/pexels-photo-574071.jpeg?auto=compress&cs=tinysrgb&w=700&h=400&dpr=1" alt="Simulation and Digital Twins"></div>
         <div class="build-card-body">
           <h4>Simulation &amp; Digital Twins</h4>
           <p>Validate autonomy stacks in simulation before expensive field trials and hardware iterations.</p>
@@ -350,12 +361,122 @@
         </div>
       </div>
       <div class="build-card reveal">
-        <div class="build-card-photo photo"><img src="https://images.pexels.com/photos/3912976/pexels-photo-3912976.jpeg?auto=compress&cs=tinysrgb&w=700&h=400&dpr=1" alt="Human-Robot Interaction"></div>
+        <div class="build-card-photo photo"><img src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=700&h=400&q=80" alt="Human-Robot Interaction"></div>
         <div class="build-card-body">
           <h4>Human-Robot Interaction</h4>
           <p>Interfaces and safety systems that let humans and robots collaborate on the same factory floor.</p>
           <div class="example-tags"><span class="example-tag">Cobots</span><span class="example-tag">Gesture Recognition</span><span class="example-tag">Voice Commands</span><span class="example-tag">Safety Monitoring</span><span class="example-tag">Operator Dashboards</span></div>
         </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section style="background:#FAFAF8;">
+  <div class="wrap">
+    <div class="section-head">
+      <h2>Applications by industry</h2>
+      <p>The same core stack — perception, planning, edge inference — adapted to the physical constraints of each domain.</p>
+    </div>
+    <div class="dept-grid">
+      <div class="dept-card reveal">
+        <h4>Manufacturing</h4>
+        <p>Vision QC, cobot assist, and in-line inspection that keep up with takt time.</p>
+        <ul class="dept-list">
+          <li>Defect detection &amp; classification</li>
+          <li>Pick-and-place with force control</li>
+          <li>Assembly verification</li>
+          <li>Safety zone monitoring</li>
+          <li>PLC / MES integration</li>
+          <li>Operator alert dashboards</li>
+        </ul>
+      </div>
+      <div class="dept-card reveal">
+        <h4>Logistics &amp; Warehousing</h4>
+        <p>AMR navigation that survives layout changes and peak-season chaos.</p>
+        <ul class="dept-list">
+          <li>Visual / LiDAR SLAM</li>
+          <li>Dynamic path planning</li>
+          <li>Fleet coordination</li>
+          <li>Docking &amp; charging logic</li>
+          <li>Obstacle &amp; pedestrian avoidance</li>
+          <li>WMS / fleet software hooks</li>
+        </ul>
+      </div>
+      <div class="dept-card reveal">
+        <h4>Agriculture</h4>
+        <p>Outdoor perception for rows, crops, and obstacles — entirely on the edge.</p>
+        <ul class="dept-list">
+          <li>Crop-row detection</li>
+          <li>Weed / anomaly spotting</li>
+          <li>GNSS + vision fusion</li>
+          <li>Terrain-aware navigation</li>
+          <li>Jetson field deployment</li>
+          <li>Ruggedized sensing pipelines</li>
+        </ul>
+      </div>
+      <div class="dept-card reveal">
+        <h4>Inspection &amp; Field Ops</h4>
+        <p>Mobile and fixed systems for sites where people should not do every check.</p>
+        <ul class="dept-list">
+          <li>Infrastructure inspection</li>
+          <li>Thermal / RGB anomaly detection</li>
+          <li>Autonomous patrol routes</li>
+          <li>Remote operator takeover</li>
+          <li>Telemetry &amp; incident packs</li>
+          <li>Offline-capable edge stacks</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="section-head">
+      <h2>A layered stack from sensors to operators</h2>
+      <p>We design clear boundaries so perception, planning, and control can iterate without rewriting the whole robot.</p>
+    </div>
+    <div class="stack-arch">
+      <div class="stack-arch-col reveal">
+        <div class="sa-n">Layer 01</div>
+        <h4>Sensing</h4>
+        <ul>
+          <li>RGB / depth / stereo</li>
+          <li>LiDAR &amp; IMU</li>
+          <li>Calibration &amp; sync</li>
+          <li>Driver &amp; ROS bridges</li>
+        </ul>
+      </div>
+      <div class="stack-arch-col reveal">
+        <div class="sa-n">Layer 02</div>
+        <h4>Perception</h4>
+        <ul>
+          <li>Detection &amp; segmentation</li>
+          <li>3D / multi-sensor fusion</li>
+          <li>Tracking &amp; state estimate</li>
+          <li>Edge-optimized models</li>
+        </ul>
+      </div>
+      <div class="stack-arch-col reveal">
+        <div class="sa-n">Layer 03</div>
+        <h4>Autonomy</h4>
+        <ul>
+          <li>SLAM &amp; localization</li>
+          <li>Planning &amp; control</li>
+          <li>Safety supervisors</li>
+          <li>Mission / task logic</li>
+        </ul>
+      </div>
+      <div class="stack-arch-col reveal">
+        <div class="sa-n">Layer 04</div>
+        <h4>Operations</h4>
+        <ul>
+          <li>Fleet &amp; telemetry</li>
+          <li>Operator UI / HRI</li>
+          <li>OTA model updates</li>
+          <li>Monitoring &amp; eval</li>
+        </ul>
       </div>
     </div>
   </div>
@@ -375,7 +496,6 @@
 <section style="background:#FAFAF8;">
   <div class="wrap">
     <div class="section-head">
-      <div class="eyebrow">Robotics Capabilities</div>
       <h2>Built on modern robotics and AI stacks</h2>
     </div>
     <div class="cap-tech-grid">
@@ -419,11 +539,41 @@
   </div>
 </section>
 
+<section class="integ-section">
+  <div class="wrap">
+    <div class="section-head">
+      <h2>Stacks robotics teams already trust</h2>
+      <p>ROS 2 middleware, NVIDIA Isaac / Jetson for edge, OpenCV and PyTorch for perception — plus simulation before expensive field time.</p>
+    </div>
+    <div class="integ-wall">
+      <div class="integ-logo reveal"><img src="https://cdn.jsdelivr.net/npm/simple-icons@11.14.0/icons/ros.svg" alt="ROS" width="28" height="28" loading="lazy"><span>ROS 2</span></div>
+      <div class="integ-logo reveal"><img src="https://cdn.jsdelivr.net/npm/simple-icons@11.14.0/icons/nvidia.svg" alt="NVIDIA" width="28" height="28" loading="lazy"><span>NVIDIA Jetson</span></div>
+      <div class="integ-logo reveal"><img src="https://cdn.jsdelivr.net/npm/simple-icons@11.14.0/icons/nvidia.svg" alt="Isaac" width="28" height="28" loading="lazy"><span>Isaac ROS / Sim</span></div>
+      <div class="integ-logo reveal"><img src="https://cdn.jsdelivr.net/npm/simple-icons@11.14.0/icons/pytorch.svg" alt="PyTorch" width="28" height="28" loading="lazy"><span>PyTorch</span></div>
+      <div class="integ-logo reveal"><img src="https://cdn.jsdelivr.net/npm/simple-icons@11.14.0/icons/opencv.svg" alt="OpenCV" width="28" height="28" loading="lazy"><span>OpenCV</span></div>
+      <div class="integ-logo reveal"><img src="https://cdn.jsdelivr.net/npm/simple-icons@11.14.0/icons/python.svg" alt="Python" width="28" height="28" loading="lazy"><span>Python</span></div>
+      <div class="integ-logo reveal"><img src="https://cdn.jsdelivr.net/npm/simple-icons@11.14.0/icons/cplusplus.svg" alt="C++" width="28" height="28" loading="lazy"><span>C++</span></div>
+      <div class="integ-logo reveal"><img src="https://cdn.jsdelivr.net/npm/simple-icons@11.14.0/icons/docker.svg" alt="Docker" width="28" height="28" loading="lazy"><span>Docker</span></div>
+      <div class="integ-logo reveal no-ico"><span>MoveIt</span></div>
+      <div class="integ-logo reveal no-ico"><span>Nav2</span></div>
+      <div class="integ-logo reveal no-ico"><span>Gazebo</span></div>
+      <div class="integ-logo reveal no-ico"><span>TensorRT / ONNX</span></div>
+    </div>
+    <div class="cap-chip-row">
+      <span class="cap-chip">Real-time inference</span>
+      <span class="cap-chip">Model quantization</span>
+      <span class="cap-chip">Sensor fusion</span>
+      <span class="cap-chip">Sim-to-real</span>
+      <span class="cap-chip">Hardware-in-the-loop</span>
+      <span class="cap-chip">Fleet telemetry</span>
+    </div>
+  </div>
+</section>
+
 <section>
   <div class="wrap">
     <div class="section-head">
-      <div class="eyebrow">Our Robotics Delivery Framework</div>
-      <h2>A proven approach from concept to autonomous operation</h2>
+      <h2>From concept to autonomous operation</h2>
     </div>
     <div class="framework-bento">
       <div class="bento-step span8 reveal">
@@ -458,8 +608,7 @@
 <section style="background:#FAFAF8;">
   <div class="wrap">
     <div class="section-head">
-      <div class="eyebrow">Why Axtra</div>
-      <h2>Robotics engineering backed by research and production discipline</h2>
+      <h2>Research-backed robotics engineering</h2>
     </div>
     <div class="why-grid">
       <div class="why-card reveal"><h4>Research-Backed Perception</h4><p>Joint research partnership with PTIT AI &amp; Robotics R&amp;D Center on applied perception and autonomy.</p></div>
@@ -468,8 +617,7 @@
       <div class="why-card reveal"><h4>NVIDIA Ecosystem Experience</h4><p>Recognized NVIDIA Ambassador with hands-on experience across Isaac, TensorRT and accelerated inference pipelines.</p></div>
     </div>
     <div style="margin-top:24px;">
-      <div class="eyebrow" style="margin-bottom:10px;">Flexible Delivery</div>
-      <div class="delivery-modes">
+<div class="delivery-modes">
         <span class="mode-pill">Dedicated Robotics Teams</span>
         <span class="mode-pill">Perception / Navigation Modules</span>
         <span class="mode-pill">End-to-End Autonomy Projects</span>
@@ -481,13 +629,12 @@
 <section>
   <div class="wrap">
     <div class="section-head">
-      <div class="eyebrow">Featured Case Studies</div>
       <h2>Outcomes, not just deliverables</h2>
       <p><em>Illustrative case studies — to be replaced with verified client results.</em></p>
     </div>
 
     <div class="case-featured reveal">
-      <div class="tile-media"><img src="https://images.pexels.com/photos/3862129/pexels-photo-3862129.jpeg?auto=compress&cs=tinysrgb&w=1400&h=900&dpr=1" alt="Computer vision QC deployed across factory lines"></div>
+      <div class="tile-media"><img src="https://images.unsplash.com/photo-1647427060118-4911c9821b82?auto=format&fit=crop&w=1400&h=900&q=80" alt="Computer vision QC deployed across factory lines"></div>
       <div class="case-featured-content">
         <div class="industry-tag">Industry · Manufacturing</div>
         <h3>Computer Vision QC Deployed Across 3 Factory Lines</h3>
@@ -505,7 +652,7 @@
 
     <div class="case-grid-v2">
       <div class="case-card-v2 reveal">
-        <div class="tile-media"><img src="https://images.pexels.com/photos/5480781/pexels-photo-5480781.jpeg?auto=compress&cs=tinysrgb&w=800&h=700&dpr=1" alt="Warehouse AMR navigation system"></div>
+        <div class="tile-media"><img src="https://images.unsplash.com/photo-1716191299980-a6e8827ba10b?auto=format&fit=crop&w=800&h=700&q=80" alt="Warehouse AMR navigation system"></div>
         <div class="case-body-v2">
           <div class="industry-tag">Industry · Logistics</div>
           <h4>Warehouse AMR Navigation for Dynamic Inventory Layouts</h4>
@@ -520,7 +667,7 @@
         </div>
       </div>
       <div class="case-card-v2 reveal">
-        <div class="tile-media"><img src="https://images.pexels.com/photos/3862129/pexels-photo-3862129.jpeg?auto=compress&cs=tinysrgb&w=800&h=700&dpr=1" alt="Agricultural robotics perception"></div>
+        <div class="tile-media"><img src="https://images.unsplash.com/photo-1777383975764-bec6f5cabf00?auto=format&fit=crop&w=800&h=700&q=80" alt="Agricultural robotics perception"></div>
         <div class="case-body-v2">
           <div class="industry-tag">Industry · Agriculture</div>
           <h4>Perception Stack for Autonomous Farm Equipment</h4>
@@ -571,9 +718,9 @@
 <section id="contact" style="padding-top:0;">
   <div class="cta-banner">
     <div class="cta-banner-inner">
-      <h2>Ready to build robotics that works in the field?</h2>
+      <h2>Ready for robotics that works in the field?</h2>
       <p>Whether you're prototyping autonomous navigation or scaling computer vision across a factory floor, our engineers can help you move from simulation to production.</p>
-      <a href="mailto:hello@axtralabs.com" class="btn btn-inv">Book a Robotics Discovery Call <span>→</span></a>
+      <a href="contact.html" class="btn btn-inv">Book a Robotics Discovery Call <span>→</span></a>
     </div>
   </div>
 </section>
@@ -582,9 +729,9 @@
   <div class="wrap">
     <div class="footer-grid">
       <div class="footer-col">
-        <div class="logo" style="margin-bottom:16px;">Axtra<span>Labs</span></div>
+        <a href="index.html" class="logo logo--footer" aria-label="Axtra Labs" style="margin-bottom:16px;display:inline-block;"><img class="logo-img logo-img--light" src="assets/img/axtra-logo-white.png" alt="Axtra Labs" width="148" height="14"></a>
         <p style="font-size:15.5px;color:var(--slate);margin-bottom:18px;">AI-augmented software engineering from Vietnam.</p>
-        <div class="social-row"><div class="social-dot">in</div><div class="social-dot">X</div><div class="social-dot">f</div></div>
+        <div class="social-row"><a class="social-dot" href="https://www.linkedin.com/company/axtralabs/" target="_blank" rel="noopener noreferrer" aria-label="Axtra Labs on LinkedIn">in</a><div class="social-dot">X</div><div class="social-dot">f</div></div>
       </div>
       <div class="footer-col">
         <h5>Services</h5>
@@ -595,9 +742,34 @@
         <a href="devops.html"><span>DevOps</span></a>
         <a href="ai-software-development.html"><span>AI-Software Development</span></a>
       </div>
-      <div class="footer-col"><h5>Industries</h5><a href="manufacturing.html"><span>Manufacturing</span></a><a href="retail.html"><span>Retail &amp; E-commerce</span></a><a href="travel.html"><span>Travel</span></a><a href="home-services.html"><span>Home Services</span></a><span>Fintech</span><span>+ 3 more</span></div>
-      <div class="footer-col"><h5>Company</h5><span>About</span><span>Case Studies</span><span>Insights</span><span>Careers</span></div>
-      <div class="footer-col"><h5>Contact</h5><span>Contact Us</span><span>hello@axtralabs.com</span><span>Hanoi, Vietnam</span></div>
+      <div class="footer-col">
+        <h5>Industries</h5>
+        <a href="manufacturing.html"><span>Manufacturing</span></a>
+        <a href="retail.html"><span>Retail &amp; E-commerce</span></a>
+        <a href="travel.html"><span>Travel</span></a>
+        <a href="home-services.html"><span>Home Services</span></a>
+        <a href="fintech.html"><span>Fintech</span></a>
+        <a href="agriculture.html"><span>Agriculture</span></a>
+        <a href="logistics.html"><span>Logistics</span></a>
+        <a href="healthcare.html"><span>Healthcare</span></a>
+      </div>
+      <div class="footer-col">
+        <h5>AI Agent Solution</h5>
+        <a href="voice-ai-agent.html"><span>Voice AI Agent</span></a>
+        <a href="document-knowledge-ai-agent.html"><span>Document &amp; Knowledge</span></a>
+        <a href="workflow-ai-agent.html"><span>Workflow AI Agent</span></a>
+        <a href="sales-ai-agent.html"><span>Sales AI Agent</span></a>
+        <a href="multi-agent-system.html"><span>Multi Agent System</span></a>
+      </div>
+      <div class="footer-col">
+        <h5>Company</h5>
+        <a href="about.html"><span>About Us</span></a>
+        <a href="insights.html"><span>Insights</span></a>
+        <a href="careers.html"><span>Careers</span></a>
+        <a href="our-rd.html"><span>Our R&amp;D</span></a>
+        <a href="case-study.html"><span>Case Studies</span></a>
+        <a href="contact.html"><span>Contact</span></a>
+      </div>
     </div>
     <div class="footer-bottom">
       <div>© 2026 Axtra Labs. All rights reserved.</div>
@@ -606,7 +778,6 @@
   </div>
 </footer>
 
-
-<script src="assets/js/site.js"></script>
+<script src="assets/js/site.js?v=25"></script>
 </body>
 </html>

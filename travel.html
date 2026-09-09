@@ -1,17 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+<meta http-equiv="Pragma" content="no-cache">
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Travel &amp; Hospitality — Axtra Labs</title>
+<link rel="icon" href="assets/img/favicon.png" type="image/png">
+
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
 <style>
-  :root{
-    --ink:#0F1830; --navy:#1B2A4A; --navy-dark:#0F1830; --slate:#5C6478;
-    --ochre:#FF6B4A; --ochre-dark:#E5502E;
-    --paper:#FFFFFF; --line:#E4E7EE; --white:#FFFFFF;
-  }
+
   *{box-sizing:border-box;margin:0;padding:0;}
   body{font-family:'Inter',sans-serif;font-size:18px;color:var(--ink);background:var(--paper);line-height:1.6;-webkit-font-smoothing:antialiased;}
   h1,h2,h3,h4{font-family:'Plus Jakarta Sans',sans-serif;font-weight:800;letter-spacing:-0.02em;color:var(--ink);line-height:1.1;}
@@ -35,41 +35,7 @@
   .btn span{display:inline-block;transition:transform .2s ease;}
   .btn:hover span{transform:translateX(3px);}
 
-  header{position:absolute;top:0;left:0;right:0;z-index:50;background:transparent;border-bottom:1px solid transparent;transition:background .3s ease, border-color .3s ease;}
-  header.scrolled{position:fixed;background:rgba(247,245,240,0.94);backdrop-filter:blur(10px);border-bottom:1px solid var(--line);}
-  .nav{display:flex;align-items:center;justify-content:space-between;padding:18px 32px;max-width:1240px;margin:0 auto;}
-  .logo{font-family:'Plus Jakarta Sans',sans-serif;font-weight:800;font-size:21px;color:#fff;transition:color .3s ease;}
-  header.scrolled .logo{color:var(--ink);}
-  .logo span{color:var(--ochre-dark);}
-  .navlinks{display:flex;gap:32px;align-items:center;}
-  .navlinks>a{font-size:16.5px;font-weight:600;color:#fff;position:relative;padding-bottom:4px;transition:color .3s ease;}
-  .navlinks>a::after{content:'';position:absolute;left:0;bottom:0;width:0;height:1.5px;background:#fff;transition:width .25s ease;}
-  header.scrolled .navlinks>a{color:var(--ink);}
-  header.scrolled .navlinks>a::after{background:var(--ink);}
-  .navlinks>a:hover::after{width:100%;}
-  @media (max-width:900px){.navlinks{display:none;}}
 
-  .nav-item{position:relative;}
-  .nav-item>span{font-size:16.5px;font-weight:600;color:#fff;cursor:pointer;display:flex;align-items:center;gap:5px;padding:8px 0;transition:color .3s ease;}
-  header.scrolled .nav-item>span{color:var(--ink);}
-  .nav-item>span::after{content:'';position:absolute;left:0;bottom:0;width:0;height:1.5px;background:#fff;transition:width .25s ease, background .3s ease;}
-  header.scrolled .nav-item>span::after{background:var(--ink);}
-  .nav-item:hover>span::after{width:100%;}
-  .caret{font-size:12px;transition:transform .2s ease, color .3s ease;color:rgba(255,255,255,0.7);}
-  header.scrolled .caret{color:var(--slate);}
-  .nav-item:hover .caret{transform:rotate(180deg);}
-  .dropdown{position:absolute;top:100%;left:50%;transform:translateX(-50%) translateY(4px);background:#fff;border:1px solid var(--line);border-radius:14px;box-shadow:0 24px 48px rgba(15,24,48,0.14);padding:20px;margin-top:14px;opacity:0;visibility:hidden;pointer-events:none;transition:opacity .2s ease, transform .2s ease;z-index:60;}
-  .dropdown::before{content:'';position:absolute;top:-14px;left:0;right:0;height:14px;background:transparent;}
-  .nav-item:hover .dropdown{opacity:1;visibility:visible;transform:translateX(-50%) translateY(0);pointer-events:auto;}
-  .dropdown.wide{width:560px;display:grid;grid-template-columns:1fr 1fr;gap:4px;}
-  .dropdown.grid4{width:640px;display:grid;grid-template-columns:repeat(2,1fr);gap:4px;}
-  .dd-link{display:flex;flex-direction:column;gap:2px;padding:12px 14px;border-radius:10px;transition:background .18s ease;}
-  .dd-link:hover{background:var(--line);}
-  .dd-link .dd-num{font-family:'IBM Plex Mono',monospace;font-size:13.5px;color:var(--navy);margin-bottom:2px;}
-  .dd-link .dd-title{font-size:15.5px;font-weight:700;color:var(--ink);}
-  .dd-link .dd-sub{font-size:16px;color:var(--slate);font-weight:500;}
-  .dd-foot{grid-column:1/-1;border-top:1px solid var(--line);margin-top:8px;padding-top:12px;display:flex;justify-content:space-between;align-items:center;}
-  .dd-foot a{font-size:15.5px;font-weight:700;color:var(--navy);}
 
   /* HERO — short */
   .page-hero{position:relative;min-height:400px;display:flex;align-items:flex-end;overflow:hidden;margin:0 -32px;color:#fff;padding-bottom:48px;}
@@ -78,7 +44,9 @@
   .page-hero-inner{position:relative;z-index:2;max-width:880px;padding:0 64px;}
   .page-hero .sn{font-family:'IBM Plex Mono',monospace;font-size:15.5px;color:#FFB199;margin-bottom:12px;display:block;}
   .page-hero h1{font-size:clamp(34px, 4.6vw, 58px);line-height:1.08;color:#fff;margin-bottom:16px;}
-  .page-hero p{font-size:19px;color:#D8DEE9;font-weight:500;max-width:600px;margin-bottom:18px;}
+  .page-hero p{display:none;}
+  .page-hero .sn{display:none;}
+  .page-hero h1{margin-bottom:0;}
 
   .breadcrumb{padding:16px 0;font-size:15.5px;color:var(--slate);font-weight:500;border-bottom:1px solid var(--line);}
   .breadcrumb a{color:var(--slate);}
@@ -250,76 +218,78 @@
   .related-card .related-arrow{bottom:24px;right:24px;}
   @media (max-width:860px){.related-featured{grid-template-columns:1fr;}.related-photo{height:220px;}.related-grid{grid-template-columns:1fr;}}
 
-  .cta-banner{background:var(--navy-dark);color:#fff;width:100vw;margin-left:calc(50% - 50vw);margin-right:calc(50% - 50vw);padding:60px 32px;}
-  .cta-banner-inner{max-width:900px;margin:0 auto;width:100%;text-align:center;}
-  .cta-banner h2{color:#fff;font-size:32px;margin-bottom:14px;text-wrap:balance;}
-  .cta-banner p{color:#C7D2E3;font-size:17.5px;font-weight:500;margin-bottom:26px;max-width:560px;margin-left:auto;margin-right:auto;}
-
-  .other-services{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;margin-top:22px;}
-  .other-pill{font-family:'IBM Plex Mono',monospace;font-size:15px;padding:8px 14px;border-radius:999px;border:1px solid rgba(255,255,255,0.25);color:#C7D2E3;transition:all .2s ease;}
-  .other-pill:hover{border-color:#fff;background:#fff;color:var(--navy);}
-
-  footer{padding:52px 0 0;background:#F5F5F2;}
-  .footer-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr 1fr;gap:26px;padding-bottom:36px;}
-  .footer-col h5{font-family:'IBM Plex Mono',monospace;font-size:14.5px;text-transform:uppercase;letter-spacing:0.06em;color:var(--slate);margin-bottom:16px;}
-  .footer-col a,.footer-col span{display:block;font-size:16px;color:var(--ink);margin-bottom:11px;cursor:pointer;transition:color .2s ease;}
-  .footer-col span:hover,.footer-col a:hover{color:var(--ochre-dark);}
-  .footer-bottom{border-top:1px solid var(--line);padding:22px 0;display:flex;justify-content:space-between;font-size:15px;color:var(--slate);flex-wrap:wrap;gap:10px;}
-  .social-row{display:flex;gap:10px;}
-  .social-dot{width:30px;height:30px;border:1px solid var(--line);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:14px;color:var(--slate);transition:all .2s ease;cursor:pointer;}
-  .social-dot:hover{background:var(--ink);color:#fff;border-color:var(--ink);}
-  @media (max-width:860px){.footer-grid{grid-template-columns:1fr 1fr;}}
 </style>
-<link rel="stylesheet" href="assets/css/responsive.css">
+<link rel="stylesheet" href="assets/css/site-tokens.css?v=3">
+<link rel="stylesheet" href="assets/css/responsive.css?v=43">
+<link rel="stylesheet" href="assets/css/site-header.css?v=18">
+<link rel="stylesheet" href="assets/css/industry-layouts.css">
 <link rel="stylesheet" href="assets/css/tech-icons.css">
+<link rel="stylesheet" href="assets/css/nav-drawer-v3.css?v=2">
 </head>
 <body>
 
 <header>
   <div class="nav">
-    <a href="index.html" class="logo">Axtra<span>Labs</span></a>
+    <a href="index.html" class="logo" aria-label="Axtra Labs"><img class="logo-img logo-img--light" src="assets/img/axtra-logo-white.png" alt="" width="148" height="14"><img class="logo-img logo-img--dark" src="assets/img/axtra-logo-dark.png" alt="Axtra Labs" width="148" height="14"></a>
     <nav class="navlinks">
       <div class="nav-item">
         <span>Services <span class="caret">▾</span></span>
         <div class="dropdown wide">
-          <a href="ai-services.html" class="dd-link"><span class="dd-num">01</span><span class="dd-title">AI Services</span><span class="dd-sub">Gen AI, agents, RAG, LLM fine-tuning</span></a>
-          <a href="data-bi.html" class="dd-link"><span class="dd-num">02</span><span class="dd-title">Data &amp; BI</span><span class="dd-sub">Pipelines, dashboards, decision intelligence</span></a>
-          <a href="embedded-software.html" class="dd-link"><span class="dd-num">03</span><span class="dd-title">Embedded Software Engineering</span><span class="dd-sub">Firmware, RTOS, embedded Linux</span></a>
-          <a href="ai-robotics.html" class="dd-link"><span class="dd-num">04</span><span class="dd-title">AI for Robotics</span><span class="dd-sub">Perception, navigation, edge AI</span></a>
-          <a href="devops.html" class="dd-link"><span class="dd-num">05</span><span class="dd-title">DevOps</span><span class="dd-sub">CI/CD, Kubernetes, MLOps</span></a>
-          <a href="ai-software-development.html" class="dd-link"><span class="dd-num">06</span><span class="dd-title">AI-Software Development</span><span class="dd-sub">Full-stack, AI-native products</span></a>
-          <div class="dd-foot"><span style="font-size:15px;color:var(--slate);">6 practices, one delivery team</span><a href="services.html">View all services →</a></div>
+          <a href="ai-services.html" class="dd-link"><span class="dd-title">AI Services</span><span class="dd-sub">Gen AI, agents, RAG, LLM fine-tuning</span></a>
+          <a href="data-bi.html" class="dd-link"><span class="dd-title">Data &amp; BI</span><span class="dd-sub">Pipelines, dashboards, decision intelligence</span></a>
+          <a href="embedded-software.html" class="dd-link"><span class="dd-title">Embedded Software Engineering</span><span class="dd-sub">Firmware, RTOS, embedded Linux</span></a>
+          <a href="ai-robotics.html" class="dd-link"><span class="dd-title">AI for Robotics</span><span class="dd-sub">Perception, navigation, edge AI</span></a>
+          <a href="devops.html" class="dd-link"><span class="dd-title">DevOps</span><span class="dd-sub">CI/CD, Kubernetes, MLOps</span></a>
+          <a href="ai-software-development.html" class="dd-link"><span class="dd-title">AI-Software Development</span><span class="dd-sub">Full-stack, AI-native products</span></a>
+          <div class="dd-foot"><span style="font-size:15px;color:var(--slate);">6 services, one team</span><a href="services.html">View all services <span>→</span></a></div>
         </div>
       </div>
-            <div class="nav-item">
+      <div class="nav-item">
+        <span>AI Agent Solution <span class="caret">▾</span></span>
+        <div class="dropdown wide">
+          <a href="voice-ai-agent.html" class="dd-link"><span class="dd-title">Voice AI Agent</span><span class="dd-sub">White-label voice AI in your infrastructure</span></a>
+          <a href="document-knowledge-ai-agent.html" class="dd-link"><span class="dd-title">Document and Knowledge AI Agent</span><span class="dd-sub">RAG, docs, enterprise knowledge</span></a>
+          <a href="workflow-ai-agent.html" class="dd-link"><span class="dd-title">Workflow AI Agent</span><span class="dd-sub">Process automation &amp; orchestration</span></a>
+          <a href="sales-ai-agent.html" class="dd-link"><span class="dd-title">Sales AI Agent</span><span class="dd-sub">Outreach, qualification, follow-up</span></a>
+          <a href="multi-agent-system.html" class="dd-link"><span class="dd-title">Multi Agent System</span><span class="dd-sub">Coordinated multi-agent teams</span></a>
+          <div class="dd-foot"><span style="font-size:15px;color:var(--slate);">5 agent solutions</span><a href="voice-ai-agent.html">Explore Voice AI <span>→</span></a></div>
+        </div>
+      </div>
+      <a href="ai-robotics.html">AI for Robotics</a>
+      <div class="nav-item">
         <span>Industries <span class="caret">▾</span></span>
         <div class="dropdown grid4">
           <a href="manufacturing.html" class="dd-link"><span class="dd-title">Manufacturing</span></a>
           <a href="retail.html" class="dd-link"><span class="dd-title">Retail &amp; E-commerce</span></a>
           <a href="travel.html" class="dd-link"><span class="dd-title">Travel &amp; Hospitality</span></a>
           <a href="home-services.html" class="dd-link"><span class="dd-title">Home Services</span></a>
-          <a href="#" class="dd-link"><span class="dd-title">Fintech</span></a>
-          <a href="#" class="dd-link"><span class="dd-title">Agriculture</span></a>
-          <a href="#" class="dd-link"><span class="dd-title">Logistics</span></a>
-          <a href="#" class="dd-link"><span class="dd-title">Healthcare</span></a>
-          <div class="dd-foot"><span style="font-size:15px;color:var(--slate);">8 industries served</span><a href="index.html#industries">View all industries →</a></div>
+          <a href="fintech.html" class="dd-link"><span class="dd-title">Fintech</span></a>
+          <a href="agriculture.html" class="dd-link"><span class="dd-title">Agriculture</span></a>
+          <a href="logistics.html" class="dd-link"><span class="dd-title">Logistics</span></a>
+          <a href="healthcare.html" class="dd-link"><span class="dd-title">Healthcare</span></a>
+          <div class="dd-foot"><span style="font-size:15px;color:var(--slate);">8 industries served</span><a href="index.html#industries">View all industries <span>→</span></a></div>
         </div>
       </div>
-      <a href="index.html#work">Work</a>
-      <a href="index.html#insights">Insights</a>
-      <a href="index.html#about">About</a>
+      <a href="case-study.html">Work</a>
+      <div class="nav-item">
+        <span>About <span class="caret">▾</span></span>
+        <div class="dropdown company">
+          <a href="about.html" class="dd-link"><span class="dd-title">About Us</span><span class="dd-sub">Who we are and how we work</span></a>
+          <a href="insights.html" class="dd-link"><span class="dd-title">Insights</span><span class="dd-sub">Articles, ideas, and industry notes</span></a>
+          <a href="careers.html" class="dd-link"><span class="dd-title">Careers</span><span class="dd-sub">Growth path, roles, and culture</span></a>
+          <a href="our-rd.html" class="dd-link"><span class="dd-title">Our R&amp;D</span><span class="dd-sub">PTIT lab, research, and applied AI</span></a>
+        </div>
+      </div>
     </nav>
-    <a href="index.html#contact" class="btn" style="padding:10px 20px;font-size:16px;">Contact Us</a>
+    <a href="contact.html" class="btn" style="padding:10px 20px;font-size:16px;">Contact Us</a>
   </div>
 </header>
 
 <section class="page-hero" style="padding:0;">
-  <div class="photo"><img src="https://images.pexels.com/photos/7752894/pexels-photo-7752894.jpeg?auto=compress&cs=tinysrgb&w=1600&h=800&dpr=1" alt="Travel & Hospitality"></div>
+  <div class="photo"><img src="https://images.pexels.com/photos/1051075/pexels-photo-1051075.jpeg?auto=compress&cs=tinysrgb&w=1600&h=800&dpr=1" alt="Travel & Hospitality"></div>
   <div class="page-hero-overlay"></div>
   <div class="wrap page-hero-inner">
-    <span class="sn">Industries</span>
     <h1>Travel &amp; Hospitality</h1>
-    <p>Conversational AI, personalization and ops automation for travel brands that need bookings, not demos.</p>
   </div>
 </section>
 
@@ -330,14 +300,13 @@
 <section>
   <div class="wrap">
     <div class="section-head">
-      <div class="eyebrow">Use cases we build</div>
-      <h2>Every type of AI, applied to a real travel decision</h2>
+      <h2>AI applied to real travel decisions</h2>
       <p>Practical use cases for OTAs, hotels and tour operators — systems that convert browsers into booked trips.</p>
     </div>
     <div class="usecase-grid">
 
       <div class="usecase-card reveal">
-        <div class="usecase-card-photo"><img src="https://images.pexels.com/photos/7752894/pexels-photo-7752894.jpeg?auto=compress&cs=tinysrgb&w=700&h=450&dpr=1" alt="AI Agents"></div>
+        <div class="usecase-card-photo"><img src="https://images.pexels.com/photos/1051075/pexels-photo-1051075.jpeg?auto=compress&cs=tinysrgb&w=700&h=450&dpr=1" alt="AI Agents"></div>
         <div class="usecase-card-body">
           <h4>AI Agents</h4>
           <p>Autonomous agents that complete multi-step travel tasks, not just answer FAQs.</p>
@@ -351,7 +320,7 @@
       </div>
 
       <div class="usecase-card reveal">
-        <div class="usecase-card-photo"><img src="https://images.pexels.com/photos/8867267/pexels-photo-8867267.jpeg?auto=compress&cs=tinysrgb&w=700&h=450&dpr=1" alt="Voice AI"></div>
+        <div class="usecase-card-photo"><img src="https://images.pexels.com/photos/5473955/pexels-photo-5473955.jpeg?auto=compress&cs=tinysrgb&w=700&h=450&dpr=1" alt="Voice AI"></div>
         <div class="usecase-card-body">
           <h4>Voice AI</h4>
           <p>Hands-free interaction for the store, the warehouse and the phone line.</p>
@@ -365,7 +334,7 @@
       </div>
 
       <div class="usecase-card reveal">
-        <div class="usecase-card-photo"><img src="https://images.pexels.com/photos/16412441/pexels-photo-16412441.jpeg?auto=compress&cs=tinysrgb&w=700&h=450&dpr=1" alt="Computer Vision"></div>
+        <div class="usecase-card-photo"><img src="https://images.pexels.com/photos/2599244/pexels-photo-2599244.jpeg?auto=compress&cs=tinysrgb&w=700&h=450&dpr=1" alt="Computer Vision"></div>
         <div class="usecase-card-body">
           <h4>Computer Vision</h4>
           <p>Cameras that turn the physical and digital storefront into structured, usable data.</p>
@@ -379,7 +348,7 @@
       </div>
 
       <div class="usecase-card reveal">
-        <div class="usecase-card-photo"><img src="https://images.pexels.com/photos/3912976/pexels-photo-3912976.jpeg?auto=compress&cs=tinysrgb&w=700&h=450&dpr=1" alt="Predictive & Forecasting AI"></div>
+        <div class="usecase-card-photo"><img src="https://images.pexels.com/photos/265087/pexels-photo-265087.jpeg?auto=compress&cs=tinysrgb&w=700&h=450&dpr=1" alt="Predictive & Forecasting AI"></div>
         <div class="usecase-card-body">
           <h4>Predictive &amp; Forecasting AI</h4>
           <p>Models that tell you what's about to happen, before it shows up in the numbers.</p>
@@ -393,7 +362,7 @@
       </div>
 
       <div class="usecase-card reveal">
-        <div class="usecase-card-photo"><img src="https://images.pexels.com/photos/34804005/pexels-photo-34804005.jpeg?auto=compress&cs=tinysrgb&w=700&h=450&dpr=1" alt="Generative AI & NLP"></div>
+        <div class="usecase-card-photo"><img src="https://images.pexels.com/photos/546819/pexels-photo-546819.jpeg?auto=compress&cs=tinysrgb&w=700&h=450&dpr=1" alt="Generative AI & NLP"></div>
         <div class="usecase-card-body">
           <h4>Generative AI &amp; NLP</h4>
           <p>Text and language work that used to take a team, done at SKU scale.</p>
@@ -407,7 +376,7 @@
       </div>
 
       <div class="usecase-card reveal">
-        <div class="usecase-card-photo"><img src="https://images.pexels.com/photos/6331237/pexels-photo-6331237.jpeg?auto=compress&cs=tinysrgb&w=700&h=450&dpr=1" alt="Recommendation & Personalization"></div>
+        <div class="usecase-card-photo"><img src="https://images.pexels.com/photos/230544/pexels-photo-230544.jpeg?auto=compress&cs=tinysrgb&w=700&h=450&dpr=1" alt="Recommendation & Personalization"></div>
         <div class="usecase-card-body">
           <h4>Recommendation &amp; Personalization</h4>
           <p>Every customer sees a slightly different store, based on what they actually do.</p>
@@ -440,7 +409,6 @@
 <section style="background:#FAFAF8;">
   <div class="wrap">
     <div class="section-head">
-      <div class="eyebrow">Travel Capabilities</div>
       <h2>Built on modern travel technologies</h2>
     </div>
     <div class="cap-tech-grid">
@@ -466,18 +434,18 @@
       <div class="cap-tech-col">
         <h5>Data Platforms</h5>
         <div class="tech-pill-list">
-          <span class="tech-pill"><span class="tp-mark">P</span>Power BI</span>
-          <span class="tech-pill"><span class="tp-mark">L</span>Looker</span>
-          <span class="tech-pill"><span class="tp-mark">S</span>Snowflake</span>
-          <span class="tech-pill no-logo">dbt</span>
+          <span class="tech-pill has-icon"><img class="tp-icon" src="https://cdn.jsdelivr.net/npm/simple-icons@11.14.0/icons/powerbi.svg" alt="" width="18" height="18" loading="lazy">Power BI</span>
+          <span class="tech-pill has-icon"><img class="tp-icon" src="https://cdn.jsdelivr.net/npm/simple-icons@11.14.0/icons/looker.svg" alt="" width="18" height="18" loading="lazy">Looker</span>
+          <span class="tech-pill has-icon"><img class="tp-icon" src="https://cdn.jsdelivr.net/npm/simple-icons@11.14.0/icons/snowflake.svg" alt="" width="18" height="18" loading="lazy">Snowflake</span>
+          <span class="tech-pill has-icon"><img class="tp-icon" src="https://cdn.jsdelivr.net/npm/simple-icons@11.14.0/icons/dbt.svg" alt="" width="18" height="18" loading="lazy">dbt</span>
         </div>
       </div>
       <div class="cap-tech-col">
         <h5>Channel Integration</h5>
         <div class="tech-pill-list">
-          <span class="tech-pill"><span class="tp-mark">S</span>Amadeus</span>
-          <span class="tech-pill"><span class="tp-mark">N</span>Booking.com</span>
-          <span class="tech-pill"><span class="tp-mark">S</span>SAP</span>
+          <span class="tech-pill no-logo">Amadeus</span>
+          <span class="tech-pill no-logo">Booking.com</span>
+          <span class="tech-pill has-icon"><img class="tp-icon" src="https://cdn.jsdelivr.net/npm/simple-icons@11.14.0/icons/sap.svg" alt="" width="18" height="18" loading="lazy">SAP</span>
           <span class="tech-pill no-logo">GDS / PMS Integration</span>
         </div>
       </div>
@@ -488,19 +456,34 @@
 <section>
   <div class="wrap">
     <div class="section-head">
-      <div class="eyebrow">Our Engagement Approach</div>
-      <h2>A proven approach from pilot market to global rollout</h2>
+      <h2>From pilot market to global rollout</h2>
     </div>
-    <div class="pipeline-flow">
-      <div class="pipeline-step reveal"><div class="pn">01</div><h4>Data Audit</h4><p>Map PMS, GDS, CRM and content systems before building anything.</p></div>
-      <div class="pipeline-arrow">→</div>
-      <div class="pipeline-step reveal"><div class="pn">02</div><h4>Pilot Market</h4><p>Prove the assistant or model on one market or property before scaling.</p></div>
-      <div class="pipeline-arrow">→</div>
-      <div class="pipeline-step reveal"><div class="pn">03</div><h4>Channel Integration</h4><p>Connect into booking engines and ops tools so AI shows up where teams already work.</p></div>
-      <div class="pipeline-arrow">→</div>
-      <div class="pipeline-step reveal"><div class="pn">04</div><h4>Network Rollout</h4><p>Scale the validated pilot across properties and markets.</p></div>
-      <div class="pipeline-arrow">→</div>
-      <div class="pipeline-step reveal"><div class="pn">05</div><h4>Continuous Tuning</h4><p>Models are retrained as seasons, routes and demand patterns change.</p></div>
+    <div class="zig-track">
+      <div class="zig-step reveal">
+        <div class="zig-spacer"></div>
+        <div class="zig-mid"><div class="zn">01</div><div class="zline"></div></div>
+        <div class="zig-card"><h4>Data Audit</h4><p>Map PMS, GDS, CRM and content systems before building anything.</p></div>
+      </div>
+      <div class="zig-step reveal">
+        <div class="zig-spacer"></div>
+        <div class="zig-mid"><div class="zn">02</div><div class="zline"></div></div>
+        <div class="zig-card"><h4>Pilot Market</h4><p>Prove the assistant or model on one market or property before scaling.</p></div>
+      </div>
+      <div class="zig-step reveal">
+        <div class="zig-spacer"></div>
+        <div class="zig-mid"><div class="zn">03</div><div class="zline"></div></div>
+        <div class="zig-card"><h4>Channel Integration</h4><p>Connect into booking engines and ops tools so AI shows up where teams already work.</p></div>
+      </div>
+      <div class="zig-step reveal">
+        <div class="zig-spacer"></div>
+        <div class="zig-mid"><div class="zn">04</div><div class="zline"></div></div>
+        <div class="zig-card"><h4>Network Rollout</h4><p>Scale the validated pilot across properties and markets.</p></div>
+      </div>
+      <div class="zig-step reveal">
+        <div class="zig-spacer"></div>
+        <div class="zig-mid"><div class="zn">05</div></div>
+        <div class="zig-card"><h4>Continuous Tuning</h4><p>Models are retrained as seasons, routes and demand patterns change.</p></div>
+      </div>
     </div>
   </div>
 </section>
@@ -508,18 +491,13 @@
 <section style="background:#FAFAF8;">
   <div class="wrap">
     <div class="section-head">
-      <div class="eyebrow">Why Axtra</div>
-      <h2>Engineering that understands retail economics</h2>
+      <h2>Engineering for travel and hospitality</h2>
     </div>
-    <div class="why-grid">
-      <div class="why-card reveal"><h4>We Think in SKUs and Margins</h4><p>Our models are built around retail economics, not generic machine learning benchmarks.</p></div>
-      <div class="why-card reveal"><h4>Built for Peak Season</h4><p>Systems are load-tested for Black Friday-level traffic, not just steady-state demo conditions.</p></div>
-      <div class="why-card reveal"><h4>Integrates With Your Existing Stack</h4><p>We connect into POS, ERP and WMS systems instead of asking you to replace them.</p></div>
-      <div class="why-card reveal"><h4>Data + Store Operations</h4><p>The same team that builds the forecast also thinks through how store staff will actually use it.</p></div>
+    <div class="why-stack">
+      <div class="why-stack-item reveal"><div class="ws-num">01</div><div><h4>We Think in Occupancy and Ancillary</h4><p>Models optimize for room nights, load factor and ancillary attach — not vanity engagement metrics.</p></div></div><div class="why-stack-item reveal"><div class="ws-num">02</div><div><h4>Built for Seasonal Peaks</h4><p>Systems hold up when demand spikes for holidays, events and weather-driven surges.</p></div></div><div class="why-stack-item reveal"><div class="ws-num">03</div><div><h4>Integrates With GDS / PMS Stacks</h4><p>We connect into booking engines, PMS and CRM instead of forcing a rip-and-replace.</p></div></div><div class="why-stack-item reveal"><div class="ws-num">04</div><div><h4>Guest Ops, Not Just Marketing</h4><p>The same team ships the guest assistant and the ops tools front-desk teams actually use.</p></div></div>
     </div>
     <div style="margin-top:24px;">
-      <div class="eyebrow" style="margin-bottom:10px;">Flexible Delivery</div>
-      <div class="delivery-modes">
+<div class="delivery-modes">
         <span class="mode-pill">Dedicated Teams</span>
         <span class="mode-pill">Staff Augmentation</span>
         <span class="mode-pill">Pilot-to-Rollout Projects</span>
@@ -531,13 +509,12 @@
 <section>
   <div class="wrap">
     <div class="section-head">
-      <div class="eyebrow">Featured Case Studies</div>
       <h2>Outcomes, not just deliverables</h2>
       <p><em>Illustrative case studies — to be replaced with verified client results.</em></p>
     </div>
 
     <div class="case-featured reveal">
-      <div class="tile-media"><img src="https://images.pexels.com/photos/7109291/pexels-photo-7109291.jpeg?auto=compress&cs=tinysrgb&w=1400&h=900&dpr=1" alt="Reporting cycle cut from 3 weeks to 2 days"></div>
+      <div class="tile-media"><img src="https://images.pexels.com/photos/669610/pexels-photo-669610.jpeg?auto=compress&cs=tinysrgb&w=1400&h=900&dpr=1" alt="Reporting cycle cut from 3 weeks to 2 days"></div>
       <div class="case-featured-content">
         <div class="industry-tag">Industry · Online Travel</div>
         <h3>Reporting Cycle Cut From 3 Weeks to 2 Days</h3>
@@ -555,7 +532,7 @@
 
     <div class="case-grid-v2">
       <div class="case-card-v2 reveal">
-        <div class="tile-media"><img src="https://images.pexels.com/photos/6331237/pexels-photo-6331237.jpeg?auto=compress&cs=tinysrgb&w=800&h=700&dpr=1" alt="Personalized recommendation engine for a fashion e-commerce brand"></div>
+        <div class="tile-media"><img src="https://images.pexels.com/photos/230544/pexels-photo-230544.jpeg?auto=compress&cs=tinysrgb&w=800&h=700&dpr=1" alt="Personalized recommendation engine for a fashion e-commerce brand"></div>
         <div class="case-body-v2">
           <div class="industry-tag">Industry · Hospitality</div>
           <h4>Personalized Recommendation Engine for a Fashion Brand</h4>
@@ -570,7 +547,7 @@
         </div>
       </div>
       <div class="case-card-v2 reveal">
-        <div class="tile-media"><img src="https://images.pexels.com/photos/34207359/pexels-photo-34207359.jpeg?auto=compress&cs=tinysrgb&w=800&h=700&dpr=1" alt="Shelf monitoring rollout across 40 stores"></div>
+        <div class="tile-media"><img src="https://images.pexels.com/photos/8294606/pexels-photo-8294606.jpeg?auto=compress&cs=tinysrgb&w=800&h=700&dpr=1" alt="Shelf monitoring rollout across 40 stores"></div>
         <div class="case-body-v2">
           <div class="industry-tag">Industry · Tours &amp; Experiences</div>
           <h4>Shelf Monitoring Rollout Across 40 Stores</h4>
@@ -595,7 +572,7 @@
     </div>
 
     <a href="data-bi.html" class="related-featured reveal">
-      <div class="related-photo photo"><img src="https://images.pexels.com/photos/12969403/pexels-photo-12969403.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&dpr=1" alt="Data & BI"></div>
+      <div class="related-photo photo"><img src="https://images.pexels.com/photos/590022/pexels-photo-590022.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&dpr=1" alt="Data & BI"></div>
       <div class="related-body">
         <h4>Data &amp; BI</h4>
         <p>Pipelines and dashboards that turn booking, occupancy and margin data into decisions your team actually uses.</p>
@@ -621,9 +598,9 @@
 <section id="contact" style="padding-top:0;">
   <div class="cta-banner">
     <div class="cta-banner-inner">
-      <h2>Ready to turn browse traffic into confirmed bookings?</h2>
+      <h2>Turn browse traffic into confirmed bookings</h2>
       <p>Whether it's trip planning assistants or yield systems, our engineers help travel teams ship AI that guests actually use.</p>
-      <a href="mailto:hello@axtralabs.com" class="btn btn-inv">Book a Travel Discovery Call <span>→</span></a>
+      <a href="contact.html" class="btn btn-inv">Book a Travel Discovery Call <span>→</span></a>
     </div>
   </div>
 </section>
@@ -632,9 +609,9 @@
   <div class="wrap">
     <div class="footer-grid">
       <div class="footer-col">
-        <div class="logo" style="margin-bottom:16px;">Axtra<span>Labs</span></div>
+        <a href="index.html" class="logo logo--footer" aria-label="Axtra Labs" style="margin-bottom:16px;display:inline-block;"><img class="logo-img logo-img--light" src="assets/img/axtra-logo-white.png" alt="Axtra Labs" width="148" height="14"></a>
         <p style="font-size:15.5px;color:var(--slate);margin-bottom:18px;">AI-augmented software engineering from Vietnam.</p>
-        <div class="social-row"><div class="social-dot">in</div><div class="social-dot">X</div><div class="social-dot">f</div></div>
+        <div class="social-row"><a class="social-dot" href="https://www.linkedin.com/company/axtralabs/" target="_blank" rel="noopener noreferrer" aria-label="Axtra Labs on LinkedIn">in</a><div class="social-dot">X</div><div class="social-dot">f</div></div>
       </div>
       <div class="footer-col">
         <h5>Services</h5>
@@ -645,9 +622,34 @@
         <a href="devops.html"><span>DevOps</span></a>
         <a href="ai-software-development.html"><span>AI-Software Development</span></a>
       </div>
-      <div class="footer-col"><h5>Industries</h5><a href="manufacturing.html"><span>Manufacturing</span></a><a href="retail.html"><span>Retail &amp; E-commerce</span></a><a href="travel.html"><span>Travel</span></a><a href="home-services.html"><span>Home Services</span></a><span>Fintech</span><span>+ 3 more</span></div>
-      <div class="footer-col"><h5>Company</h5><span>About</span><span>Case Studies</span><span>Insights</span><span>Careers</span></div>
-      <div class="footer-col"><h5>Contact</h5><span>Contact Us</span><span>hello@axtralabs.com</span><span>Hanoi, Vietnam</span></div>
+      <div class="footer-col">
+        <h5>Industries</h5>
+        <a href="manufacturing.html"><span>Manufacturing</span></a>
+        <a href="retail.html"><span>Retail &amp; E-commerce</span></a>
+        <a href="travel.html"><span>Travel</span></a>
+        <a href="home-services.html"><span>Home Services</span></a>
+        <a href="fintech.html"><span>Fintech</span></a>
+        <a href="agriculture.html"><span>Agriculture</span></a>
+        <a href="logistics.html"><span>Logistics</span></a>
+        <a href="healthcare.html"><span>Healthcare</span></a>
+      </div>
+      <div class="footer-col">
+        <h5>AI Agent Solution</h5>
+        <a href="voice-ai-agent.html"><span>Voice AI Agent</span></a>
+        <a href="document-knowledge-ai-agent.html"><span>Document &amp; Knowledge</span></a>
+        <a href="workflow-ai-agent.html"><span>Workflow AI Agent</span></a>
+        <a href="sales-ai-agent.html"><span>Sales AI Agent</span></a>
+        <a href="multi-agent-system.html"><span>Multi Agent System</span></a>
+      </div>
+      <div class="footer-col">
+        <h5>Company</h5>
+        <a href="about.html"><span>About Us</span></a>
+        <a href="insights.html"><span>Insights</span></a>
+        <a href="careers.html"><span>Careers</span></a>
+        <a href="our-rd.html"><span>Our R&amp;D</span></a>
+        <a href="case-study.html"><span>Case Studies</span></a>
+        <a href="contact.html"><span>Contact</span></a>
+      </div>
     </div>
     <div class="footer-bottom">
       <div>© 2026 Axtra Labs. All rights reserved.</div>
@@ -656,6 +658,6 @@
   </div>
 </footer>
 
-<script src="assets/js/site.js"></script>
+<script src="assets/js/site.js?v=25"></script>
 </body>
 </html>

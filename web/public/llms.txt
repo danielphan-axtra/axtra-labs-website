@@ -1,0 +1,44 @@
+# Axtra Labs
+> AI-augmented software engineering from Vietnam. Gen AI, data, robotics, and DevOps teams that ship production systems.
+
+- Site: https://axtralabs.com
+- Contact: contact@axtralabs.com
+- LinkedIn: https://www.linkedin.com/company/axtralabs/
+- Full text for AI agents: https://axtralabs.com/llms-full.txt
+- Sitemap: https://axtralabs.com/sitemap.xml
+
+## Services
+- [AI Services](https://axtralabs.com/ai-services): Gen AI apps, agents, RAG pipelines, LLM fine-tuning
+- [Data & BI](https://axtralabs.com/data-bi): Pipelines, warehouses, dashboards, decision intelligence
+- [Embedded Software](https://axtralabs.com/embedded-software): Firmware, RTOS, embedded Linux, connected devices
+- [AI for Robotics](https://axtralabs.com/ai-robotics): Perception, navigation, edge inference
+- [DevOps](https://axtralabs.com/devops): CI/CD, Kubernetes, MLOps
+- [AI-Software Development](https://axtralabs.com/ai-software-development): Full-stack AI-native product teams
+
+## AI Agent Solutions
+- [Voice AI Agent](https://axtralabs.com/voice-ai-agent)
+- [Document & Knowledge AI Agent](https://axtralabs.com/document-knowledge-ai-agent)
+- [Workflow AI Agent](https://axtralabs.com/workflow-ai-agent)
+- [Sales AI Agent](https://axtralabs.com/sales-ai-agent)
+- [Multi Agent System](https://axtralabs.com/multi-agent-system)
+
+## Industries
+- [Manufacturing](https://axtralabs.com/manufacturing)
+- [Retail](https://axtralabs.com/retail)
+- [Travel](https://axtralabs.com/travel)
+- [Home Services](https://axtralabs.com/home-services)
+- [Fintech](https://axtralabs.com/fintech)
+- [Agriculture](https://axtralabs.com/agriculture)
+- [Logistics](https://axtralabs.com/logistics)
+- [Healthcare](https://axtralabs.com/healthcare)
+
+## Company
+- [About](https://axtralabs.com/about)
+- [Insights](https://axtralabs.com/insights)
+- [Careers](https://axtralabs.com/careers)
+- [Our R&D](https://axtralabs.com/our-rd)
+- [Case Studies](https://axtralabs.com/case-study)
+- [Contact](https://axtralabs.com/contact)
+
+## Optional
+- [llms-full.txt](https://axtralabs.com/llms-full.txt): Longer company summary for AI agents

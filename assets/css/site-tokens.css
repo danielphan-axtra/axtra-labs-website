@@ -1,0 +1,242 @@
+/* Axtra Labs — shared design tokens + sitewide chrome (footer, CTA) */
+
+:root {
+  /* Navy + white + slate; orange = sole accent; purple = premium bands only */
+  --ink: #071428;
+  --navy: #0B2A4A;
+  --navy-mid: #153A63;
+  --navy-dark: #06101F;
+  --slate: #5A6B82;
+  --slate-light: #8FA6C4;
+  --slate-muted: #C7D2E3;
+  --purple-deep: #3A1560;
+  --purple-mid: #241845;
+  --purple-glow: rgba(147, 88, 210, 0.35);
+  --ochre: #FF5A00;
+  --ochre-dark: #E04A00;
+  --accent: #FF5A00;
+  --accent-bright: #FF7A3D;
+  --accent-soft: #FFE8DE;
+  /* legacy aliases used in inline page styles */
+  --pink: var(--accent);
+  --purple: var(--purple-deep);
+  --paper: #FFFFFF;
+  --paper-soft: #E8EDF5;
+  --slate-bg: #DCE4EE;
+  --line: #D7E0EB;
+  --white: #FFFFFF;
+  --radius: 4px;
+}
+
+/* ── CTA banner (premium purple/navy + orange accent strip) ── */
+.cta-banner {
+  background: linear-gradient(118deg, var(--purple-mid) 0%, var(--navy) 38%, var(--navy-dark) 100%);
+  color: #fff;
+  width: 100vw;
+  margin-left: calc(50% - 50vw);
+  margin-right: calc(50% - 50vw);
+  padding: 64px 32px;
+  position: relative;
+  overflow: hidden;
+  border-top: 4px solid var(--accent);
+}
+
+.cta-banner::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse 60% 120% at 0% 50%, var(--purple-glow) 0%, transparent 55%);
+  pointer-events: none;
+}
+
+.cta-banner-inner {
+  max-width: 900px;
+  margin: 0 auto;
+  width: 100%;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+}
+
+.cta-banner h2 {
+  color: #fff;
+  font-size: clamp(28px, 3.2vw, 36px);
+  margin-bottom: 14px;
+  text-wrap: balance;
+  font-weight: 800;
+}
+
+.cta-banner p {
+  color: var(--slate-muted);
+  font-size: 17.5px;
+  font-weight: 500;
+  margin-bottom: 26px;
+  max-width: 560px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Homepage split layout */
+.cta-banner--split .cta-banner-inner {
+  max-width: 1240px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 26px;
+  text-align: left;
+}
+
+.cta-banner--split h2 {
+  font-size: clamp(28px, 3.2vw, 40px);
+  max-width: 520px;
+  font-weight: 900;
+  margin-bottom: 0;
+}
+
+.cta-right {
+  display: flex;
+  align-items: center;
+  gap: 22px;
+  flex-wrap: wrap;
+}
+
+.cta-right p {
+  color: var(--slate-muted);
+  font-size: 16px;
+  max-width: 280px;
+  font-weight: 400;
+  margin-bottom: 0;
+}
+
+.other-services {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+  margin-top: 22px;
+}
+
+.other-pill {
+  font-family: 'IBM Plex Mono', ui-monospace, monospace;
+  font-size: 15px;
+  padding: 8px 14px;
+  border-radius: 999px;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  color: var(--slate-muted);
+  transition: all 0.2s ease;
+}
+
+.other-pill:hover {
+  border-color: #fff;
+  background: #fff;
+  color: var(--navy);
+}
+
+/* ── Footer (navy dark, white text, orange social hover) ── */
+footer {
+  padding: 52px 0 0;
+  background: var(--navy-dark);
+  margin-top: 0;
+  color: #fff;
+}
+
+footer .wrap {
+  padding-top: 8px;
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr 1fr 1fr 1fr;
+  gap: 26px;
+  padding-bottom: 36px;
+}
+
+.footer-col h5 {
+  font-family: 'IBM Plex Mono', ui-monospace, monospace;
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--slate-light);
+  margin-bottom: 16px;
+}
+
+.footer-col a,
+.footer-col span {
+  display: block;
+  font-size: 16px;
+  color: rgba(255, 255, 255, 0.88);
+  margin-bottom: 11px;
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+
+.footer-col span:hover,
+.footer-col a:hover {
+  color: #fff;
+}
+
+.footer-bottom {
+  border-top: 1px solid rgba(255, 255, 255, 0.12);
+  padding: 22px 0;
+  display: flex;
+  justify-content: space-between;
+  font-size: 15px;
+  color: var(--slate-light);
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.social-row {
+  display: flex;
+  gap: 10px;
+}
+
+.social-dot,
+.footer-col a.social-dot,
+.footer-col .social-dot {
+  width: 30px;
+  height: 30px;
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  border-radius: 50%;
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px !important;
+  line-height: 1 !important;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  color: var(--slate-light);
+  text-decoration: none;
+  margin: 0 !important;
+  padding: 0;
+  box-sizing: border-box;
+  flex-shrink: 0;
+  transition: all 0.2s ease;
+  cursor: pointer;
+}
+
+.social-dot:hover,
+.footer-col a.social-dot:hover {
+  background: var(--accent);
+  color: #fff !important;
+  border-color: var(--accent);
+}
+
+footer .logo .logo-img--dark {
+  display: none !important;
+}
+
+footer .logo .logo-img--light {
+  display: block !important;
+}
+
+footer p {
+  color: var(--slate-muted) !important;
+}
+
+@media (max-width: 860px) {
+  .footer-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}

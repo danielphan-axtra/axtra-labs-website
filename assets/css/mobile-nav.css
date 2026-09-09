@@ -1,0 +1,258 @@
+/* Mobile drawer — loaded LAST so it wins over per-page inline header CSS.
+   Drawer is reparented to <body> in site.js to escape header backdrop-filter. */
+
+@media (max-width: 900px) {
+  body.nav-open {
+    overflow: hidden !important;
+  }
+
+  body.nav-open header,
+  body.nav-open header.scrolled,
+  body.nav-open header.header-solid,
+  body.nav-open header.header-light,
+  body.nav-open header.header-light.scrolled,
+  body.nav-open header.header-solid.scrolled {
+    position: fixed !important;
+    top: 0 !important;
+    left: 0 !important;
+    right: 0 !important;
+    bottom: auto !important;
+    width: 100% !important;
+    height: auto !important;
+    background: var(--paper, #fff) !important;
+    border-bottom: 1px solid var(--line, #D7E0EB) !important;
+    box-shadow: none !important;
+    backdrop-filter: none !important;
+    -webkit-backdrop-filter: none !important;
+    filter: none !important;
+    transform: none !important;
+    overflow: visible !important;
+    /* Must sit ABOVE the body-ported drawer so logo + X stay visible */
+    z-index: 10002 !important;
+  }
+
+  body.nav-open header .nav {
+    max-width: none !important;
+    width: 100% !important;
+    background: transparent !important;
+  }
+
+  body.nav-open header .logo .logo-img--light,
+  body.nav-open header:not(.scrolled) .logo .logo-img--light,
+  body.nav-open header:not(.header-solid) .logo .logo-img--light {
+    display: none !important;
+  }
+
+  body.nav-open header .logo .logo-img--dark,
+  body.nav-open header:not(.scrolled) .logo .logo-img--dark,
+  body.nav-open header:not(.header-solid) .logo .logo-img--dark {
+    display: block !important;
+  }
+
+  body.nav-open header .logo,
+  body.nav-open .nav-toggle {
+    position: relative !important;
+    z-index: 10003 !important;
+  }
+
+  body.nav-open .nav-toggle {
+    border-color: transparent !important;
+    display: flex !important;
+  }
+
+  body.nav-open .nav-toggle span,
+  body.nav-open header .nav-toggle span,
+  body.nav-open header.scrolled .nav-toggle span,
+  body.nav-open header:not(.scrolled) .nav-toggle span {
+    background: var(--ink, #071428) !important;
+  }
+
+  /* Drawer panel (may be direct child of body) — below header chrome */
+  body.nav-open .navlinks,
+  body.nav-open > .navlinks {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: stretch !important;
+    justify-content: flex-start !important;
+    position: fixed !important;
+    inset: 0 !important;
+    width: 100vw !important;
+    max-width: none !important;
+    height: 100% !important;
+    min-height: 100dvh !important;
+    margin: 0 !important;
+    gap: 0 !important;
+    padding: 92px 24px 48px !important;
+    z-index: 10001 !important;
+    background: var(--paper, #fff) !important;
+    color: var(--ink, #071428) !important;
+    overflow-x: hidden !important;
+    overflow-y: auto !important;
+    -webkit-overflow-scrolling: touch;
+    backdrop-filter: none !important;
+    -webkit-backdrop-filter: none !important;
+    transform: none !important;
+    filter: none !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    pointer-events: auto !important;
+  }
+
+  body.nav-open .navlinks > a {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: flex-start !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
+    margin: 0 !important;
+    padding: 18px 0 !important;
+    height: auto !important;
+    color: var(--ink, #071428) !important;
+    font-size: 24px !important;
+    font-weight: 700 !important;
+    letter-spacing: -0.02em !important;
+    line-height: 1.2 !important;
+    text-align: left !important;
+  }
+
+  body.nav-open .navlinks > a::after {
+    display: none !important;
+  }
+
+  body.nav-open .nav-item {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: stretch !important;
+    width: 100% !important;
+    height: auto !important;
+    border-bottom: none !important;
+    position: relative !important;
+  }
+
+  body.nav-open .nav-item > span {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: flex-start !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
+    margin: 0 !important;
+    padding: 18px 28px 18px 0 !important;
+    height: auto !important;
+    color: var(--ink, #071428) !important;
+    font-size: 24px !important;
+    font-weight: 700 !important;
+    letter-spacing: -0.02em !important;
+    line-height: 1.2 !important;
+    text-align: left !important;
+    position: relative !important;
+    cursor: pointer !important;
+  }
+
+  body.nav-open .nav-item > span::after {
+    display: none !important;
+  }
+
+  /* Solid triangle caret on the right */
+  body.nav-open .nav-item > span .caret,
+  body.nav-open .caret {
+    display: block !important;
+    position: absolute !important;
+    right: 0 !important;
+    left: auto !important;
+    top: 50% !important;
+    width: 0 !important;
+    height: 0 !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    opacity: 1 !important;
+    color: transparent !important;
+    font-size: 0 !important;
+    line-height: 0 !important;
+    overflow: hidden !important;
+    text-indent: -999px !important;
+    border-style: solid !important;
+    border-width: 8px 7px 0 7px !important;
+    border-color: var(--navy, #0B2A4A) transparent transparent transparent !important;
+    background: none !important;
+    box-shadow: none !important;
+    transform: translateY(-60%) !important;
+    transition: transform 0.2s ease !important;
+  }
+
+  body.nav-open .caret::before,
+  body.nav-open .caret::after {
+    content: none !important;
+    display: none !important;
+  }
+
+  body.nav-open .nav-item.open > span .caret,
+  body.nav-open .nav-item.open .caret {
+    transform: translateY(-40%) rotate(180deg) !important;
+  }
+
+  body.nav-open .dropdown,
+  body.nav-open .dropdown.wide,
+  body.nav-open .dropdown.grid4,
+  body.nav-open .dropdown.company {
+    display: none !important;
+    position: static !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 0 !important;
+    padding: 0 0 10px !important;
+    background: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+    transform: none !important;
+    left: auto !important;
+    right: auto !important;
+    gap: 0 !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+    pointer-events: auto !important;
+    grid-template-columns: 1fr !important;
+  }
+
+  body.nav-open .nav-item.open > .dropdown,
+  body.nav-open .nav-item.open > .dropdown.wide,
+  body.nav-open .nav-item.open > .dropdown.grid4,
+  body.nav-open .nav-item.open > .dropdown.company {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: stretch !important;
+  }
+
+  body.nav-open .dd-link {
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: center !important;
+    justify-content: flex-start !important;
+    width: 100% !important;
+    gap: 0 !important;
+    padding: 11px 0 11px 2px !important;
+    border-radius: 0 !important;
+    border: none !important;
+    background: transparent !important;
+    text-align: left !important;
+  }
+
+  body.nav-open .dd-link .dd-title {
+    color: var(--navy, #0B2A4A) !important;
+    font-size: 14px !important;
+    font-weight: 700 !important;
+    letter-spacing: 0.06em !important;
+    text-transform: uppercase !important;
+    line-height: 1.35 !important;
+    text-align: left !important;
+  }
+
+  body.nav-open .dd-link .dd-sub,
+  body.nav-open .dd-foot {
+    display: none !important;
+  }
+
+  body.nav-open .navlinks .nav-contact-link,
+  body.nav-open .navlinks a.btn {
+    display: none !important;
+  }
+}

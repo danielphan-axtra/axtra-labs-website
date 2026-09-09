@@ -1,0 +1,99 @@
+<section class="csd">
+  <div class="wrap">
+    <div class="breadcrumb"><a href="/">Home</a> / <a href="/case-study">Case Studies</a> / Data Engineering and Analytics for Insurance Risk Assessment</div>
+    <div class="csd-hero">
+      <div class="csd-meta"><span>Fintech</span><span>Data &amp; BI</span></div>
+      <h1>Data Engineering and Analytics for Insurance Risk Assessment</h1>
+      <p class="csd-sub">Pipelines and analytics for insurance risk scoring and fraud detection.</p>
+      <div class="csd-related"><a href="/big-data-analytics-business-intelligence">Big Data Analytics for Business Intelligence</a><a href="/ai-powered-rfp-tender-response-platform">AI-Powered RFP &amp; Tender Response Platform</a><a href="/fintech">Fintech industry</a></div>
+    </div>
+    <div class="csd-hero-media">
+      <img src="https://images.pexels.com/photos/590022/pexels-photo-590022.jpeg?auto=compress&cs=tinysrgb&w=1600" alt="Data Engineering and Analytics for Insurance Risk Assessment" loading="eager">
+    </div>
+
+    <div class="csd-layout">
+      <div class="csd-main">
+        <h2>Key Details</h2>
+        <table class="csd-keys">
+          <tr><th>Challenge</th><td>Risk and fraud teams waited on manual extracts; models could not see fresh features.</td></tr>
+          <tr><th>Solution</th><td>A warehouse, feature jobs and dashboards for risk scoring and investigation queues.</td></tr>
+          <tr><th>Technologies</th><td>dbt, Snowflake, Python, Power BI</td></tr>
+        </table>
+
+        <div class="csd-tech">
+          <h2>Technologies used</h2>
+          <div class="csd-tech-list">
+          <span class="tech-pill has-icon"><img class="tp-icon" src="https://cdn.jsdelivr.net/npm/simple-icons@11.14.0/icons/dbt.svg" alt="" width="18" height="18" loading="lazy">dbt</span>
+          <span class="tech-pill has-icon"><img class="tp-icon" src="https://cdn.jsdelivr.net/npm/simple-icons@11.14.0/icons/snowflake.svg" alt="" width="18" height="18" loading="lazy">Snowflake</span>
+          <span class="tech-pill has-icon"><img class="tp-icon" src="https://cdn.jsdelivr.net/npm/simple-icons@11.14.0/icons/python.svg" alt="" width="18" height="18" loading="lazy">Python</span>
+          <span class="tech-pill has-icon"><img class="tp-icon" src="https://cdn.jsdelivr.net/npm/simple-icons@11.14.0/icons/powerbi.svg" alt="" width="18" height="18" loading="lazy">Power BI</span>
+          <span class="tech-pill has-icon"><img class="tp-icon" src="https://cdn.jsdelivr.net/npm/simple-icons@11.14.0/icons/apacheairflow.svg" alt="" width="18" height="18" loading="lazy">Apache Airflow</span>
+          </div>
+        </div>
+
+        <div class="csd-body">
+          <h2>Client background</h2>
+          <p>An insurance carrier’s risk and fraud teams depended on weekly spreadsheet extracts. Models trained on stale features, investigators chased cases without a shared queue, and audits asked for lineage nobody could produce.</p>
+
+          <h2>Key challenges</h2>
+          <ul><li>Manual extracts delayed risk refresh and created untracked copies of sensitive data.</li><li>Feature definitions differed between data science notebooks and production jobs.</li><li>Fraud investigators lacked a prioritized queue tied to model scores.</li><li>No reliable audit trail from source system to dashboard metric.</li></ul>
+
+          <div class="csd-gallery">
+            <figure>
+              <img src="https://images.pexels.com/photos/669610/pexels-photo-669610.jpeg?auto=compress&cs=tinysrgb&w=1000" alt="Risk dashboards refreshed daily for investigators" loading="lazy">
+              <figcaption>Risk dashboards refreshed daily for investigators</figcaption>
+            </figure>
+            <figure>
+              <img src="https://images.pexels.com/photos/325229/pexels-photo-325229.jpeg?auto=compress&cs=tinysrgb&w=1000" alt="Feature jobs feeding scoring models" loading="lazy">
+              <figcaption>Feature jobs feeding scoring models</figcaption>
+            </figure>
+          </div>
+
+          <h2>What we built</h2>
+          <ul><li>Snowflake warehouse with dbt models for claims, policy and behavioral features.</li><li>Scheduled feature jobs with tests and documentation for model consumers.</li><li>Power BI risk and fraud dashboards with investigation queues.</li><li>Lineage and access patterns designed for audit and least-privilege use.</li></ul>
+          <p class="team-note"><strong>Project team:</strong> 8 engineers across AI/ML, backend and domain specialists — delivery over 18 weeks.</p>
+
+          <h2>How we delivered</h2>
+          <div class="csd-approach"><div class="csd-step"><div class="sn">01</div><h4>Map</h4><p>Traced source systems, SLAs and which metrics risk leadership actually used.</p></div><div class="csd-step"><div class="sn">02</div><h4>Model</h4><p>Built a star schema and feature contracts shared by analytics and ML.</p></div><div class="csd-step"><div class="sn">03</div><h4>Pipeline</h4><p>Automated daily refresh with tests for freshness and null rates.</p></div><div class="csd-step"><div class="sn">04</div><h4>Enable</h4><p>Trained investigators and risk ops on the new dashboards and queues.</p></div></div>
+
+          <h2>Business impact</h2>
+          <div class="csd-impact"><div><strong>Daily</strong>Risk refresh</div><div><strong>Fewer</strong>Manual extracts</div><div><strong>Audit</strong>Trail on features</div></div>
+
+          <h2>Related services</h2>
+          <div class="csd-services"><a href="/data-bi">Data &amp; BI →</a><a href="/ai-services">AI Services →</a></div>
+        </div>
+      </div>
+
+      <aside class="csd-side">
+        <div class="csd-side-card">
+          <h3>At a glance</h3>
+          <dl>
+            <dt>Industry</dt><dd>Fintech</dd>
+            <dt>Expertise</dt><dd>Data &amp; BI</dd>
+            <dt>Duration</dt><dd>18 weeks</dd>
+            <dt>Team</dt><dd>8 engineers</dd>
+          </dl>
+        </div>
+        <div class="csd-side-card">
+          <h3>Stack highlights</h3>
+          <div class="csd-tech-list" style="gap:8px;">
+          <span class="tech-pill has-icon"><img class="tp-icon" src="https://cdn.jsdelivr.net/npm/simple-icons@11.14.0/icons/dbt.svg" alt="" width="18" height="18" loading="lazy">dbt</span>
+          <span class="tech-pill has-icon"><img class="tp-icon" src="https://cdn.jsdelivr.net/npm/simple-icons@11.14.0/icons/snowflake.svg" alt="" width="18" height="18" loading="lazy">Snowflake</span>
+          <span class="tech-pill has-icon"><img class="tp-icon" src="https://cdn.jsdelivr.net/npm/simple-icons@11.14.0/icons/python.svg" alt="" width="18" height="18" loading="lazy">Python</span>
+          <span class="tech-pill has-icon"><img class="tp-icon" src="https://cdn.jsdelivr.net/npm/simple-icons@11.14.0/icons/powerbi.svg" alt="" width="18" height="18" loading="lazy">Power BI</span>
+          </div>
+        </div>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<section id="contact" style="padding-top:0;">
+  <div class="cta-banner">
+    <div class="cta-banner-inner">
+      <h2>We empower businesses with AI, ML, and data solutions.</h2>
+      <p>Response within 1 business day. You will hear from an engineer, not a salesperson.</p>
+      <a href="/contact" class="btn" style="background:#fff;border-color:#fff;">Contact Us <span>→</span></a>
+    </div>
+  </div>
+</section>

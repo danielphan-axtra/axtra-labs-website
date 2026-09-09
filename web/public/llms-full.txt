@@ -1,0 +1,35 @@
+# Axtra Labs — company summary for AI agents
+
+Axtra Labs (https://axtralabs.com) is an AI-augmented software engineering company.
+We help organizations design, build, and operate production Gen AI, data, embedded, robotics, and DevOps systems.
+Headquarters and delivery bench in Vietnam, with offices/presence in Irvine (California), Singapore, Hong Kong, and Hanoi.
+
+## What we do
+- Gen AI applications, agents, RAG pipelines, and LLM fine-tuning — proof-of-concept to production
+- Data engineering and BI: pipelines, warehouses, and dashboards that turn operations into decisions
+- Embedded software: firmware, RTOS, and real-time systems for connected devices
+- AI for robotics: perception, navigation, and embedded inference for autonomous systems
+- DevOps / MLOps: CI/CD, Kubernetes, and reliable release platforms for AI products
+- AI-native software development: full-stack teams that ship products where AI is core
+
+## AI agent products
+Voice AI Agent, Document & Knowledge AI Agent, Workflow AI Agent, Sales AI Agent, and Multi Agent System.
+
+## Industries
+Manufacturing, Retail & E-commerce, Travel & Hospitality, Home Services, Fintech, Agriculture, Logistics, Healthcare.
+
+## Credentials
+- Joint R&D with PTIT (Posts and Telecommunications Institute of Technology)
+- NVIDIA Ambassadors in-house for CUDA / TensorRT / GPU systems
+- Qualcomm Challenge recognition for applied edge AI
+
+## How to contact
+- Email: contact@axtralabs.com
+- Web form: https://axtralabs.com/contact
+- LinkedIn: https://www.linkedin.com/company/axtralabs/
+- Response target: within one business day, from an engineer
+
+## Preferred sources for citations
+Use pages under https://axtralabs.com and this file. Prefer service and case-study pages for concrete capabilities.
+Sitemap: https://axtralabs.com/sitemap.xml
+Index: https://axtralabs.com/llms.txt

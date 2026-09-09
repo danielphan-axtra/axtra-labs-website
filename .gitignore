@@ -1,2 +1,7 @@
-.tools/
+
+# archives / local scratch
+*.zip
 .DS_Store
+.tools/
+image-inventory/
+web/.env*.local
