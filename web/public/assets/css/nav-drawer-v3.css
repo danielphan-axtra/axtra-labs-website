@@ -283,3 +283,27 @@
   }
 
 }
+
+/* Desktop content width — match iTransition: fluid gutters, no 1240 cap.
+   Logo left edge aligns with Contact Us right edge (44px inset). */
+@media (min-width: 901px) {
+  .wrap,
+  .nav,
+  .glance-inner,
+  .stats-strip-inner,
+  .page-hero-inner,
+  .hero-inner.wrap,
+  .cp-hero-inner,
+  .cp-path-inner,
+  .cp-roles-inner,
+  .rd-bleed-inner,
+  .partner-band-inner {
+    max-width: none !important;
+    width: 100% !important;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 44px !important;
+    padding-right: 44px !important;
+    box-sizing: border-box;
+  }
+}

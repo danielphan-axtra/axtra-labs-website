@@ -35,7 +35,7 @@
   width: 100vw;
   margin-left: calc(50% - 50vw);
   margin-right: calc(50% - 50vw);
-  padding: 64px 32px;
+  padding: 64px 44px;
   position: relative;
   overflow: hidden;
   border-top: 4px solid var(--accent);
@@ -78,7 +78,11 @@
 
 /* Homepage split layout */
 .cta-banner--split .cta-banner-inner {
-  max-width: 1240px;
+  max-width: none;
+  width: 100%;
+  padding-left: 0;
+  padding-right: 0;
+  box-sizing: border-box;
   display: flex;
   justify-content: space-between;
   align-items: center;

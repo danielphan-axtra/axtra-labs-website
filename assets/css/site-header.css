@@ -10,8 +10,10 @@ header {
   display: flex !important;
   align-items: center !important;
   justify-content: space-between !important;
-  padding: 18px 32px !important;
-  max-width: 1240px;
+  padding: 14px 16px;
+  max-width: none;
+  width: 100%;
+  box-sizing: border-box;
   margin: 0 auto;
   overflow: visible;
   gap: 12px;
@@ -19,6 +21,10 @@ header {
 
 /* Desktop only — do not override mobile drawer display in responsive.css */
 @media (min-width: 901px) {
+  .nav {
+    padding: 18px 44px !important;
+  }
+
   header .navlinks {
     display: flex !important;
     align-items: center !important;

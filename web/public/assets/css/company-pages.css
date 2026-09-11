@@ -157,7 +157,7 @@
 .value-card p{font-size:14.5px;color:var(--slate);}
 .partner-band{background:linear-gradient(118deg, var(--purple-mid) 0%, var(--navy) 38%, var(--navy-dark) 100%);color:#fff;width:100vw;margin-left:calc(50% - 50vw);margin-right:calc(50% - 50vw);padding:56px 32px;position:relative;overflow:hidden;border-top:4px solid var(--accent);}
 .partner-band::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 60% 120% at 0% 50%, var(--purple-glow) 0%, transparent 55%);pointer-events:none;}
-.partner-band-inner{max-width:1240px;margin:0 auto;position:relative;z-index:1;}
+.partner-band-inner{max-width:none;width:100%;box-sizing:border-box;padding-left:44px;padding-right:44px;margin:0 auto;position:relative;z-index:1;}
 .partner-band h2{color:#fff;font-size:36px;margin-bottom:14px;}
 .partner-band p{color:#C7D2E3;max-width:720px;margin-bottom:28px;}
 .pb-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;}
@@ -171,7 +171,7 @@
 .cp-hero .photo{position:absolute;inset:0;border-radius:0;}
 .cp-hero .photo img{width:100%;height:100%;object-fit:cover;transform:scale(1.04);animation:cpHeroIn 1.4s ease forwards;}
 .cp-hero-overlay{position:absolute;inset:0;background:linear-gradient(105deg,rgba(6,16,31,0.88) 0%,rgba(6,16,31,0.55) 48%,rgba(6,16,31,0.35) 100%);z-index:1;}
-.cp-hero-inner{position:relative;z-index:2;max-width:1240px;margin:0 auto;padding:0 32px;width:100%;}
+.cp-hero-inner{position:relative;z-index:2;max-width:none;width:100%;box-sizing:border-box;margin:0 auto;padding:0 44px;}
 .cp-hero .eyebrow{color:rgba(255,255,255,0.75);}
 .cp-hero .eyebrow::before{background:var(--ochre);}
 .cp-hero h1{font-size:clamp(48px,8vw,92px);color:#fff;line-height:0.94;letter-spacing:-0.045em;margin:12px 0 18px;max-width:12ch;}
@@ -194,7 +194,7 @@
 /* Career path — horizontal stage rail */
 .cp-path{padding:56px 0 96px;background:var(--navy-dark);color:#fff;width:100vw;margin-left:calc(50% - 50vw);margin-right:calc(50% - 50vw);position:relative;overflow:hidden;}
 .cp-path::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 50% 80% at 85% 20%, var(--purple-glow) 0%, transparent 55%);pointer-events:none;}
-.cp-path-inner{max-width:1240px;margin:0 auto;padding:0 32px;position:relative;z-index:1;}
+.cp-path-inner{max-width:none;width:100%;box-sizing:border-box;margin:0 auto;padding:0 44px;position:relative;z-index:1;}
 .cp-path-head{display:grid;grid-template-columns:1fr 1fr;gap:24px;align-items:end;margin-bottom:48px;}
 .cp-path-head h2{font-size:clamp(36px,4.5vw,56px);color:#fff;letter-spacing:-0.035em;margin:0;max-width:10ch;line-height:0.98;}
 .cp-path-head p{color:var(--slate-light);font-size:16px;margin:0;max-width:34ch;line-height:1.5;}
@@ -221,7 +221,7 @@
 /* Roles — dark board */
 .cp-roles{padding:88px 0;background:linear-gradient(135deg,var(--purple-mid) 0%,var(--navy) 45%,var(--navy-dark) 100%);color:#fff;width:100vw;margin-left:calc(50% - 50vw);margin-right:calc(50% - 50vw);position:relative;overflow:hidden;border-top:4px solid var(--accent);}
 .cp-roles::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 55% 90% at 10% 40%, var(--purple-glow) 0%, transparent 55%);pointer-events:none;}
-.cp-roles-inner{max-width:1240px;margin:0 auto;padding:0 32px;position:relative;z-index:1;}
+.cp-roles-inner{max-width:none;width:100%;box-sizing:border-box;margin:0 auto;padding:0 44px;position:relative;z-index:1;}
 .cp-roles-head{margin-bottom:40px;max-width:40ch;}
 .cp-roles-head h2{color:#fff;font-size:clamp(36px,4.5vw,56px);letter-spacing:-0.035em;margin:0 0 14px;line-height:0.98;}
 .cp-roles-head p{color:var(--slate-muted);font-size:16px;margin:0;line-height:1.5;}
@@ -241,7 +241,7 @@
 .rd-bleed .photo{position:absolute;inset:0;}
 .rd-bleed .photo img{width:100%;height:100%;object-fit:cover;object-position:center 40%;}
 .rd-bleed-overlay{position:absolute;inset:0;background:linear-gradient(180deg,rgba(6,16,31,0.25) 0%,rgba(6,16,31,0.78) 70%,rgba(6,16,31,0.94) 100%);}
-.rd-bleed-inner{position:relative;z-index:2;max-width:1240px;margin:0 auto;padding:0 32px;width:100%;}
+.rd-bleed-inner{position:relative;z-index:2;max-width:none;width:100%;box-sizing:border-box;margin:0 auto;padding:0 44px;}
 .rd-bleed h1{font-size:clamp(48px,8vw,92px);color:#fff;letter-spacing:-0.045em;line-height:0.94;margin:10px 0 16px;max-width:10ch;}
 .rd-bleed p{font-size:clamp(17px,1.6vw,20px);color:rgba(255,255,255,0.88);max-width:36ch;margin:0;line-height:1.45;}
 
