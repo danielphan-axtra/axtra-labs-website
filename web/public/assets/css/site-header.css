@@ -22,7 +22,13 @@ header {
 /* Desktop only — do not override mobile drawer display in responsive.css */
 @media (min-width: 901px) {
   .nav {
-    padding: 18px 44px !important;
+    padding-top: 18px !important;
+    padding-bottom: 18px !important;
+  }
+
+  body.homepage .nav {
+    padding-left: 44px !important;
+    padding-right: 44px !important;
   }
 
   header .navlinks {

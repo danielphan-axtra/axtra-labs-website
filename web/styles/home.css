@@ -1,3 +1,4 @@
+body.homepage .wrap{max-width:none;width:100%;padding:0 44px;box-sizing:border-box;}
 /* Synced from index.html page styles */
 :root{
     --font:"Archivo","Helvetica Neue",Helvetica,Arial,sans-serif;
@@ -9,7 +10,7 @@ h1,h2,h3,h4{font-family:var(--font);font-weight:900;letter-spacing:-0.01em;color
 .mono{font-family:var(--font-mono);}
 a{text-decoration:none;color:inherit;}
 img{max-width:100%;display:block;}
-.wrap{max-width:none;width:100%;margin:0 auto;padding:0 44px;box-sizing:border-box;}
+.wrap{max-width:1216px;width:min(1216px,calc(100% - 64px));margin:0 auto;padding:0;box-sizing:border-box;}
 .eyebrow{font-family:var(--font-mono);font-size:13px;letter-spacing:0.08em;text-transform:uppercase;color:var(--accent);display:flex;align-items:center;gap:8px;margin-bottom:14px;font-weight:500;}
 .eyebrow::before{content:'';width:14px;height:1px;background:var(--accent);}
 .photo{position:relative;overflow:hidden;background:var(--ink);border-radius:var(--radius);}

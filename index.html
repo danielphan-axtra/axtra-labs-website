@@ -22,7 +22,7 @@
   .mono{font-family:var(--font-mono);}
   a{text-decoration:none;color:inherit;}
   img{max-width:100%;display:block;}
-  .wrap{max-width:none;width:100%;margin:0 auto;padding:0 44px;box-sizing:border-box;}
+  .wrap{max-width:1216px;width:min(1216px,calc(100% - 64px));margin:0 auto;padding:0;box-sizing:border-box;}
   .eyebrow{font-family:var(--font-mono);font-size:13px;letter-spacing:0.08em;text-transform:uppercase;color:var(--accent);display:flex;align-items:center;gap:8px;margin-bottom:14px;font-weight:500;}
   .eyebrow::before{content:'';width:14px;height:1px;background:var(--accent);}
 
@@ -272,7 +272,7 @@
 </style>
 <link rel="stylesheet" href="assets/css/site-tokens.css?v=4">
 <link rel="stylesheet" href="assets/css/responsive.css?v=45">
-<link rel="stylesheet" href="assets/css/site-header.css?v=20">
+<link rel="stylesheet" href="assets/css/site-header.css?v=21">
 <style>
 
   /* Homepage type scale — keep larger than shared mobile defaults */
@@ -280,9 +280,9 @@
   .section-head h2{font-size:clamp(36px, 6vw, 72px);font-weight:900;}
 
 </style>
-<link rel="stylesheet" href="assets/css/nav-drawer-v3.css?v=3">
+<link rel="stylesheet" href="assets/css/nav-drawer-v3.css?v=4">
 </head>
-<body>
+<body class="homepage">
 
 <header>
   <div class="nav">

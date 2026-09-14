@@ -284,8 +284,9 @@
 
 }
 
-/* Desktop content width — match iTransition: fluid gutters, no 1240 cap.
-   Logo left edge aligns with Contact Us right edge (44px inset). */
+/* Desktop content width — match iTransition:
+   Homepage = fluid 44px gutters (wide logo→Contact Us).
+   Inner pages = capped 1216px column (narrower logo→Contact Us). */
 @media (min-width: 901px) {
   .wrap,
   .nav,
@@ -297,13 +298,32 @@
   .cp-path-inner,
   .cp-roles-inner,
   .rd-bleed-inner,
-  .partner-band-inner {
-    max-width: none !important;
-    width: 100% !important;
+  .partner-band-inner,
+  .cta-banner--split .cta-banner-inner {
+    max-width: 1216px !important;
+    width: min(1216px, calc(100% - 64px)) !important;
     margin-left: auto;
     margin-right: auto;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    box-sizing: border-box;
+  }
+
+  body.homepage .wrap,
+  body.homepage .nav,
+  body.homepage .glance-inner,
+  body.homepage .stats-strip-inner,
+  body.homepage .page-hero-inner,
+  body.homepage .hero-inner.wrap,
+  body.homepage .cp-hero-inner,
+  body.homepage .cp-path-inner,
+  body.homepage .cp-roles-inner,
+  body.homepage .rd-bleed-inner,
+  body.homepage .partner-band-inner,
+  body.homepage .cta-banner--split .cta-banner-inner {
+    max-width: none !important;
+    width: 100% !important;
     padding-left: 44px !important;
     padding-right: 44px !important;
-    box-sizing: border-box;
   }
 }

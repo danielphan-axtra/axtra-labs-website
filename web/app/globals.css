@@ -53,11 +53,17 @@ img {
 }
 
 .wrap {
+  max-width: 1216px;
+  width: min(1216px, calc(100% - 64px));
+  margin: 0 auto;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body.homepage .wrap {
   max-width: none;
   width: 100%;
-  margin: 0 auto;
   padding: 0 44px;
-  box-sizing: border-box;
 }
 
 .btn {
