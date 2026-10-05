@@ -35,8 +35,10 @@ export default function JsonLd() {
     ],
     address: OFFICES.map((o) => ({
       "@type": "PostalAddress",
+      streetAddress: o.street,
       addressLocality: o.city,
       ...(o.region ? { addressRegion: o.region } : {}),
+      ...(o.postalCode ? { postalCode: o.postalCode } : {}),
       addressCountry: o.country,
     })),
     contactPoint: [

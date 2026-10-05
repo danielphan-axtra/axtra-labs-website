@@ -35,11 +35,13 @@ export type Office = {
   city: string;
   country: string;
   region?: string;
+  street: string;
+  postalCode?: string;
 };
 
 export const OFFICES: Office[] = [
-  { city: "Irvine", region: "California", country: "US" },
-  { city: "Singapore", country: "SG" },
-  { city: "Hong Kong", country: "HK" },
-  { city: "Hanoi", country: "VN" },
+  { city: "Hanoi", region: "Cau Giay", country: "VN", street: "Viet A Tower, 9 Duy Tan Street" },
+  { city: "Singapore", country: "SG", street: "03-15 Jalan Besar Plaza, 101 Kitchener Rd" },
+  { city: "Hong Kong", region: "Kwun Tong", country: "HK", street: "King Palace Plaza, 55 King Yip Street" },
+  { city: "Irvine", region: "CA", country: "US", street: "100 Spectrum Center Drive", postalCode: "92618" },
 ];

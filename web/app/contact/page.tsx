@@ -1,17 +1,15 @@
 import type { Metadata } from "next";
-import { pageMeta } from "@/lib/seo";
+import { metaFor } from "@/lib/seo";
 import ContactForm from "@/components/ContactForm";
+import PageJsonLd from "@/components/PageJsonLd";
 import "@/styles/contact.css";
 
-export const metadata: Metadata = pageMeta({
-  title: "Contact",
-  description: "Talk to an Axtra Labs engineer about your AI, data, or robotics project. Response within one business day.",
-  path: "/contact"
-});
+export const metadata: Metadata = metaFor("contact");
 
 export default function ContactPage() {
   return (
     <>
+      <PageJsonLd slug="contact" />
       <section className="contact-page">
         <div className="wrap">
           <div className="contact-hero reveal">

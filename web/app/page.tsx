@@ -273,40 +273,40 @@ export default function HomePage() {
           <div className="tile photo-plain reveal">
             <div className="tile-media"><img src="https://images.pexels.com/photos/1181244/pexels-photo-1181244.jpeg?auto=compress&cs=tinysrgb&w=700&h=760&dpr=1" alt="Delivery team collaborating" loading="lazy" decoding="async" /></div>
           </div>
-          <div className="tile color-blue reveal">
+          <a href="/ai-services" className="tile color-blue reveal">
             <div className="tile-content">
               <div className="tile-tag">Service</div>
               <h4>AI Services</h4>
               <div className="tile-desc">Gen AI apps, agents, RAG pipelines and LLM fine-tuning, from proof-of-concept to production.</div>
             </div>
-          </div>
-          <div className="tile photo-text span2 reveal">
+          </a>
+          <a href="/chatbot-automated-customer-support" className="tile photo-text span2 reveal">
             <div className="tile-media"><img src="https://images.pexels.com/photos/346885/pexels-photo-346885.jpeg?auto=compress&cs=tinysrgb&w=1200&h=760&dpr=1" alt="Airport travel operations" loading="lazy" decoding="async" /></div>
             <div className="tile-content">
               <div className="tile-tag">Case Study</div>
-              <h4>Conversational AI trip-planning assistant</h4>
-              <div className="tile-desc">Designed and built a full-stack AI travel assistant end-to-end, from conversation flow to booking logic.</div>
+              <h4>Chatbot for Automated Customer Support</h4>
+              <div className="tile-desc">Sales and support chatbot covering FAQs, handoff and booking flows for travel operations.</div>
             </div>
-          </div>
+          </a>
 
           {/* Row 2: case study (dark navy) | photo | case study (light) | photo */}
-          <div className="tile color-navy reveal">
+          <a href="/big-data-analytics-business-intelligence" className="tile color-navy reveal">
             <div className="tile-content">
               <div className="tile-tag">Case Study</div>
-              <h4>Reporting cycle cut from 3 weeks to 2 days</h4>
-              <div className="tile-desc">Partnered with a Power BI consultancy to ship a full reporting layer for an Australian industrial supply business.</div>
+              <h4>Big Data Analytics for Business Intelligence</h4>
+              <div className="tile-desc">Predictive dashboards that shortened a reporting cycle from 3 weeks to 2 days.</div>
             </div>
-          </div>
+          </a>
           <div className="tile photo-plain reveal">
             <div className="tile-media"><img src="https://images.pexels.com/photos/669610/pexels-photo-669610.jpeg?auto=compress&cs=tinysrgb&w=700&h=760&dpr=1" alt="Business reporting dashboards" loading="lazy" decoding="async" /></div>
           </div>
-          <div className="tile color-navy reveal">
+          <a href="/ai-fraud-detection-neobank-startup" className="tile color-navy reveal">
             <div className="tile-content">
               <div className="tile-tag">Case Study</div>
-              <h4>AI-ranked catalyst intelligence for mining investors</h4>
-              <div className="tile-desc">Built a catalyst-tracking platform for TSX/TSX-V mining stocks, ranking company news by significance.</div>
+              <h4>AI Fraud Detection for a Neobank Startup</h4>
+              <div className="tile-desc">Graph and behavioral fraud scoring that cut false declines while catching account-takeover rings.</div>
             </div>
-          </div>
+          </a>
           <div className="tile photo-plain reveal">
             <div className="tile-media"><img src="https://images.pexels.com/photos/546819/pexels-photo-546819.jpeg?auto=compress&cs=tinysrgb&w=700&h=760&dpr=1" alt="Code on a development workstation" loading="lazy" decoding="async" /></div>
           </div>
@@ -322,33 +322,33 @@ export default function HomePage() {
           <div className="tile photo-plain reveal">
             <div className="tile-media"><img src="https://images.pexels.com/photos/2085831/pexels-photo-2085831.jpeg?auto=compress&cs=tinysrgb&w=700&h=760&dpr=1" alt="Factory production line" loading="lazy" decoding="async" /></div>
           </div>
-          <div className="tile color-blue reveal">
+          <a href="/computer-vision-qc-factory-lines" className="tile color-blue reveal">
             <div className="tile-content">
               <div className="tile-tag">Case Study</div>
-              <h4>Computer vision QC deployed across 3 factory lines</h4>
-              <div className="tile-desc">Deployed a real-time defect-detection model across three production lines for a manufacturing client.</div>
+              <h4>Computer vision QC across 3 factory lines</h4>
+              <div className="tile-desc">Real-time defect detection deployed on production lines for a manufacturing client.</div>
             </div>
-          </div>
+          </a>
 
           {/* Row 4: photo | service (blue) | service photo+text (span 2) */}
           <div className="tile photo-plain reveal">
             <div className="tile-media"><img src="https://images.unsplash.com/photo-1647427060118-4911c9821b82?auto=format&fit=crop&w=700&h=760&q=80" alt="Industrial robot on a factory floor" loading="lazy" decoding="async" /></div>
           </div>
-          <div className="tile color-blue reveal">
+          <a href="/data-bi" className="tile color-blue reveal">
             <div className="tile-content">
               <div className="tile-tag">Service</div>
               <h4>Data &amp; BI</h4>
               <div className="tile-desc">Pipelines and dashboards that turn operational data into decisions.</div>
             </div>
-          </div>
-          <div className="tile photo-text span2 reveal">
+          </a>
+          <a href="/devops" className="tile photo-text span2 reveal">
             <div className="tile-media"><img src="https://images.pexels.com/photos/1148820/pexels-photo-1148820.jpeg?auto=compress&cs=tinysrgb&w=1200&h=760&dpr=1" alt="Server infrastructure for CI/CD and MLOps" loading="lazy" decoding="async" /></div>
             <div className="tile-content">
               <div className="tile-tag">Service</div>
               <h4>DevOps</h4>
               <div className="tile-desc">CI/CD, Kubernetes and MLOps for AI-driven products.</div>
             </div>
-          </div>
+          </a>
         </div>
       </section>
 

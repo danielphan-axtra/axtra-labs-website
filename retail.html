@@ -131,7 +131,7 @@
   @media (max-width:600px){.cap-tech-grid{grid-template-columns:1fr;}}
 
   .framework-layout{display:grid;grid-template-columns:0.85fr 1.15fr;gap:48px;align-items:start;}
-  .framework-photo{height:560px;position:sticky;top:100px;}
+  @media (min-width:901px){.framework-photo{height:560px;position:sticky;top:100px;}}
   .framework-steps{display:flex;flex-direction:column;position:relative;padding-left:8px;}
   .framework-steps::before{content:'';position:absolute;left:28px;top:20px;bottom:20px;width:2px;background:var(--line);}
   .reveal{opacity:0;transform:translateY(26px);transition:opacity .6s ease, transform .6s ease;}
@@ -219,8 +219,8 @@
   @media (max-width:860px){.related-featured{grid-template-columns:1fr;}.related-photo{height:220px;}.related-grid{grid-template-columns:1fr;}}
 
 </style>
-<link rel="stylesheet" href="assets/css/site-tokens.css?v=4">
-<link rel="stylesheet" href="assets/css/responsive.css?v=45">
+<link rel="stylesheet" href="assets/css/site-tokens.css?v=5">
+<link rel="stylesheet" href="assets/css/responsive.css?v=46">
 <link rel="stylesheet" href="assets/css/site-header.css?v=21">
 <link rel="stylesheet" href="assets/css/industry-layouts.css">
 <link rel="stylesheet" href="assets/css/tech-icons.css">
@@ -486,54 +486,44 @@
   <div class="wrap">
     <div class="section-head">
       <h2>Outcomes, not just deliverables</h2>
-      <p><em>Illustrative case studies — to be replaced with verified client results.</em></p>
+      <p>Selected work from our <a href="/case-study">case studies</a>.</p>
     </div>
 
     <div class="case-featured reveal">
-      <div class="tile-media"><img src="https://images.pexels.com/photos/669610/pexels-photo-669610.jpeg?auto=compress&cs=tinysrgb&w=1400&h=900&dpr=1" alt="Reporting cycle cut from 3 weeks to 2 days"></div>
+      <div class="tile-media"><img src="https://images.pexels.com/photos/5632402/pexels-photo-5632402.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="AI-Driven Personalized E-Commerce Recommendations" loading="lazy" decoding="async"></div>
       <div class="case-featured-content">
-        <div class="industry-tag">Industry · Retail Distribution</div>
-        <h3>Reporting Cycle Cut From 3 Weeks to 2 Days</h3>
-        <div class="stat-chip-row">
-          <div class="stat-chip"><div class="sc-num">3wk→2d</div><div class="sc-lbl">Reporting cycle</div></div>
-          <div class="stat-chip"><div class="sc-num">2</div><div class="sc-lbl">Dashboards shipped</div></div>
-          <div class="stat-chip"><div class="sc-num">100%</div><div class="sc-lbl">Self-serve adoption</div></div>
-        </div>
+        <div class="industry-tag">Retail · AI Services</div>
+        <h3>AI-Driven Personalized E-Commerce Recommendations</h3>
+        <div class="stat-chip-row"><div class="stat-chip"><div class="sc-num">Higher</div><div class="sc-lbl">Conversion</div></div><div class="stat-chip"><div class="sc-num">Personal</div><div class="sc-lbl">Ranking</div></div></div>
         <div class="case-extra">
-          <p>Partnered with a Power BI consultancy to model and ship a full reporting layer for an Australian retail supply business.</p>
-          <a href="#" class="read-link">Read case study <span>→</span></a>
+          <p>Ranking and retention models to boost conversions and customer retention.</p>
+          <a href="/ai-driven-personalized-ecommerce-recommendations" class="read-link">Read case study <span>→</span></a>
         </div>
       </div>
     </div>
 
     <div class="case-grid-v2">
       <div class="case-card-v2 reveal">
-        <div class="tile-media"><img src="https://images.pexels.com/photos/230544/pexels-photo-230544.jpeg?auto=compress&cs=tinysrgb&w=800&h=700&dpr=1" alt="Personalized recommendation engine for a fashion e-commerce brand"></div>
+        <div class="tile-media"><img src="https://images.pexels.com/photos/5632402/pexels-photo-5632402.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="AI Returns Prevention for a D2C Ecommerce Startup" loading="lazy" decoding="async"></div>
         <div class="case-body-v2">
-          <div class="industry-tag">Industry · Fashion E-commerce</div>
-          <h4>Personalized Recommendation Engine for a Fashion Brand</h4>
-          <div class="stat-chip-row small">
-            <div class="stat-chip small"><div class="sc-num">28%</div><div class="sc-lbl">Conversion rate lift</div></div>
-            <div class="stat-chip small"><div class="sc-num">AI-powered</div><div class="sc-lbl">Storefront personalization</div></div>
-          </div>
+          <div class="industry-tag">Retail · AI Services</div>
+          <h4>AI Returns Prevention for a D2C Ecommerce Startup</h4>
+          <div class="stat-chip-row small"><div class="stat-chip small"><div class="sc-num">Lower</div><div class="sc-lbl">Returns</div></div><div class="stat-chip small"><div class="sc-num">Fit</div><div class="sc-lbl">Guidance</div></div></div>
           <div class="case-extra">
-            <p>Built a recommendation engine that personalizes homepage and product-page layout based on real browsing behavior.</p>
-            <a href="#" class="read-link">Read case study <span>→</span></a>
+            <p>Size and fit recommendation plus return-risk scoring that lowered return rate for a fast-growing D2C apparel brand.</p>
+            <a href="/ai-returns-prevention-ecommerce-startup" class="read-link">Read case study <span>→</span></a>
           </div>
         </div>
       </div>
       <div class="case-card-v2 reveal">
-        <div class="tile-media"><img src="https://images.pexels.com/photos/8294606/pexels-photo-8294606.jpeg?auto=compress&cs=tinysrgb&w=800&h=700&dpr=1" alt="Shelf monitoring rollout across 40 stores"></div>
+        <div class="tile-media"><img src="/assets/img/case-studies/data-analytics.jpg?v=1" alt="Big Data Analytics for Business Intelligence" loading="lazy" decoding="async"></div>
         <div class="case-body-v2">
-          <div class="industry-tag">Industry · Grocery Retail</div>
-          <h4>Shelf Monitoring Rollout Across 40 Stores</h4>
-          <div class="stat-chip-row small">
-            <div class="stat-chip small"><div class="sc-num">40</div><div class="sc-lbl">Stores covered</div></div>
-            <div class="stat-chip small"><div class="sc-num">Real-time</div><div class="sc-lbl">Restocking alerts</div></div>
-          </div>
+          <div class="industry-tag">Industrial · Data & BI</div>
+          <h4>Big Data Analytics for Business Intelligence</h4>
+          <div class="stat-chip-row small"><div class="stat-chip small"><div class="sc-num">3w→2d</div><div class="sc-lbl">Reporting</div></div><div class="stat-chip small"><div class="sc-num">Live</div><div class="sc-lbl">Dashboards</div></div></div>
           <div class="case-extra">
-            <p>Rolled out camera-based shelf monitoring that flags empty sections and routes restocking tasks automatically.</p>
-            <a href="#" class="read-link">Read case study <span>→</span></a>
+            <p>Predictive dashboards that shortened a reporting cycle from 3 weeks to 2 days.</p>
+            <a href="/big-data-analytics-business-intelligence" class="read-link">Read case study <span>→</span></a>
           </div>
         </div>
       </div>

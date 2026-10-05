@@ -6,6 +6,8 @@ import {
   SITE_OG_IMAGE,
   SITE_URL,
 } from "./site";
+import { heroImage } from "./content";
+import { getPage } from "./pages";
 
 type PageMetaInput = {
   title: string;
@@ -55,4 +57,16 @@ export function pageMeta({
     },
     robots: { index: true, follow: true },
   };
+}
+
+/** Metadata for a registered content page (see `lib/pages.ts`). */
+export function metaFor(slug: string): Metadata {
+  const page = getPage(slug);
+  return pageMeta({
+    title: page.seoTitle ?? page.title,
+    description: page.description,
+    path: `/${slug}`,
+    type: page.kind === "case-study" ? "article" : "website",
+    image: heroImage(slug),
+  });
 }

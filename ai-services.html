@@ -92,7 +92,7 @@
   @media (max-width:600px){.cap-tech-grid{grid-template-columns:1fr;}}
 
   .framework-layout{display:grid;grid-template-columns:0.85fr 1.15fr;gap:48px;align-items:start;}
-  .framework-photo{height:560px;position:sticky;top:100px;}
+  @media (min-width:901px){.framework-photo{height:560px;position:sticky;top:100px;}}
   .framework-steps{display:flex;flex-direction:column;position:relative;padding-left:8px;}
   .framework-steps::before{content:'';position:absolute;left:28px;top:20px;bottom:20px;width:2px;background:var(--line);}
   .reveal{opacity:0;transform:translateY(26px);transition:opacity .6s ease, transform .6s ease;}
@@ -180,8 +180,8 @@
   @media (max-width:860px){.related-featured{grid-template-columns:1fr;}.related-photo{height:220px;}.related-grid{grid-template-columns:1fr;}}
 
 </style>
-<link rel="stylesheet" href="assets/css/site-tokens.css?v=4">
-<link rel="stylesheet" href="assets/css/responsive.css?v=45">
+<link rel="stylesheet" href="assets/css/site-tokens.css?v=5">
+<link rel="stylesheet" href="assets/css/responsive.css?v=46">
 <link rel="stylesheet" href="assets/css/site-header.css?v=21">
 <link rel="stylesheet" href="assets/css/tech-icons.css">
 <link rel="stylesheet" href="assets/css/nav-drawer-v3.css?v=4">
@@ -425,54 +425,44 @@
   <div class="wrap">
     <div class="section-head">
       <h2>Outcomes, not just deliverables</h2>
-      <p><em>Illustrative case studies — to be replaced with verified client results.</em></p>
+      <p>Selected work from our <a href="/case-study">case studies</a>.</p>
     </div>
 
     <div class="case-featured reveal">
-      <div class="tile-media"><img src="https://images.pexels.com/photos/546819/pexels-photo-546819.jpeg?auto=compress&cs=tinysrgb&w=1400&h=900&dpr=1" alt="AI customer support platform"></div>
+      <div class="tile-media"><img src="https://images.pexels.com/photos/546819/pexels-photo-546819.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="Chatbot for Automated Customer Support" loading="lazy" decoding="async"></div>
       <div class="case-featured-content">
-        <div class="industry-tag">Industry · SaaS</div>
-        <h3>AI Customer Support Platform</h3>
-        <div class="stat-chip-row">
-          <div class="stat-chip"><div class="sc-num">70%</div><div class="sc-lbl">Automated responses</div></div>
-          <div class="stat-chip"><div class="sc-num">50%</div><div class="sc-lbl">Faster resolution</div></div>
-          <div class="stat-chip"><div class="sc-num">24/7</div><div class="sc-lbl">Multilingual support</div></div>
-        </div>
+        <div class="industry-tag">Travel · AI Services</div>
+        <h3>Chatbot for Automated Customer Support</h3>
+        <div class="stat-chip-row"><div class="stat-chip"><div class="sc-num">24/7</div><div class="sc-lbl">Coverage</div></div><div class="stat-chip"><div class="sc-num">Handoff</div><div class="sc-lbl">To humans</div></div></div>
         <div class="case-extra">
-          <p>Built a multilingual support agent handling tier-1 tickets end-to-end, escalating only what genuinely needs a human.</p>
-          <a href="#" class="read-link">Read case study <span>→</span></a>
+          <p>Sales and support chatbot covering FAQs, handoff and booking flows.</p>
+          <a href="/chatbot-automated-customer-support" class="read-link">Read case study <span>→</span></a>
         </div>
       </div>
     </div>
 
     <div class="case-grid-v2">
       <div class="case-card-v2 reveal">
-        <div class="tile-media"><img src="assets/img/themes/manufacturing-cobot.jpg" alt="Computer vision quality inspection"></div>
+        <div class="tile-media"><img src="/assets/img/themes/manufacturing-cobot.jpg" alt="Computer vision QC across 3 factory lines" loading="lazy" decoding="async"></div>
         <div class="case-body-v2">
-          <div class="industry-tag">Industry · Manufacturing</div>
-          <h4>Computer Vision Quality Inspection</h4>
-          <div class="stat-chip-row small">
-            <div class="stat-chip small"><div class="sc-num">96%</div><div class="sc-lbl">Defect accuracy</div></div>
-            <div class="stat-chip small"><div class="sc-num">Real-time</div><div class="sc-lbl">Monitoring</div></div>
-          </div>
+          <div class="industry-tag">Manufacturing · AI for Robotics</div>
+          <h4>Computer vision QC across 3 factory lines</h4>
+          <div class="stat-chip-row small"><div class="stat-chip small"><div class="sc-num">3 lines</div><div class="sc-lbl">Deployed</div></div><div class="stat-chip small"><div class="sc-num">Real-time</div><div class="sc-lbl">Defects</div></div></div>
           <div class="case-extra">
-            <p>Deployed a real-time defect-detection model across three production lines for a manufacturing client.</p>
-            <a href="#" class="read-link">Read case study <span>→</span></a>
+            <p>Real-time defect detection deployed on production lines.</p>
+            <a href="/computer-vision-qc-factory-lines" class="read-link">Read case study <span>→</span></a>
           </div>
         </div>
       </div>
       <div class="case-card-v2 reveal">
-        <div class="tile-media"><img src="https://images.pexels.com/photos/8438918/pexels-photo-8438918.jpeg?auto=compress&cs=tinysrgb&w=800&h=700&dpr=1" alt="AI knowledge assistant"></div>
+        <div class="tile-media"><img src="/assets/img/case-studies/hr-recruitment.jpg?v=1" alt="AI-Powered Internal HR Knowledge & Talent Search Chatbot" loading="lazy" decoding="async"></div>
         <div class="case-body-v2">
-          <div class="industry-tag">Industry · Enterprise</div>
-          <h4>AI Knowledge Assistant</h4>
-          <div class="stat-chip-row small">
-            <div class="stat-chip small"><div class="sc-num">Instant</div><div class="sc-lbl">Enterprise search</div></div>
-            <div class="stat-chip small"><div class="sc-num">Unified</div><div class="sc-lbl">Knowledge base</div></div>
-          </div>
+          <div class="industry-tag">HR · AI Services</div>
+          <h4>AI-Powered Internal HR Knowledge & Talent Search Chatbot</h4>
+          <div class="stat-chip-row small"><div class="stat-chip small"><div class="sc-num">Instant</div><div class="sc-lbl">Policy search</div></div><div class="stat-chip small"><div class="sc-num">Unified</div><div class="sc-lbl">Talent index</div></div></div>
           <div class="case-extra">
-            <p>Unified scattered internal docs into a single retrieval-augmented assistant employees actually use.</p>
-            <a href="#" class="read-link">Read case study <span>→</span></a>
+            <p>An internal chatbot that searches HR policy and talent profiles so recruiters find answers in seconds.</p>
+            <a href="/ai-powered-internal-hr-knowledge-talent-search-chatbot" class="read-link">Read case study <span>→</span></a>
           </div>
         </div>
       </div>

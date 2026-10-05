@@ -92,7 +92,7 @@
   @media (max-width:600px){.cap-tech-grid{grid-template-columns:1fr;}}
 
   .framework-layout{display:grid;grid-template-columns:0.85fr 1.15fr;gap:48px;align-items:start;}
-  .framework-photo{height:560px;position:sticky;top:100px;}
+  @media (min-width:901px){.framework-photo{height:560px;position:sticky;top:100px;}}
   .framework-steps{display:flex;flex-direction:column;position:relative;padding-left:8px;}
   .framework-steps::before{content:'';position:absolute;left:28px;top:20px;bottom:20px;width:2px;background:var(--line);}
   .reveal{opacity:0;transform:translateY(26px);transition:opacity .6s ease, transform .6s ease;}
@@ -180,8 +180,8 @@
   @media (max-width:860px){.related-featured{grid-template-columns:1fr;}.related-photo{height:220px;}.related-grid{grid-template-columns:1fr;}}
 
 </style>
-<link rel="stylesheet" href="assets/css/site-tokens.css?v=4">
-<link rel="stylesheet" href="assets/css/responsive.css?v=45">
+<link rel="stylesheet" href="assets/css/site-tokens.css?v=5">
+<link rel="stylesheet" href="assets/css/responsive.css?v=46">
 <link rel="stylesheet" href="assets/css/site-header.css?v=21">
 <link rel="stylesheet" href="assets/css/agent-layouts.css">
 <link rel="stylesheet" href="assets/css/tech-icons.css">
@@ -335,6 +335,55 @@
           <div class="integ-logo reveal"><img src="https://cdn.jsdelivr.net/npm/simple-icons@11.14.0/icons/slack.svg" alt="Slack" width="28" height="28" loading="lazy"><span>Slack</span></div>
           <div class="integ-logo reveal"><img src="https://cdn.jsdelivr.net/npm/simple-icons@11.14.0/icons/zapier.svg" alt="Zapier" width="28" height="28" loading="lazy"><span>Zapier</span></div>
           <div class="integ-logo reveal no-ico"><span>Custom APIs</span></div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="section-head">
+      <h2>Outcomes, not just deliverables</h2>
+      <p>Selected work from our <a href="/case-study">case studies</a>.</p>
+    </div>
+
+    <div class="case-featured reveal">
+      <div class="tile-media"><img src="https://images.pexels.com/photos/186461/pexels-photo-186461.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="AI Credit Underwriting for a Lending Startup" loading="lazy" decoding="async"></div>
+      <div class="case-featured-content">
+        <div class="industry-tag">Fintech · AI Services</div>
+        <h3>AI Credit Underwriting for a Lending Startup</h3>
+        <div class="stat-chip-row"><div class="stat-chip"><div class="sc-num">Better</div><div class="sc-lbl">Approvals</div></div><div class="stat-chip"><div class="sc-num">Stable</div><div class="sc-lbl">Loss rates</div></div></div>
+        <div class="case-extra">
+          <p>Real-time underwriting models that helped a Series A lending startup approve more good borrowers without raising loss rates.</p>
+          <a href="/ai-credit-underwriting-fintech-startup" class="read-link">Read case study <span>→</span></a>
+        </div>
+      </div>
+    </div>
+
+    <div class="case-grid-v2">
+      <div class="case-card-v2 reveal">
+        <div class="tile-media"><img src="https://images.pexels.com/photos/5632402/pexels-photo-5632402.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="AI-Driven Personalized E-Commerce Recommendations" loading="lazy" decoding="async"></div>
+        <div class="case-body-v2">
+          <div class="industry-tag">Retail · AI Services</div>
+          <h4>AI-Driven Personalized E-Commerce Recommendations</h4>
+          <div class="stat-chip-row small"><div class="stat-chip small"><div class="sc-num">Higher</div><div class="sc-lbl">Conversion</div></div><div class="stat-chip small"><div class="sc-num">Personal</div><div class="sc-lbl">Ranking</div></div></div>
+          <div class="case-extra">
+            <p>Ranking and retention models to boost conversions and customer retention.</p>
+            <a href="/ai-driven-personalized-ecommerce-recommendations" class="read-link">Read case study <span>→</span></a>
+          </div>
+        </div>
+      </div>
+      <div class="case-card-v2 reveal">
+        <div class="tile-media"><img src="https://images.pexels.com/photos/546819/pexels-photo-546819.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="Chatbot for Automated Customer Support" loading="lazy" decoding="async"></div>
+        <div class="case-body-v2">
+          <div class="industry-tag">Travel · AI Services</div>
+          <h4>Chatbot for Automated Customer Support</h4>
+          <div class="stat-chip-row small"><div class="stat-chip small"><div class="sc-num">24/7</div><div class="sc-lbl">Coverage</div></div><div class="stat-chip small"><div class="sc-num">Handoff</div><div class="sc-lbl">To humans</div></div></div>
+          <div class="case-extra">
+            <p>Sales and support chatbot covering FAQs, handoff and booking flows.</p>
+            <a href="/chatbot-automated-customer-support" class="read-link">Read case study <span>→</span></a>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </section>

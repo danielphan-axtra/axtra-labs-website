@@ -500,6 +500,50 @@ body.nav-open .nav-toggle span:nth-child(3) {
     box-sizing: border-box;
   }
 
+  /* iOS paints sticky .photo (dark ink bg) over earlier headings — kill sticky early */
+  .framework-photo,
+  .framework-photo.photo,
+  .csd-side,
+  .know-answer {
+    position: static !important;
+    top: auto !important;
+    bottom: auto !important;
+    z-index: 0 !important;
+    transform: none !important;
+    -webkit-transform: none !important;
+  }
+
+  .framework-photo,
+  .framework-photo.photo {
+    height: 220px !important;
+    max-height: 220px !important;
+    overflow: hidden !important;
+  }
+
+  .framework-layout {
+    display: flex !important;
+    flex-direction: column !important;
+    overflow: hidden !important;
+    isolation: isolate;
+  }
+
+  .footer-grid {
+    grid-template-columns: 1fr !important;
+    gap: 28px !important;
+  }
+
+  footer .wrap {
+    width: 100% !important;
+    max-width: 100% !important;
+    padding-left: 16px !important;
+    padding-right: 16px !important;
+  }
+
+  .footer-col {
+    display: block !important;
+    min-width: 0 !important;
+  }
+
   .nav-toggle {
     display: flex;
     margin-left: auto;
@@ -869,10 +913,10 @@ body.nav-open .nav-toggle span:nth-child(3) {
     padding: 40px 20px;
   }
 
-  /* Footer */
+  /* Footer — single column so Agent/Company/Contact are never clipped */
   .footer-grid {
-    grid-template-columns: 1fr 1fr;
-    gap: 20px;
+    grid-template-columns: 1fr !important;
+    gap: 28px !important;
   }
 
   .footer-bottom {
@@ -888,6 +932,10 @@ body.nav-open .nav-toggle span:nth-child(3) {
 
   .nav {
     padding: 12px 16px !important;
+  }
+
+  .footer-grid {
+    grid-template-columns: 1fr !important;
   }
 
   .hero-inner {

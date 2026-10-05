@@ -92,7 +92,7 @@
   @media (max-width:600px){.cap-tech-grid{grid-template-columns:1fr;}}
 
   .framework-layout{display:grid;grid-template-columns:0.85fr 1.15fr;gap:48px;align-items:start;}
-  .framework-photo{height:560px;position:sticky;top:100px;}
+  @media (min-width:901px){.framework-photo{height:560px;position:sticky;top:100px;}}
   .framework-steps{display:flex;flex-direction:column;position:relative;padding-left:8px;}
   .framework-steps::before{content:'';position:absolute;left:28px;top:20px;bottom:20px;width:2px;background:var(--line);}
   .reveal{opacity:0;transform:translateY(26px);transition:opacity .6s ease, transform .6s ease;}
@@ -180,8 +180,8 @@
   @media (max-width:860px){.related-featured{grid-template-columns:1fr;}.related-photo{height:220px;}.related-grid{grid-template-columns:1fr;}}
 
 </style>
-<link rel="stylesheet" href="assets/css/site-tokens.css?v=4">
-<link rel="stylesheet" href="assets/css/responsive.css?v=45">
+<link rel="stylesheet" href="assets/css/site-tokens.css?v=5">
+<link rel="stylesheet" href="assets/css/responsive.css?v=46">
 <link rel="stylesheet" href="assets/css/site-header.css?v=21">
 <link rel="stylesheet" href="assets/css/agent-layouts.css">
 <link rel="stylesheet" href="assets/css/tech-icons.css">
@@ -366,6 +366,55 @@
           <div class="integ-logo reveal"><img src="https://cdn.jsdelivr.net/npm/simple-icons@11.14.0/icons/jira.svg" alt="Jira" width="28" height="28" loading="lazy"><span>Jira</span></div>
           <div class="integ-logo reveal"><img src="https://cdn.jsdelivr.net/npm/simple-icons@11.14.0/icons/confluence.svg" alt="Confluence" width="28" height="28" loading="lazy"><span>Confluence</span></div>
           <div class="integ-logo reveal no-ico"><span>Custom APIs</span></div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="section-head">
+      <h2>Outcomes, not just deliverables</h2>
+      <p>Selected work from our <a href="/case-study">case studies</a>.</p>
+    </div>
+
+    <div class="case-featured reveal">
+      <div class="tile-media"><img src="https://images.pexels.com/photos/7579831/pexels-photo-7579831.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="AI Care Navigation for a Healthtech Startup" loading="lazy" decoding="async"></div>
+      <div class="case-featured-content">
+        <div class="industry-tag">Healthcare · AI Services</div>
+        <h3>AI Care Navigation for a Healthtech Startup</h3>
+        <div class="stat-chip-row"><div class="stat-chip"><div class="sc-num">Faster</div><div class="sc-lbl">Booking</div></div><div class="stat-chip"><div class="sc-num">Triage</div><div class="sc-lbl">Intake</div></div></div>
+        <div class="case-extra">
+          <p>Intake triage and care-routing assistant that helped a healthtech startup cut time-to-appointment without replacing clinicians.</p>
+          <a href="/ai-care-navigation-healthtech-startup" class="read-link">Read case study <span>→</span></a>
+        </div>
+      </div>
+    </div>
+
+    <div class="case-grid-v2">
+      <div class="case-card-v2 reveal">
+        <div class="tile-media"><img src="https://images.pexels.com/photos/4386431/pexels-photo-4386431.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="AI Fraud Detection for a Neobank Startup" loading="lazy" decoding="async"></div>
+        <div class="case-body-v2">
+          <div class="industry-tag">Fintech · AI Services</div>
+          <h4>AI Fraud Detection for a Neobank Startup</h4>
+          <div class="stat-chip-row small"><div class="stat-chip small"><div class="sc-num">Lower</div><div class="sc-lbl">False declines</div></div><div class="stat-chip small"><div class="sc-num">Graph</div><div class="sc-lbl">Scoring</div></div></div>
+          <div class="case-extra">
+            <p>Graph + behavioral fraud scoring that cut false declines while catching account-takeover rings for an early-stage neobank.</p>
+            <a href="/ai-fraud-detection-neobank-startup" class="read-link">Read case study <span>→</span></a>
+          </div>
+        </div>
+      </div>
+      <div class="case-card-v2 reveal">
+        <div class="tile-media"><img src="https://images.pexels.com/photos/6476589/pexels-photo-6476589.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="AI-Optimized Logistics Route Planning" loading="lazy" decoding="async"></div>
+        <div class="case-body-v2">
+          <div class="industry-tag">Logistics · AI Services</div>
+          <h4>AI-Optimized Logistics Route Planning</h4>
+          <div class="stat-chip-row small"><div class="stat-chip small"><div class="sc-num">Lower</div><div class="sc-lbl">Cost/mile</div></div><div class="stat-chip small"><div class="sc-num">Faster</div><div class="sc-lbl">Routes</div></div></div>
+          <div class="case-extra">
+            <p>Route optimization for cost-effective and faster deliveries.</p>
+            <a href="/ai-optimized-logistics-route-planning" class="read-link">Read case study <span>→</span></a>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </section>

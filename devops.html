@@ -92,7 +92,7 @@
   @media (max-width:600px){.cap-tech-grid{grid-template-columns:1fr;}}
 
   .framework-layout{display:grid;grid-template-columns:0.85fr 1.15fr;gap:48px;align-items:start;}
-  .framework-photo{height:560px;position:sticky;top:100px;}
+  @media (min-width:901px){.framework-photo{height:560px;position:sticky;top:100px;}}
   .framework-steps{display:flex;flex-direction:column;position:relative;padding-left:8px;}
   .framework-steps::before{content:'';position:absolute;left:28px;top:20px;bottom:20px;width:2px;background:var(--line);}
   .reveal{opacity:0;transform:translateY(26px);transition:opacity .6s ease, transform .6s ease;}
@@ -192,8 +192,8 @@
   @media (max-width:860px){.related-featured{grid-template-columns:1fr;}.related-photo{height:220px;}.related-grid{grid-template-columns:1fr;}}
 
 </style>
-<link rel="stylesheet" href="assets/css/site-tokens.css?v=4">
-<link rel="stylesheet" href="assets/css/responsive.css?v=45">
+<link rel="stylesheet" href="assets/css/site-tokens.css?v=5">
+<link rel="stylesheet" href="assets/css/responsive.css?v=46">
 <link rel="stylesheet" href="assets/css/site-header.css?v=21">
 <link rel="stylesheet" href="assets/css/tech-icons.css">
 <link rel="stylesheet" href="assets/css/nav-drawer-v3.css?v=4">
@@ -427,54 +427,44 @@
   <div class="wrap">
     <div class="section-head">
       <h2>Outcomes, not just deliverables</h2>
-      <p><em>Illustrative case studies — to be replaced with verified client results.</em></p>
+      <p>Selected work from our <a href="/case-study">case studies</a>.</p>
     </div>
 
     <div class="case-featured reveal">
-      <div class="tile-media"><img src="https://images.pexels.com/photos/325229/pexels-photo-325229.jpeg?auto=compress&cs=tinysrgb&w=1400&h=900&dpr=1" alt="Kubernetes migration for AI platform"></div>
+      <div class="tile-media"><img src="/assets/img/themes/manufacturing-cobot.jpg" alt="Computer vision QC across 3 factory lines" loading="lazy" decoding="async"></div>
       <div class="case-featured-content">
-        <div class="industry-tag">Industry · SaaS</div>
-        <h3>Kubernetes Migration for an AI Platform</h3>
-        <div class="stat-chip-row">
-          <div class="stat-chip"><div class="sc-num">10x</div><div class="sc-lbl">Deploy frequency</div></div>
-          <div class="stat-chip"><div class="sc-num">99.9%</div><div class="sc-lbl">Uptime SLA</div></div>
-          <div class="stat-chip"><div class="sc-num">40%</div><div class="sc-lbl">Infra cost reduction</div></div>
-        </div>
+        <div class="industry-tag">Manufacturing · AI for Robotics</div>
+        <h3>Computer vision QC across 3 factory lines</h3>
+        <div class="stat-chip-row"><div class="stat-chip"><div class="sc-num">3 lines</div><div class="sc-lbl">Deployed</div></div><div class="stat-chip"><div class="sc-num">Real-time</div><div class="sc-lbl">Defects</div></div></div>
         <div class="case-extra">
-          <p>Migrated a monolithic AI SaaS platform to Kubernetes with GitOps, cutting deploy time from days to minutes.</p>
-          <a href="#" class="read-link">Read case study <span>→</span></a>
+          <p>Real-time defect detection deployed on production lines.</p>
+          <a href="/computer-vision-qc-factory-lines" class="read-link">Read case study <span>→</span></a>
         </div>
       </div>
     </div>
 
     <div class="case-grid-v2">
       <div class="case-card-v2 reveal">
-        <div class="tile-media"><img src="https://images.pexels.com/photos/546819/pexels-photo-546819.jpeg?auto=compress&cs=tinysrgb&w=800&h=700&dpr=1" alt="MLOps pipeline for computer vision"></div>
+        <div class="tile-media"><img src="https://images.pexels.com/photos/4386431/pexels-photo-4386431.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="AI Fraud Detection for a Neobank Startup" loading="lazy" decoding="async"></div>
         <div class="case-body-v2">
-          <div class="industry-tag">Industry · Manufacturing</div>
-          <h4>MLOps Pipeline for Computer Vision Models</h4>
-          <div class="stat-chip-row small">
-            <div class="stat-chip small"><div class="sc-num">Auto</div><div class="sc-lbl">Retraining</div></div>
-            <div class="stat-chip small"><div class="sc-num">A/B</div><div class="sc-lbl">Model testing</div></div>
-          </div>
+          <div class="industry-tag">Fintech · AI Services</div>
+          <h4>AI Fraud Detection for a Neobank Startup</h4>
+          <div class="stat-chip-row small"><div class="stat-chip small"><div class="sc-num">Lower</div><div class="sc-lbl">False declines</div></div><div class="stat-chip small"><div class="sc-num">Graph</div><div class="sc-lbl">Scoring</div></div></div>
           <div class="case-extra">
-            <p>Built an end-to-end MLOps pipeline for a manufacturing client's defect-detection models with automated retraining.</p>
-            <a href="#" class="read-link">Read case study <span>→</span></a>
+            <p>Graph + behavioral fraud scoring that cut false declines while catching account-takeover rings for an early-stage neobank.</p>
+            <a href="/ai-fraud-detection-neobank-startup" class="read-link">Read case study <span>→</span></a>
           </div>
         </div>
       </div>
       <div class="case-card-v2 reveal">
-        <div class="tile-media"><img src="https://images.pexels.com/photos/546819/pexels-photo-546819.jpeg?auto=compress&cs=tinysrgb&w=800&h=700&dpr=1" alt="CI/CD modernization"></div>
+        <div class="tile-media"><img src="/assets/img/case-studies/data-analytics.jpg?v=1" alt="Big Data Analytics for Business Intelligence" loading="lazy" decoding="async"></div>
         <div class="case-body-v2">
-          <div class="industry-tag">Industry · Fintech</div>
-          <h4>CI/CD Modernization for a Fintech Startup</h4>
-          <div class="stat-chip-row small">
-            <div class="stat-chip small"><div class="sc-num">15min</div><div class="sc-lbl">Build to deploy</div></div>
-            <div class="stat-chip small"><div class="sc-num">SOC 2</div><div class="sc-lbl">Compliant pipeline</div></div>
-          </div>
+          <div class="industry-tag">Industrial · Data & BI</div>
+          <h4>Big Data Analytics for Business Intelligence</h4>
+          <div class="stat-chip-row small"><div class="stat-chip small"><div class="sc-num">3w→2d</div><div class="sc-lbl">Reporting</div></div><div class="stat-chip small"><div class="sc-num">Live</div><div class="sc-lbl">Dashboards</div></div></div>
           <div class="case-extra">
-            <p>Replaced manual release processes with automated CI/CD, enabling daily deployments with full audit trails.</p>
-            <a href="#" class="read-link">Read case study <span>→</span></a>
+            <p>Predictive dashboards that shortened a reporting cycle from 3 weeks to 2 days.</p>
+            <a href="/big-data-analytics-business-intelligence" class="read-link">Read case study <span>→</span></a>
           </div>
         </div>
       </div>

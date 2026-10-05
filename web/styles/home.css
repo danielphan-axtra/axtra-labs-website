@@ -228,6 +228,8 @@ section{padding:64px 0;}
 .work-mosaic .section-head{margin-bottom:32px;}
 .mosaic{display:grid;grid-template-columns:repeat(4,1fr);grid-auto-rows:320px;gap:2px;background:var(--line);width:100vw;margin-left:calc(50% - 50vw);margin-right:calc(50% - 50vw);}
 .tile{position:relative;overflow:hidden;}
+a.tile{color:inherit;text-decoration:none;display:block;}
+a.tile:focus-visible{outline:2px solid var(--accent);outline-offset:-2px;}
 .tile.span2{grid-column:span 2;}
 .tile-media{position:absolute;inset:0;}
 .tile-media img{width:100%;height:100%;object-fit:cover;transition:transform .5s ease;}
@@ -252,6 +254,7 @@ section{padding:64px 0;}
 .tile.span2{grid-column:span 1;}
 }
 .footer-grid{grid-template-columns:1.4fr 1fr 1fr 1fr 1fr;}
+@media (max-width:900px){.footer-grid{grid-template-columns:1fr !important;gap:28px !important;}}
 /* Homepage type scale — keep larger than shared mobile defaults */
   .hero h1{font-size:clamp(42px, 8vw, 72px);font-weight:700;}
 .section-head h2{font-size:clamp(36px, 6vw, 72px);font-weight:900;}

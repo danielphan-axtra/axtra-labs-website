@@ -239,8 +239,9 @@ footer p {
   color: var(--slate-muted) !important;
 }
 
-@media (max-width: 860px) {
+@media (max-width: 900px) {
   .footer-grid {
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr;
+    gap: 28px;
   }
 }

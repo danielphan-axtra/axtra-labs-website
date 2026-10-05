@@ -131,7 +131,7 @@
   @media (max-width:600px){.cap-tech-grid{grid-template-columns:1fr;}}
 
   .framework-layout{display:grid;grid-template-columns:0.85fr 1.15fr;gap:48px;align-items:start;}
-  .framework-photo{height:560px;position:sticky;top:100px;}
+  @media (min-width:901px){.framework-photo{height:560px;position:sticky;top:100px;}}
   .framework-steps{display:flex;flex-direction:column;position:relative;padding-left:8px;}
   .framework-steps::before{content:'';position:absolute;left:28px;top:20px;bottom:20px;width:2px;background:var(--line);}
   .reveal{opacity:0;transform:translateY(26px);transition:opacity .6s ease, transform .6s ease;}
@@ -219,8 +219,8 @@
   @media (max-width:860px){.related-featured{grid-template-columns:1fr;}.related-photo{height:220px;}.related-grid{grid-template-columns:1fr;}}
 
 </style>
-<link rel="stylesheet" href="assets/css/site-tokens.css?v=4">
-<link rel="stylesheet" href="assets/css/responsive.css?v=45">
+<link rel="stylesheet" href="assets/css/site-tokens.css?v=5">
+<link rel="stylesheet" href="assets/css/responsive.css?v=46">
 <link rel="stylesheet" href="assets/css/site-header.css?v=21">
 <link rel="stylesheet" href="assets/css/industry-layouts.css">
 <link rel="stylesheet" href="assets/css/tech-icons.css">
@@ -458,44 +458,44 @@
   <div class="wrap">
     <div class="section-head">
       <h2>Outcomes, not just deliverables</h2>
-      <p><em>Illustrative case studies — to be replaced with verified client results.</em></p>
+      <p>Selected work from our <a href="/case-study">case studies</a>.</p>
     </div>
 
-        <div class="case-featured reveal">
-      <div class="tile-media"><img src="https://images.pexels.com/photos/186461/pexels-photo-186461.jpeg?auto=compress&cs=tinysrgb&w=1400&h=900&dpr=1" alt="Fraud Review Queue Cut by 40%"></div>
+    <div class="case-featured reveal">
+      <div class="tile-media"><img src="https://images.pexels.com/photos/4386431/pexels-photo-4386431.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="AI Fraud Detection for a Neobank Startup" loading="lazy" decoding="async"></div>
       <div class="case-featured-content">
-        <div class="industry-tag">Industry · Digital Bank</div>
-        <h3>Fraud Review Queue Cut by 40%</h3>
-        <div class="stat-chip-row"><div class="stat-chip"><div class="sc-num">40%</div><div class="sc-lbl">False positives cut</div></div><div class="stat-chip"><div class="sc-num">2x</div><div class="sc-lbl">Analyst throughput</div></div><div class="stat-chip"><div class="sc-num"><50ms</div><div class="sc-lbl">Score latency</div></div></div>
+        <div class="industry-tag">Fintech · AI Services</div>
+        <h3>AI Fraud Detection for a Neobank Startup</h3>
+        <div class="stat-chip-row"><div class="stat-chip"><div class="sc-num">Lower</div><div class="sc-lbl">False declines</div></div><div class="stat-chip"><div class="sc-num">Graph</div><div class="sc-lbl">Scoring</div></div></div>
         <div class="case-extra">
-          <p>Built a real-time fraud scoring path with explainable features and case tooling for a digital banking team.</p>
-          <a href="#" class="read-link">Read case study <span>→</span></a>
+          <p>Graph + behavioral fraud scoring that cut false declines while catching account-takeover rings for an early-stage neobank.</p>
+          <a href="/ai-fraud-detection-neobank-startup" class="read-link">Read case study <span>→</span></a>
         </div>
       </div>
     </div>
 
     <div class="case-grid-v2">
       <div class="case-card-v2 reveal">
-        <div class="tile-media"><img src="https://images.pexels.com/photos/265087/pexels-photo-265087.jpeg?auto=compress&cs=tinysrgb&w=800&h=700&dpr=1" alt="Underwriting Assist for SME Loans"></div>
+        <div class="tile-media"><img src="https://images.pexels.com/photos/186461/pexels-photo-186461.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="AI Credit Underwriting for a Lending Startup" loading="lazy" decoding="async"></div>
         <div class="case-body-v2">
-          <div class="industry-tag">Industry · Lending</div>
-          <h4>Underwriting Assist for SME Loans</h4>
-          <div class="stat-chip-row small"><div class="stat-chip small"><div class="sc-num">30%</div><div class="sc-lbl">Faster decisions</div></div><div class="stat-chip small"><div class="sc-num">Audit-ready</div><div class="sc-lbl">Decision logs</div></div></div>
+          <div class="industry-tag">Fintech · AI Services</div>
+          <h4>AI Credit Underwriting for a Lending Startup</h4>
+          <div class="stat-chip-row small"><div class="stat-chip small"><div class="sc-num">Better</div><div class="sc-lbl">Approvals</div></div><div class="stat-chip small"><div class="sc-num">Stable</div><div class="sc-lbl">Loss rates</div></div></div>
           <div class="case-extra">
-            <p>Assembled underwriting packets and risk summaries so credit officers decide faster with full lineage.</p>
-            <a href="#" class="read-link">Read case study <span>→</span></a>
+            <p>Real-time underwriting models that helped a Series A lending startup approve more good borrowers without raising loss rates.</p>
+            <a href="/ai-credit-underwriting-fintech-startup" class="read-link">Read case study <span>→</span></a>
           </div>
         </div>
       </div>
       <div class="case-card-v2 reveal">
-        <div class="tile-media"><img src="https://images.pexels.com/photos/546819/pexels-photo-546819.jpeg?auto=compress&cs=tinysrgb&w=800&h=700&dpr=1" alt="Personalized Portfolio Recommendations"></div>
+        <div class="tile-media"><img src="https://images.pexels.com/photos/590022/pexels-photo-590022.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="Data Engineering and Analytics for Insurance Risk Assessment" loading="lazy" decoding="async"></div>
         <div class="case-body-v2">
-          <div class="industry-tag">Industry · Wealth</div>
-          <h4>Personalized Portfolio Recommendations</h4>
-          <div class="stat-chip-row small"><div class="stat-chip small"><div class="sc-num">22%</div><div class="sc-lbl">Engagement lift</div></div><div class="stat-chip small"><div class="sc-num">Suitability</div><div class="sc-lbl">Rules enforced</div></div></div>
+          <div class="industry-tag">Fintech · Data & BI</div>
+          <h4>Data Engineering and Analytics for Insurance Risk Assessment</h4>
+          <div class="stat-chip-row small"><div class="stat-chip small"><div class="sc-num">Risk</div><div class="sc-lbl">Scoring</div></div><div class="stat-chip small"><div class="sc-num">Fraud</div><div class="sc-lbl">Signals</div></div></div>
           <div class="case-extra">
-            <p>Shipped recommendation APIs that respect risk profiles and generate compliant client copy.</p>
-            <a href="#" class="read-link">Read case study <span>→</span></a>
+            <p>Pipelines and analytics for insurance risk scoring and fraud detection.</p>
+            <a href="/data-engineering-analytics-insurance-risk" class="read-link">Read case study <span>→</span></a>
           </div>
         </div>
       </div>
