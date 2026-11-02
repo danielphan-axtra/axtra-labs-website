@@ -1,10 +1,11 @@
 # Axtra Labs — Next.js site
 
-Synced from the root static HTML (source of truth for content/design).
+`web/` is the source of truth for the deployed site. The HTML files at the repo root are a legacy static snapshot. `web/scripts/migrate-html.py` is disabled so it cannot copy that snapshot, including retired generated case studies, back over `web/content`.
+
+Case studies are hand-written in `web/content/<slug>.html`, registered in `web/lib/pages.ts`, and routed from `web/app/<slug>/page.tsx`.
 
 ```bash
-# From repo root: refresh content + assets into web/
-python3 web/scripts/migrate-html.py
+# Assets only, when images under /assets change:
 rsync -a --delete assets/ web/public/assets/
 cp -f assets/css/*.css web/styles/
 

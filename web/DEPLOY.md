@@ -39,12 +39,11 @@ npm run build && npm run start -- -p 3001
 
 ## Notes
 
-- Static HTML at repo root remains source for content sync (`python3 web/scripts/migrate-html.py`).
+- `web/` is the source of truth. Do not run `web/scripts/migrate-html.py`; it is disabled because a sync from the legacy root HTML would overwrite case studies.
 - `web/public/assets` is a real copy of `assets/` (required for Vercel; do not use a symlink).
-- After HTML/CSS/asset edits at repo root, refresh Next before deploy:
+- After asset edits under repo-root `assets/`, refresh the Next public copy before deploy:
 
 ```bash
-python3 web/scripts/migrate-html.py
 rsync -a --delete assets/ web/public/assets/
 cp -f assets/css/*.css web/styles/
 cd web && npm run build

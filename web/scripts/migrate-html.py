@@ -1,5 +1,19 @@
 #!/usr/bin/env python3
-"""Migrate root *.html into Next.js pages using HTML fragments (SSG-safe)."""
+"""DISABLED. Do not copy root HTML over web/.
+
+web/ is the source of truth for the Next.js app (Vercel root directory).
+The repo-root *.html files are a legacy static snapshot. Running the old
+sync rewrote web/content from that snapshot and would restore retired
+generated case studies.
+
+Case studies are authored in:
+  web/content/<slug>.html
+  web/app/<slug>/page.tsx
+  web/lib/pages.ts
+
+Edit those files. Do not re-enable this script unless the root HTML has
+been regenerated from web/ first.
+"""
 
 from __future__ import annotations
 
@@ -226,6 +240,14 @@ def build_page(slug: str, title: str, desc: str, imports: list[str], has_page_cs
 
 
 def main() -> None:
+    raise SystemExit(
+        "migrate-html.py is disabled.\n"
+        "web/ is the source of truth for the Next.js site. Copying root *.html\n"
+        "into web/content would restore retired generated case studies.\n"
+        "Edit web/content, web/app and web/lib/pages.ts instead.\n"
+        "See the docstring at the top of this file."
+    )
+
     CONTENT.mkdir(parents=True, exist_ok=True)
     STYLES_PAGES.mkdir(parents=True, exist_ok=True)
 

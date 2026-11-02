@@ -245,3 +245,10 @@ footer p {
     gap: 28px;
   }
 }
+
+/* real-case-brand */
+.tile-media.brand-panel{
+  background:
+    radial-gradient(ellipse 70% 80% at 100% 0%, rgba(255,90,0,0.42), transparent 52%),
+    linear-gradient(155deg, #0B2A4A 0%, #071428 78%);
+}
