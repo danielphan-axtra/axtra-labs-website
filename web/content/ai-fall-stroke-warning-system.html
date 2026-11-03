@@ -1,0 +1,143 @@
+<section class="csd">
+  <div class="wrap">
+    <div class="breadcrumb"><a href="/">Home</a> / <a href="/case-study">Case Studies</a> / AI Fall &amp; Stroke Warning System for Elderly Care</div>
+    <div class="csd-hero">
+      <div class="csd-meta"><span>Healthcare</span><span>AI Services</span></div>
+      <h1>AI Fall &amp; Stroke Warning System for Elderly Care</h1>
+      <p class="csd-sub">Real-time, on-premise computer vision that spots falls and visible stroke warning signs in older adults and raises an alert in seconds, with no video leaving the home.</p>
+      <div class="csd-related"><a href="/computer-vision-qc-factory-lines">Computer vision QC across 3 factory lines</a><a href="/vika-cube-ai-learning-companion">Vika Cube AI Learning Companion</a><a href="/healthcare">Healthcare industry</a></div>
+    </div>
+    <div class="csd-hero-media">
+      <img src="/assets/img/case-studies/ai-fall-stroke-warning-system.jpg" alt="AI Fall and Stroke Warning System for Elderly Care" loading="eager">
+    </div>
+
+    <div class="csd-layout">
+      <div class="csd-main">
+        <h2>Key Details</h2>
+        <table class="csd-keys">
+          <tr><th>Challenge</th><td>Older adults can spend a long time on the floor after a fall before anyone notices. Wearable panic buttons only help if the person can press them. Cloud cameras send private home video to third parties. Simple motion rules false-alarm on bending, sitting and lying down, and visible stroke signs are easy to miss.</td></tr>
+          <tr><th>Solution</th><td>A hands-free, on-premise monitor. 17-keypoint pose estimation and ByteTrack follow each person. Temporal kinematic analysis separates falls from everyday movement, and sustained posture asymmetry, one-sided weakness and sudden loss of balance are treated as early stroke warning signs. Confirmed events trigger audio, on-screen and WebSocket alerts. The system does not diagnose.</td></tr>
+          <tr><th>Technologies</th><td>17-keypoint pose estimation, ByteTrack, temporal kinematic analysis, Python 3.11, DirectML, WebSocket, NVIDIA GPU, Windows, macOS</td></tr>
+        </table>
+
+        <div class="csd-tech">
+          <h2>Technologies used</h2>
+          <div class="csd-tech-list">
+          <span class="tech-pill no-logo">17-keypoint pose estimation</span><span class="tech-pill no-logo">ByteTrack</span><span class="tech-pill no-logo">Python 3.11</span><span class="tech-pill no-logo">DirectML</span><span class="tech-pill no-logo">WebSocket</span><span class="tech-pill no-logo">NVIDIA GPU</span><span class="tech-pill no-logo">Windows</span><span class="tech-pill no-logo">macOS</span>
+          </div>
+        </div>
+
+        <div class="csd-body">
+          <h2>Overview</h2>
+          <p>Axtra Labs built a camera-based safety monitor for older adults living at home or in care settings. A standard webcam or IP camera watches the room. On-device AI reads each person's body pose, follows how they move over time, and raises an alert when it sees a fall or visible stroke warning signs. Everything runs on a local computer, so no video goes to an outside server. This is an Axtra Labs product and R&amp;D build. No client is named.</p>
+
+          <h2>The challenge</h2>
+          <p>For many older adults the most dangerous part of a fall is the time they spend on the floor before anyone notices, and many of them are alone during the day. The usual options each fall short:</p>
+          <ul>
+            <li>Wearable panic buttons only help if the person is conscious, wearing the device and able to press it.</li>
+            <li>Cloud camera services stream private home video to third parties, which many families and care providers will not accept.</li>
+            <li>Simple motion or "person on the floor" rules go off when someone bends to pick something up, sits down quickly or lies down to rest. When the false alarms keep coming, families stop trusting the system.</li>
+            <li>Stroke signs are subtle. Posture asymmetry, weakness on one side and sudden loss of balance are easy to miss and hard to tell apart from normal movement.</li>
+          </ul>
+          <p>The goal was a hands-free system with nothing to wear and nothing to press. It had to react in real time, run entirely on-premise, and be simple enough for a non-technical family to install.</p>
+
+          <div class="csd-shots">
+            <h2>Product screenshots</h2>
+            <div class="csd-shots-grid pair">
+              <figure class="csd-shot">
+                <a href="/assets/img/case-studies/product-v2/ai-fall-stroke-warning-system-1.webp" target="_blank" rel="noopener">
+                  <img src="/assets/img/case-studies/product-v2/ai-fall-stroke-warning-system-1.webp" alt="Real system screenshot of a fall-detection dashboard with a living-room camera feed showing a person on the floor inside a red &#x27;fall detected 96%&#x27; box, an alert card with snapshot, time and confidence, system status tiles and an alert history table; the system name area is blurred." width="1536" height="1024" loading="lazy" decoding="async">
+                </a>
+                <figcaption>Live monitoring dashboard: a home camera feed flags a detected fall with its confidence score and raises an alert with the event logged in the alert history.</figcaption>
+              </figure>
+              <figure class="csd-shot">
+                <a href="/assets/img/case-studies/product-v2/ai-fall-stroke-warning-system-2.webp" target="_blank" rel="noopener">
+                  <img src="/assets/img/case-studies/product-v2/ai-fall-stroke-warning-system-2.webp" alt="Dark teal analysis screen with a living-room camera frame of an older woman steadying herself on a chair, overlaid with a pose skeleton and bounding box, plus charts of torso angle and hip height over the last ten seconds against a fall threshold, and a state indicator reading unsteady, monitoring." width="1600" height="1000" loading="lazy" decoding="async">
+                </a>
+                <figcaption>Pose-tracking view: the model follows body keypoints frame by frame and watches torso angle and hip height so it can tell a stumble from a fall.</figcaption>
+              </figure>
+            </div>
+          </div>
+          <h2>The solution</h2>
+          <p>Axtra Labs designed and built the Fall &amp; Stroke Warning System, a real-time computer vision application that runs 24/7 on an ordinary PC or laptop with a local GPU.</p>
+          <ul>
+            <li><strong>Pose estimation.</strong> Each video frame goes through a 17-keypoint (COCO) pose estimation model, which finds every person in view and maps their skeleton.</li>
+            <li><strong>Multi-person tracking.</strong> ByteTrack gives each person a stable ID, so the system can follow several people in the same room.</li>
+            <li><strong>Temporal kinematic analysis.</strong> The system looks at a sliding window of movement rather than single frames. It measures how fast the body drops, the torso angle, body shape and how close the hips are to the floor. This lets it tell a real fall apart from bending down, sitting or lying down on purpose.</li>
+            <li><strong>Stroke sign recognition.</strong> The system watches for posture asymmetry, weakness in the limbs on one side and sudden loss of balance, and treats them as early warning signs.</li>
+            <li><strong>Conservative alert logic.</strong> Several signals are combined, and risk has to stay high for a sustained period before an alarm fires. A single noisy frame cannot trigger an alert.</li>
+            <li><strong>Multi-channel alerts.</strong> When an event is confirmed, the system sounds an alarm through the PC speakers, flashes a red indicator on the dashboard and pushes the event over a real-time WebSocket feed that other systems can subscribe to.</li>
+          </ul>
+          <p>The system flags observable warning signs and asks a person to check. It does not diagnose medical conditions, and it supports caregivers rather than replacing them.</p>
+          <h2>Key features</h2>
+          <ul>
+            <li>Instant fall detection: temporal kinematic analysis separates real falls from everyday movement such as bending, sitting and picking things up.</li>
+            <li>Stroke warning signs: posture asymmetry, weakness on one side and sudden loss of balance.</li>
+            <li>Multi-person tracking: ByteTrack follows each person in the room separately.</li>
+            <li>Flexible camera input: USB and built-in webcams, RTSP IP security cameras, and MP4 video files for testing and demos.</li>
+            <li>Multi-channel alerts: audio alarm, flashing on-screen indicator, and a real-time WebSocket alert stream.</li>
+            <li>Live monitoring dashboard: live camera view with a bounding box, event label and detection confidence; an alert card with a snapshot, time and camera; alert history; and system statistics (total alerts, cameras monitored, people tracked, current risk level).</li>
+            <li>24/7 operation: optional autostart with Windows, so monitoring resumes after every reboot.</li>
+            <li>Privacy controls: all processing stays on the machine, and face blurring is optional.</li>
+            <li>Localised UI: the dashboard is fully in Vietnamese for local families and caregivers, and the product site is bilingual (EN/VI).</li>
+          </ul>
+
+          <h2>Deployment and privacy</h2>
+          <ul>
+            <li>Fully on-premise and offline. Video is processed on the local GPU and never sent to an external server. Monitoring needs no internet connection.</li>
+            <li>Optional face blurring for extra privacy in shared or care settings.</li>
+            <li>Runs on mainstream hardware. The target is Windows 10/11 PCs and laptops (Intel Core i5 8th gen or newer, or AMD Ryzen 5 or newer, 8 GB RAM minimum, 16 GB recommended) with a modest discrete GPU (NVIDIA GTX 1650 / RTX, or AMD Radeon via DirectML).</li>
+            <li>Zero-setup install for families. Download, double-click the Windows .exe, and the AI engine, camera stream and dashboard start automatically with no console window. Models and dependencies are bundled, so Python is not required. A macOS .dmg is also available.</li>
+            <li>Developer-friendly. Integrators can run from the Python 3.11 source, retrain models, plug in their own cameras, or connect to the local API (Swagger docs at localhost:8000) and the WebSocket feed.</li>
+          </ul>
+
+          <h2>What was delivered</h2>
+          <ul>
+            <li>A working real-time fall and stroke warning system. The project states real-time inference at up to 30 FPS on a local GPU.</li>
+            <li>Fall detection that separates real falls from bending, sitting and other normal activity, so families get fewer false alarms.</li>
+            <li>Early warning for visible stroke signs (posture asymmetry, weakness on one side, sudden loss of balance).</li>
+            <li>Audio, on-screen and WebSocket alerts, plus a live dashboard with alert history and system stats.</li>
+            <li>Support for multiple people and multiple camera types (USB, RTSP, MP4).</li>
+            <li>A privacy-first architecture where no video leaves the premises, with optional face blurring.</li>
+            <li>Production-style packaging: a one-click Windows installer with autostart, a macOS build, a local API with Swagger docs, and an iterative release cycle. Current release v0.3.5.</li>
+          </ul>
+
+          <h2>Services used</h2>
+          <div class="csd-services"><a href="/ai-services">AI Services →</a><a href="/ai-software-development">AI-Software Development →</a><a href="/ai-robotics">AI for Robotics →</a></div>
+          <h2>Industries</h2>
+          <div class="csd-services"><a href="/healthcare">Healthcare →</a></div>
+        </div>
+      </div>
+
+      <aside class="csd-side">
+        <div class="csd-side-card">
+          <h3>At a glance</h3>
+          <dl>
+            <dt>Industry</dt><dd>Healthcare</dd>
+            <dt>Engagement</dt><dd>Product / R&amp;D</dd>
+            <dt>Expertise</dt><dd>AI Services</dd>
+            <dt>Privacy</dt><dd>On-premise, no video leaves the machine</dd>
+            <dt>Inference</dt><dd>Up to 30 FPS on a local GPU</dd>
+            <dt>Release</dt><dd>v0.3.5</dd>
+          </dl>
+        </div>
+        <div class="csd-side-card">
+          <h3>Stack highlights</h3>
+          <div class="csd-tech-list" style="gap:8px;">
+          <span class="tech-pill no-logo">17-keypoint pose estimation</span><span class="tech-pill no-logo">ByteTrack</span><span class="tech-pill no-logo">Python 3.11</span><span class="tech-pill no-logo">DirectML</span><span class="tech-pill no-logo">WebSocket</span>
+          </div>
+        </div>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<section id="contact" style="padding-top:0;">
+  <div class="cta-banner">
+    <div class="cta-banner-inner">
+      <h2>We empower businesses with AI, ML, and data solutions.</h2>
+      <p>Response within 1 business day. You will hear from an engineer, not a salesperson.</p>
+      <a href="/contact" class="btn" style="background:#fff;border-color:#fff;">Contact Us <span>→</span></a>
+    </div>
+  </div>
+</section>

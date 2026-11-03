@@ -280,31 +280,30 @@ export default function HomePage() {
               <div className="tile-desc">Gen AI apps, agents, RAG pipelines and LLM fine-tuning, from proof-of-concept to production.</div>
             </div>
           </a>
-          <a href="/chatbot-automated-customer-support" className="tile photo-text span2 reveal">
-            <div className="tile-media"><img src="https://images.pexels.com/photos/346885/pexels-photo-346885.jpeg?auto=compress&cs=tinysrgb&w=1200&h=760&dpr=1" alt="Airport travel operations" loading="lazy" decoding="async" /></div>
+          <a href="/ai-powered-retail-traffic-analytics" className="tile color-navy span2 reveal">
             <div className="tile-content">
               <div className="tile-tag">Case Study</div>
-              <h4>Chatbot for Automated Customer Support</h4>
-              <div className="tile-desc">Sales and support chatbot covering FAQs, handoff and booking flows for travel operations.</div>
+              <h4>AI-Powered Retail Traffic Analytics</h4>
+              <div className="tile-desc">Footfall and dwell-time analytics on existing CCTV for a regional mall operator in Thailand.</div>
             </div>
           </a>
 
           {/* Row 2: case study (dark navy) | photo | case study (light) | photo */}
-          <a href="/big-data-analytics-business-intelligence" className="tile color-navy reveal">
+          <a href="/ai-powered-rfp-tender-response-platform" className="tile color-navy reveal">
             <div className="tile-content">
               <div className="tile-tag">Case Study</div>
-              <h4>Big Data Analytics for Business Intelligence</h4>
-              <div className="tile-desc">Predictive dashboards that shortened a reporting cycle from 3 weeks to 2 days.</div>
+              <h4>AI-Powered RFP &amp; Tender Response Platform</h4>
+              <div className="tile-desc">Tender preparation time reduced by 50% for a Europe-based B2B SaaS startup, with up to 90% less time on repetitive work.</div>
             </div>
           </a>
           <div className="tile photo-plain reveal">
             <div className="tile-media"><img src="https://images.pexels.com/photos/669610/pexels-photo-669610.jpeg?auto=compress&cs=tinysrgb&w=700&h=760&dpr=1" alt="Business reporting dashboards" loading="lazy" decoding="async" /></div>
           </div>
-          <a href="/ai-fraud-detection-neobank-startup" className="tile color-navy reveal">
+          <a href="/intelligent-loan-processing-platform" className="tile color-navy reveal">
             <div className="tile-content">
               <div className="tile-tag">Case Study</div>
-              <h4>AI Fraud Detection for a Neobank Startup</h4>
-              <div className="tile-desc">Graph and behavioral fraud scoring that cut false declines while catching account-takeover rings.</div>
+              <h4>Intelligent Loan Processing Platform</h4>
+              <div className="tile-desc">Document intake for a US fintech lender. Thousands of documents a month, and the contract was extended 7 times.</div>
             </div>
           </a>
           <div className="tile photo-plain reveal">
@@ -322,11 +321,11 @@ export default function HomePage() {
           <div className="tile photo-plain reveal">
             <div className="tile-media"><img src="https://images.pexels.com/photos/2085831/pexels-photo-2085831.jpeg?auto=compress&cs=tinysrgb&w=700&h=760&dpr=1" alt="Factory production line" loading="lazy" decoding="async" /></div>
           </div>
-          <a href="/computer-vision-qc-factory-lines" className="tile color-blue reveal">
+          <a href="/uk-infrastructure-project-tracking-portal" className="tile color-blue reveal">
             <div className="tile-content">
               <div className="tile-tag">Case Study</div>
-              <h4>Computer vision QC across 3 factory lines</h4>
-              <div className="tile-desc">Real-time defect detection deployed on production lines for a manufacturing client.</div>
+              <h4>Enterprise Project Tracking Portal</h4>
+              <div className="tile-desc">Reporting delays reduced by 70%+ for 400+ users across 10+ departments at a UK infrastructure firm.</div>
             </div>
           </a>
 

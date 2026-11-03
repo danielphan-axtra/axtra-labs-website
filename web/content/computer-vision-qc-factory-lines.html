@@ -5,7 +5,7 @@
       <div class="csd-meta"><span>Manufacturing</span><span>AI for Robotics</span></div>
       <h1>Computer vision QC across 3 factory lines</h1>
       <p class="csd-sub">Real-time defect detection deployed on production lines.</p>
-      <div class="csd-related"><a href="/ai-powered-smart-surveillance-system">AI-Powered Smart Surveillance System</a><a href="/ai-optimized-logistics-route-planning">AI-Optimized Logistics Route Planning</a><a href="/manufacturing">Manufacturing industry</a></div>
+      <div class="csd-related"><a href="/vika-cube-ai-learning-companion">Vika Cube AI Learning Companion</a><a href="/ai-powered-smart-surveillance-system">AI-Powered Smart Surveillance System</a><a href="/manufacturing">Manufacturing industry</a></div>
     </div>
     <div class="csd-hero-media">
       <img src="/assets/img/themes/manufacturing-cobot.jpg" alt="Computer vision QC across factory lines" loading="eager">
@@ -39,29 +39,30 @@
           <h2>Key challenges</h2>
           <ul><li>Lighting drift and vibration made naive models unstable between shifts.</li><li>Latency budgets left little room for cloud round-trips.</li><li>False rejects vs. misses required careful threshold and UX design.</li><li>Reject signals had to integrate cleanly with existing PLC logic.</li></ul>
 
-          <div class="csd-gallery">
-            <figure>
-              <img src="https://images.pexels.com/photos/2582937/pexels-photo-2582937.jpeg?auto=compress&cs=tinysrgb&w=1000" alt="Vision station with operator review UI" loading="lazy">
-              <figcaption>Vision station with operator review UI</figcaption>
-            </figure>
-            <figure>
-              <img src="https://images.pexels.com/photos/4485284/pexels-photo-4485284.jpeg?auto=compress&cs=tinysrgb&w=1000" alt="Edge inference integrated with PLC reject signals" loading="lazy">
-              <figcaption>Edge inference integrated with PLC reject signals</figcaption>
-            </figure>
+          <div class="csd-shots">
+            <h2>Product screenshots</h2>
+            <div class="csd-shots-grid">
+              <figure class="csd-shot">
+                <a href="/assets/img/case-studies/product-v2/computer-vision-qc-factory-lines-1.webp" target="_blank" rel="noopener">
+                  <img src="/assets/img/case-studies/product-v2/computer-vision-qc-factory-lines-1.webp" alt="Industrial dark-grey and yellow inspection console showing a top-down belt camera with seven machined caps, two marked with red boxes for scratch and dent and the rest tagged OK, a reject-gate status, a defect crop gallery for operator confirmation and per-shift counts." width="1600" height="1000" loading="lazy" decoding="async">
+                </a>
+                <figcaption>Line inspection station: each part on the belt is classified as it passes, defects are boxed with their type, and rejects go to an operator review queue.</figcaption>
+              </figure>
+            </div>
           </div>
-
           <h2>What we built</h2>
           <ul><li>Edge inference on Jetson per line with OpenCV/PyTorch defect models.</li><li>Operator review UI for ambiguous cases without stopping the line.</li><li>OPC-UA / PLC reject pulse with safe defaults on model uncertainty.</li><li>Monitoring for lighting drift, latency and false-reject rates.</li></ul>
           <p class="team-note"><strong>Project team:</strong> 8 engineers across AI/ML, backend and domain specialists — delivery over 24 weeks.</p>
-
           <h2>How we delivered</h2>
           <div class="csd-approach"><div class="csd-step"><div class="sn">01</div><h4>Floor</h4><p>Assessed lighting, camera mounts and PLC interfaces on each line.</p></div><div class="csd-step"><div class="sn">02</div><h4>Pilot</h4><p>Validated on one line before touching the other two.</p></div><div class="csd-step"><div class="sn">03</div><h4>Integrate</h4><p>Wired reject signals and trained operators on the review UX.</p></div><div class="csd-step"><div class="sn">04</div><h4>Scale</h4><p>Cloned the station design across three lines with shared model ops.</p></div></div>
 
           <h2>Business impact</h2>
           <div class="csd-impact"><div><strong>3 lines</strong>In production</div><div><strong>Lower</strong>Escape rate</div><div><strong>Stable</strong>False rejects</div></div>
 
-          <h2>Related services</h2>
-          <div class="csd-services"><a href="/ai-robotics">AI for Robotics →</a><a href="/manufacturing">Manufacturing →</a></div>
+          <h2>Services used</h2>
+          <div class="csd-services"><a href="/ai-robotics">AI for Robotics →</a></div>
+          <h2>Industries</h2>
+          <div class="csd-services"><a href="/manufacturing">Manufacturing →</a></div>
         </div>
       </div>
 

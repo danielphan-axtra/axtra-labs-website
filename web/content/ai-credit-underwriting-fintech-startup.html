@@ -5,10 +5,10 @@
       <div class="csd-meta"><span>Fintech</span><span>AI Services</span><span>Startup</span></div>
       <h1>AI Credit Underwriting for a Lending Startup</h1>
       <p class="csd-sub">Real-time underwriting models that helped a Series A lending startup approve more good borrowers without raising loss rates.</p>
-      <div class="csd-related"><a href="/ai-fraud-detection-neobank-startup">AI Fraud Detection for a Neobank Startup</a><a href="/data-engineering-analytics-insurance-risk">Data Engineering and Analytics for Insurance Risk Assessment</a><a href="/fintech">Fintech industry</a></div>
+      <div class="csd-related"><a href="/ai-returns-prevention-ecommerce-startup">AI Returns Prevention for a D2C Ecommerce Startup</a><a href="/ai-driven-personalized-ecommerce-recommendations">AI-Driven Personalized E-Commerce Recommendations</a><a href="/fintech">Fintech industry</a></div>
     </div>
     <div class="csd-hero-media">
-      <img src="https://images.pexels.com/photos/186461/pexels-photo-186461.jpeg?auto=compress&cs=tinysrgb&w=1600" alt="AI Credit Underwriting for a Lending Startup" loading="eager">
+      <img src="/assets/img/case-studies/ai-credit-underwriting-fintech-startup.jpg" alt="AI Credit Underwriting for a Lending Startup" loading="eager">
     </div>
 
     <div class="csd-layout">
@@ -39,29 +39,30 @@
           <h2>Key challenges</h2>
           <ul><li>Analysts could not keep up with peak application spikes without adding headcount.</li><li>Thin-file and new-to-credit applicants were over-rejected by rigid bureau rules.</li><li>Founders needed explainability for investors, partners and regulators.</li><li>Shadow models in notebooks never made it into the live decision path.</li></ul>
 
-          <div class="csd-gallery">
-            <figure>
-              <img src="https://images.pexels.com/photos/4386431/pexels-photo-4386431.jpeg?auto=compress&cs=tinysrgb&w=1000" alt="Underwriting console with explainable score drivers" loading="lazy">
-              <figcaption>Underwriting console with explainable score drivers</figcaption>
-            </figure>
-            <figure>
-              <img src="https://images.pexels.com/photos/6801648/pexels-photo-6801648.jpeg?auto=compress&cs=tinysrgb&w=1000" alt="Feature pipelines feeding live decisioning" loading="lazy">
-              <figcaption>Feature pipelines feeding live decisioning</figcaption>
-            </figure>
+          <div class="csd-shots">
+            <h2>Product screenshots</h2>
+            <div class="csd-shots-grid">
+              <figure class="csd-shot">
+                <a href="/assets/img/case-studies/product-v2/ai-credit-underwriting-fintech-startup-1.webp" target="_blank" rel="noopener">
+                  <img src="/assets/img/case-studies/product-v2/ai-credit-underwriting-fintech-startup-1.webp" alt="Light mint and deep-green underwriting screen with an applicant summary, a score gauge with a recommendation band, a horizontal factor-contribution chart showing positive and negative drivers, data sources checked, and an analyst decision panel with reason codes." width="1600" height="1000" loading="lazy" decoding="async">
+                </a>
+                <figcaption>Underwriting decision view: the model&#x27;s score comes with the factors that pushed it up or down, so the analyst can see why and record the final decision.</figcaption>
+              </figure>
+            </div>
           </div>
-
           <h2>What we built</h2>
           <ul><li>Feature store for bureau, bank-transaction and application signals with freshness checks.</li><li>Gradient-boosted underwriting model with SHAP-style driver explanations for analysts.</li><li>FastAPI decision service with policy overlays and human review for edge cases.</li><li>Monitoring for approval rate, loss early-warning and score drift.</li></ul>
           <p class="team-note"><strong>Project team:</strong> 5 engineers across AI/ML, backend and product engineering — delivery over 12 weeks for a startup team that needed to ship, not slide decks.</p>
-
           <h2>How we delivered</h2>
           <div class="csd-approach"><div class="csd-step"><div class="sn">01</div><h4>Scope</h4><p>Aligned risk appetite, excluded populations and what “good approval” meant for the round.</p></div><div class="csd-step"><div class="sn">02</div><h4>Data</h4><p>Joined bureau, KYC and transaction feeds into a decision-ready feature layer.</p></div><div class="csd-step"><div class="sn">03</div><h4>Model</h4><p>Trained and calibrated scores with holdout and time-based validation.</p></div><div class="csd-step"><div class="sn">04</div><h4>Ship</h4><p>Cut over behind feature flags with analyst override and weekly risk reviews.</p></div></div>
 
           <h2>Business impact</h2>
           <div class="csd-impact"><div><strong>+28%</strong>Auto-decision rate</div><div><strong>Flat</strong>Early delinquency</div><div><strong>Minutes</strong>From hours of review</div></div>
 
-          <h2>Related services</h2>
-          <div class="csd-services"><a href="/ai-services">AI Services →</a><a href="/fintech">Fintech →</a><a href="/data-bi">Data &amp; BI →</a></div>
+          <h2>Services used</h2>
+          <div class="csd-services"><a href="/ai-services">AI Services →</a><a href="/data-bi">Data &amp; BI →</a></div>
+          <h2>Industries</h2>
+          <div class="csd-services"><a href="/fintech">Fintech →</a></div>
         </div>
       </div>
 

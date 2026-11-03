@@ -54,3 +54,12 @@ section{padding:64px 0;}
 @media (max-width:600px){.svc-grid{grid-template-columns:1fr;}
 .svc-card.short,.svc-card.long{grid-column:span 1;}
 }
+
+/* real-case-brand */
+.page-hero.page-hero-brand{
+  background:
+    radial-gradient(ellipse 55% 140% at 100% 100%, rgba(255,90,0,0.38), transparent 46%),
+    linear-gradient(135deg, #0B2A4A 0%, #071428 100%);
+  min-height:280px;
+}
+.page-hero.page-hero-brand .page-hero-inner{max-width:860px;}

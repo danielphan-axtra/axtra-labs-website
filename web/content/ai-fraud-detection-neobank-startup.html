@@ -5,10 +5,10 @@
       <div class="csd-meta"><span>Fintech</span><span>AI Services</span><span>Startup</span></div>
       <h1>AI Fraud Detection for a Neobank Startup</h1>
       <p class="csd-sub">Graph + behavioral fraud scoring that cut false declines while catching account-takeover rings for an early-stage neobank.</p>
-      <div class="csd-related"><a href="/ai-credit-underwriting-fintech-startup">AI Credit Underwriting for a Lending Startup</a><a href="/data-engineering-analytics-insurance-risk">Data Engineering and Analytics for Insurance Risk Assessment</a><a href="/fintech">Fintech industry</a></div>
+      <div class="csd-related"><a href="/ai-credit-underwriting-fintech-startup">AI Credit Underwriting for a Lending Startup</a><a href="/ai-returns-prevention-ecommerce-startup">AI Returns Prevention for a D2C Ecommerce Startup</a><a href="/fintech">Fintech industry</a></div>
     </div>
     <div class="csd-hero-media">
-      <img src="https://images.pexels.com/photos/4386431/pexels-photo-4386431.jpeg?auto=compress&cs=tinysrgb&w=1600" alt="AI Fraud Detection for a Neobank Startup" loading="eager">
+      <img src="/assets/img/case-studies/ai-fraud-detection-neobank-startup.jpg" alt="AI Fraud Detection for a Neobank Startup" loading="eager">
     </div>
 
     <div class="csd-layout">
@@ -39,29 +39,36 @@
           <h2>Key challenges</h2>
           <ul><li>False declines hurt activation and support costs for a brand still earning trust.</li><li>Coordinated rings shared devices and funding patterns rules could not see.</li><li>No real-time feature path — batch jobs were too slow for card authorizations.</li><li>Investigators lacked a prioritized queue with evidence packs.</li></ul>
 
-          <div class="csd-gallery">
-            <figure>
-              <img src="https://images.pexels.com/photos/6801648/pexels-photo-6801648.jpeg?auto=compress&cs=tinysrgb&w=1000" alt="Fraud ops queue prioritized by model risk" loading="lazy">
-              <figcaption>Fraud ops queue prioritized by model risk</figcaption>
-            </figure>
-            <figure>
-              <img src="https://images.pexels.com/photos/590022/pexels-photo-590022.jpeg?auto=compress&cs=tinysrgb&w=1000" alt="Device and velocity features in the decision path" loading="lazy">
-              <figcaption>Device and velocity features in the decision path</figcaption>
-            </figure>
+          <div class="csd-shots">
+            <h2>Product screenshots</h2>
+            <div class="csd-shots-grid pair">
+              <figure class="csd-shot">
+                <a href="/assets/img/case-studies/product-v2/ai-fraud-detection-neobank-startup-1.webp" target="_blank" rel="noopener">
+                  <img src="/assets/img/case-studies/product-v2/ai-fraud-detection-neobank-startup-1.webp" alt="Dark purple investigation console with a force-directed link graph of accounts, devices, IP addresses and payees around a flagged account, a risk-score card listing the model&#x27;s top signals, and a case timeline with freeze and release actions." width="1600" height="1000" loading="lazy" decoding="async">
+                </a>
+                <figcaption>Fraud investigation graph: a flagged transfer is linked to the accounts, devices and payees it shares, so the analyst can see the ring the model picked up.</figcaption>
+              </figure>
+              <figure class="csd-shot">
+                <a href="/assets/img/case-studies/product-v2/ai-fraud-detection-neobank-startup-2.webp" target="_blank" rel="noopener">
+                  <img src="/assets/img/case-studies/product-v2/ai-fraud-detection-neobank-startup-2.webp" alt="Light lilac banking app shown on three phones: a push notification about a paused transfer, a &#x27;Was this you?&#x27; screen with transfer details and yes or no buttons plus face confirmation, and a confirmation screen showing the card frozen and next steps." width="1600" height="1000" loading="lazy" decoding="async">
+                </a>
+                <figcaption>Customer-side step-up: when a transfer looks risky the app pauses it and asks &#x27;Was this you?&#x27;, then confirms or freezes the card in one tap.</figcaption>
+              </figure>
+            </div>
           </div>
-
           <h2>What we built</h2>
           <ul><li>Streaming features for device fingerprint, velocity and peer-graph risk.</li><li>Online fraud score service with kill-switches and reason codes.</li><li>Investigator console with case notes, linked entities and disposition outcomes.</li><li>Feedback loop so confirmed fraud retrains weekly challenger models.</li></ul>
           <p class="team-note"><strong>Project team:</strong> 6 engineers across AI/ML, backend and product engineering — delivery over 14 weeks for a startup team that needed to ship, not slide decks.</p>
-
           <h2>How we delivered</h2>
           <div class="csd-approach"><div class="csd-step"><div class="sn">01</div><h4>Baseline</h4><p>Measured false decline vs. fraud loss and mapped the hottest attack patterns.</p></div><div class="csd-step"><div class="sn">02</div><h4>Features</h4><p>Stood up streaming feature jobs with latency budgets for auth time.</p></div><div class="csd-step"><div class="sn">03</div><h4>Score</h4><p>Shipped v1 scorer with human review for mid-risk band.</p></div><div class="csd-step"><div class="sn">04</div><h4>Operate</h4><p>Trained fraud ops and locked SLAs for model and rule changes.</p></div></div>
 
           <h2>Business impact</h2>
           <div class="csd-impact"><div><strong>-35%</strong>False declines</div><div><strong>+2.1×</strong>Fraud catch rate</div><div><strong>&lt;80ms</strong>Score latency</div></div>
 
-          <h2>Related services</h2>
-          <div class="csd-services"><a href="/ai-services">AI Services →</a><a href="/fintech">Fintech →</a><a href="/devops">DevOps →</a></div>
+          <h2>Services used</h2>
+          <div class="csd-services"><a href="/ai-services">AI Services →</a><a href="/devops">DevOps →</a></div>
+          <h2>Industries</h2>
+          <div class="csd-services"><a href="/fintech">Fintech →</a></div>
         </div>
       </div>
 

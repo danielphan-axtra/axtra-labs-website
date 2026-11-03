@@ -33,6 +33,11 @@ const longCache = [
 ];
 
 const nextConfig: NextConfig = {
+  async redirects() {
+    return [
+      { source: "/case-studies", destination: "/case-study", statusCode: 301 },
+    ];
+  },
   poweredByHeader: false,
   compress: true,
   compiler: {
