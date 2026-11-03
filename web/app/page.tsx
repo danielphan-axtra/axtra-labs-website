@@ -280,20 +280,20 @@ export default function HomePage() {
               <div className="tile-desc">Gen AI apps, agents, RAG pipelines and LLM fine-tuning, from proof-of-concept to production.</div>
             </div>
           </a>
-          <a href="/ai-powered-rfp-tender-response-platform" className="tile color-navy span2 reveal">
+          <a href="/ai-powered-retail-traffic-analytics" className="tile color-navy span2 reveal">
             <div className="tile-content">
               <div className="tile-tag">Case Study</div>
-              <h4>AI-Powered RFP &amp; Tender Response Platform</h4>
-              <div className="tile-desc">Tender preparation time reduced by 50% for a Europe-based B2B SaaS startup, with up to 90% less time on repetitive work.</div>
+              <h4>AI-Powered Retail Traffic Analytics</h4>
+              <div className="tile-desc">Footfall and dwell-time analytics on existing CCTV for a regional mall operator in Thailand.</div>
             </div>
           </a>
 
           {/* Row 2: case study (dark navy) | photo | case study (light) | photo */}
-          <a href="/uk-infrastructure-project-tracking-portal" className="tile color-navy reveal">
+          <a href="/ai-powered-rfp-tender-response-platform" className="tile color-navy reveal">
             <div className="tile-content">
               <div className="tile-tag">Case Study</div>
-              <h4>Enterprise Project Tracking Portal</h4>
-              <div className="tile-desc">Reporting delays reduced by 70%+ for 400+ users across 10+ departments at a UK infrastructure firm.</div>
+              <h4>AI-Powered RFP &amp; Tender Response Platform</h4>
+              <div className="tile-desc">Tender preparation time reduced by 50% for a Europe-based B2B SaaS startup, with up to 90% less time on repetitive work.</div>
             </div>
           </a>
           <div className="tile photo-plain reveal">
@@ -321,11 +321,11 @@ export default function HomePage() {
           <div className="tile photo-plain reveal">
             <div className="tile-media"><img src="https://images.pexels.com/photos/2085831/pexels-photo-2085831.jpeg?auto=compress&cs=tinysrgb&w=700&h=760&dpr=1" alt="Factory production line" loading="lazy" decoding="async" /></div>
           </div>
-          <a href="/ai-powered-retail-traffic-analytics" className="tile color-blue reveal">
+          <a href="/uk-infrastructure-project-tracking-portal" className="tile color-blue reveal">
             <div className="tile-content">
               <div className="tile-tag">Case Study</div>
-              <h4>AI-Powered Retail Traffic Analytics</h4>
-              <div className="tile-desc">Footfall and dwell-time analytics on existing CCTV for a regional mall operator in Thailand.</div>
+              <h4>Enterprise Project Tracking Portal</h4>
+              <div className="tile-desc">Reporting delays reduced by 70%+ for 400+ users across 10+ departments at a UK infrastructure firm.</div>
             </div>
           </a>
 
