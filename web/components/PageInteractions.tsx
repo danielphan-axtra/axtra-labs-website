@@ -14,8 +14,17 @@ export default function PageInteractions({ page }: { page: Page }) {
       const exp = document.getElementById("cs-expertise-opts");
       const cards = document.querySelectorAll<HTMLElement>(".cs-card");
       const showAll = () => cards.forEach((c) => (c.style.display = ""));
-      const filter = (kind: string, val: string) => {
+      const filter = (kind: string, val: string, industries: string) => {
+        const group = industries ? industries.split("|") : null;
         cards.forEach((c) => {
+          if (kind === "industry" && val === "all") {
+            c.style.display = "";
+            return;
+          }
+          if (group) {
+            c.style.display = group.includes(c.getAttribute("data-industry") || "") ? "" : "none";
+            return;
+          }
           c.style.display = c.getAttribute(`data-${kind}`) === val ? "" : "none";
         });
       };
@@ -35,7 +44,7 @@ export default function PageInteractions({ page }: { page: Page }) {
           ?.querySelectorAll(".cs-opt")
           .forEach((o) => o.classList.remove("on"));
         opt.classList.add("on");
-        filter(kind, opt.getAttribute("data-value") || "");
+        filter(kind, opt.getAttribute("data-value") || "", opt.getAttribute("data-industries") || "");
       };
       document.querySelectorAll<HTMLElement>(".cs-opt").forEach((opt) => {
         opt.addEventListener("click", onOpt(opt));
