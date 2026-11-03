@@ -233,6 +233,14 @@ export const PAGES: PageEntry[] = [
       "Case study: AI video surveillance with threat detection, facial recognition and real-time alerts that cut manual monitoring 50% and sped response 40%.",
   },
   {
+    slug: "ai-fall-stroke-warning-system",
+    kind: "case-study",
+    title: "AI Fall & Stroke Warning System for Elderly Care",
+    seoTitle: "AI Fall & Stroke Warning System",
+    description:
+      "Case study: on-premise computer vision that spots falls and visible stroke warning signs in older adults and raises an alert in seconds, with no video leaving the home.",
+  },
+  {
     slug: "ai-returns-prevention-ecommerce-startup",
     kind: "case-study",
     title: "AI Returns Prevention for a D2C Ecommerce Startup",
