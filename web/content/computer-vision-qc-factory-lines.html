@@ -1,0 +1,102 @@
+<section class="csd">
+  <div class="wrap">
+    <div class="breadcrumb"><a href="/">Home</a> / <a href="/case-study">Case Studies</a> / Computer vision QC across 3 factory lines</div>
+    <div class="csd-hero">
+      <div class="csd-meta"><span>Manufacturing</span><span>AI for Robotics</span></div>
+      <h1>Computer vision QC across 3 factory lines</h1>
+      <p class="csd-sub">Real-time defect detection deployed on production lines.</p>
+      <div class="csd-related"><a href="/ai-powered-smart-surveillance-system">AI-Powered Smart Surveillance System</a><a href="/ai-optimized-logistics-route-planning">AI-Optimized Logistics Route Planning</a><a href="/manufacturing">Manufacturing industry</a></div>
+    </div>
+    <div class="csd-hero-media">
+      <img src="/assets/img/themes/manufacturing-cobot.jpg" alt="Computer vision QC across factory lines" loading="eager">
+    </div>
+
+    <div class="csd-layout">
+      <div class="csd-main">
+        <h2>Key Details</h2>
+        <table class="csd-keys">
+          <tr><th>Challenge</th><td>Manual QC missed defects at line speed and tired operators.</td></tr>
+          <tr><th>Solution</th><td>A vision station per line with operator UX and reject signals to PLC.</td></tr>
+          <tr><th>Technologies</th><td>OpenCV, PyTorch, NVIDIA Jetson, OPC-UA</td></tr>
+        </table>
+
+        <div class="csd-tech">
+          <h2>Technologies used</h2>
+          <div class="csd-tech-list">
+          <span class="tech-pill has-icon"><img class="tp-icon" src="https://cdn.jsdelivr.net/npm/simple-icons@11.14.0/icons/opencv.svg" alt="" width="18" height="18" loading="lazy">OpenCV</span>
+          <span class="tech-pill has-icon"><img class="tp-icon" src="https://cdn.jsdelivr.net/npm/simple-icons@11.14.0/icons/pytorch.svg" alt="" width="18" height="18" loading="lazy">PyTorch</span>
+          <span class="tech-pill has-icon"><img class="tp-icon" src="https://cdn.jsdelivr.net/npm/simple-icons@11.14.0/icons/nvidia.svg" alt="" width="18" height="18" loading="lazy">NVIDIA</span>
+          <span class="tech-pill has-icon"><img class="tp-icon" src="https://cdn.jsdelivr.net/npm/simple-icons@11.14.0/icons/python.svg" alt="" width="18" height="18" loading="lazy">Python</span>
+          <span class="tech-pill has-icon"><img class="tp-icon" src="https://cdn.jsdelivr.net/npm/simple-icons@11.14.0/icons/docker.svg" alt="" width="18" height="18" loading="lazy">Docker</span>
+          <span class="tech-pill has-icon"><img class="tp-icon" src="https://cdn.jsdelivr.net/npm/simple-icons@11.14.0/icons/mqtt.svg" alt="" width="18" height="18" loading="lazy">MQTT</span>
+          </div>
+        </div>
+
+        <div class="csd-body">
+          <h2>Client background</h2>
+          <p>A manufacturer running three similar lines relied on manual QC at line speed. Escape rates rose on later shifts, and false rejects from earlier automation attempts had eroded operator trust.</p>
+
+          <h2>Key challenges</h2>
+          <ul><li>Lighting drift and vibration made naive models unstable between shifts.</li><li>Latency budgets left little room for cloud round-trips.</li><li>False rejects vs. misses required careful threshold and UX design.</li><li>Reject signals had to integrate cleanly with existing PLC logic.</li></ul>
+
+          <div class="csd-gallery">
+            <figure>
+              <img src="/assets/img/case-studies/computer-vision-qc-factory-lines.jpg" alt="Vision station with operator review UI" loading="lazy">
+              <figcaption>Vision station with operator review UI</figcaption>
+            </figure>
+            <figure>
+              <img src="/assets/img/case-studies/computer-vision-qc-factory-lines.jpg" alt="Edge inference integrated with PLC reject signals" loading="lazy">
+              <figcaption>Edge inference integrated with PLC reject signals</figcaption>
+            </figure>
+          </div>
+
+          <h2>What we built</h2>
+          <ul><li>Edge inference on Jetson per line with OpenCV/PyTorch defect models.</li><li>Operator review UI for ambiguous cases without stopping the line.</li><li>OPC-UA / PLC reject pulse with safe defaults on model uncertainty.</li><li>Monitoring for lighting drift, latency and false-reject rates.</li></ul>
+          <p class="team-note"><strong>Project team:</strong> 8 engineers across AI/ML, backend and domain specialists — delivery over 24 weeks.</p>
+
+          <h2>How we delivered</h2>
+          <div class="csd-approach"><div class="csd-step"><div class="sn">01</div><h4>Floor</h4><p>Assessed lighting, camera mounts and PLC interfaces on each line.</p></div><div class="csd-step"><div class="sn">02</div><h4>Pilot</h4><p>Validated on one line before touching the other two.</p></div><div class="csd-step"><div class="sn">03</div><h4>Integrate</h4><p>Wired reject signals and trained operators on the review UX.</p></div><div class="csd-step"><div class="sn">04</div><h4>Scale</h4><p>Cloned the station design across three lines with shared model ops.</p></div></div>
+
+          <h2>Business impact</h2>
+          <div class="csd-impact"><div><strong>3 lines</strong>In production</div><div><strong>Lower</strong>Escape rate</div><div><strong>Stable</strong>False rejects</div></div>
+
+          <h2>Services used</h2>
+          <div class="csd-services"><a href="/ai-robotics">AI for Robotics →</a></div>
+          <h2>Industries</h2>
+          <div class="csd-services"><a href="/manufacturing">Manufacturing →</a></div>
+        </div>
+      </div>
+
+      <aside class="csd-side">
+        <div class="csd-side-card">
+          <h3>At a glance</h3>
+          <dl>
+            <dt>Industry</dt><dd>Manufacturing</dd>
+            <dt>Expertise</dt><dd>AI for Robotics</dd>
+            <dt>Duration</dt><dd>24 weeks</dd>
+            <dt>Team</dt><dd>8 engineers</dd>
+          </dl>
+        </div>
+        <div class="csd-side-card">
+          <h3>Stack highlights</h3>
+          <div class="csd-tech-list" style="gap:8px;">
+          <span class="tech-pill has-icon"><img class="tp-icon" src="https://cdn.jsdelivr.net/npm/simple-icons@11.14.0/icons/opencv.svg" alt="" width="18" height="18" loading="lazy">OpenCV</span>
+          <span class="tech-pill has-icon"><img class="tp-icon" src="https://cdn.jsdelivr.net/npm/simple-icons@11.14.0/icons/pytorch.svg" alt="" width="18" height="18" loading="lazy">PyTorch</span>
+          <span class="tech-pill has-icon"><img class="tp-icon" src="https://cdn.jsdelivr.net/npm/simple-icons@11.14.0/icons/nvidia.svg" alt="" width="18" height="18" loading="lazy">NVIDIA</span>
+          <span class="tech-pill has-icon"><img class="tp-icon" src="https://cdn.jsdelivr.net/npm/simple-icons@11.14.0/icons/python.svg" alt="" width="18" height="18" loading="lazy">Python</span>
+          </div>
+        </div>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<section id="contact" style="padding-top:0;">
+  <div class="cta-banner">
+    <div class="cta-banner-inner">
+      <h2>We empower businesses with AI, ML, and data solutions.</h2>
+      <p>Response within 1 business day. You will hear from an engineer, not a salesperson.</p>
+      <a href="/contact" class="btn" style="background:#fff;border-color:#fff;">Contact Us <span>→</span></a>
+    </div>
+  </div>
+</section>

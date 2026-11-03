@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+<meta http-equiv="Pragma" content="no-cache">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Building an AI-Powered Personal Trainer — Axtra Labs</title>
+<link rel="icon" href="assets/img/favicon.png" type="image/png">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+
+  *{box-sizing:border-box;margin:0;padding:0;}
+  body{font-family:'Inter',sans-serif;font-size:18px;color:var(--ink);background:var(--paper);line-height:1.6;-webkit-font-smoothing:antialiased;}
+  h1,h2,h3,h4{font-family:'Plus Jakarta Sans',sans-serif;font-weight:800;letter-spacing:-0.02em;color:var(--ink);line-height:1.08;}
+  a{text-decoration:none;color:inherit;}
+  img{max-width:100%;display:block;}
+  .wrap{max-width:1216px;width:min(1216px,calc(100% - 64px));margin:0 auto;padding:0;box-sizing:border-box;}
+  .eyebrow{font-family:'IBM Plex Mono',monospace;font-size:14.5px;letter-spacing:0.1em;text-transform:uppercase;color:var(--ochre-dark);display:flex;align-items:center;gap:8px;margin-bottom:14px;}
+  .eyebrow::before{content:'';width:14px;height:1px;background:var(--ochre-dark);}
+  .photo{position:relative;overflow:hidden;background:var(--ink);border-radius:10px;}
+  .photo img{width:100%;height:100%;object-fit:cover;display:block;}
+
+  .btn{display:inline-flex;align-items:center;gap:8px;padding:13px 26px;font-size:16px;font-weight:700;border:1.5px solid var(--navy);border-radius:8px;cursor:pointer;position:relative;overflow:hidden;transition:color .25s ease, transform .18s ease, box-shadow .18s ease;z-index:1;background:var(--paper);color:var(--navy);}
+  .btn::before{content:'';position:absolute;inset:0;background:var(--navy);transform:scaleX(0);transform-origin:left;transition:transform .3s ease;z-index:-1;}
+  .btn:hover{color:#fff;transform:translateY(-2px);box-shadow:0 8px 20px rgba(27,42,74,0.35);}
+  .btn:hover::before{transform:scaleX(1);}
+  .btn span{display:inline-block;transition:transform .2s ease;}
+  .btn:hover span{transform:translateX(3px);}
+
+
+
+  .page-hero{position:relative;min-height:300px;display:flex;align-items:flex-end;overflow:hidden;margin:0 -32px;color:#fff;padding-bottom:44px;}
+  .page-hero .photo{position:absolute;inset:0;border-radius:0;margin:0;}
+  .page-hero-overlay{position:absolute;inset:0;background:linear-gradient(135deg,rgba(15,24,48,0.65) 0%,rgba(15,24,48,0.92) 100%);z-index:1;}
+  .page-hero-inner{position:relative;z-index:2;max-width:760px;padding:0 64px;}
+  .page-hero h1{font-size:56px;color:#fff;margin-bottom:16px;}
+  .page-hero p{font-size:19px;color:#D8DEE9;font-weight:500;max-width:600px;}
+
+  .breadcrumb{padding:16px 0;font-size:15.5px;color:var(--slate);font-weight:500;border-bottom:1px solid var(--line);}
+  .breadcrumb a{color:var(--slate);}
+  .breadcrumb a:hover{color:var(--navy);}
+
+  section{padding:64px 0;}
+  .section-head{max-width:820px;margin-bottom:44px;}
+  .section-head h2{font-size:46px;line-height:1.08;margin-bottom:16px;font-weight:800;}
+  .section-head p{color:var(--slate);font-size:18px;font-weight:500;}
+
+  .svc-grid{display:grid;grid-template-columns:repeat(4,1fr);grid-auto-rows:260px;gap:16px;}
+  .svc-card{position:relative;border-radius:14px;overflow:hidden;display:block;color:#fff;scroll-margin-top:96px;}
+  .svc-card.short{grid-column:span 2;}
+  .svc-card.long{grid-column:span 4;}
+  @media (min-width:900px){.svc-card.long{grid-column:span 2;}}
+  .svc-bg{position:absolute;inset:0;}
+  .svc-bg img{width:100%;height:100%;object-fit:cover;transition:transform .5s ease;}
+  .svc-card:not(.coming-soon):hover .svc-bg img{transform:scale(1.06);}
+  .svc-bg::after{content:'';position:absolute;inset:0;background:linear-gradient(180deg,rgba(15,24,48,0.15) 0%,rgba(15,24,48,0.88) 100%);}
+  .svc-content{position:relative;z-index:2;height:100%;display:flex;flex-direction:column;justify-content:flex-end;padding:22px;}
+  .svc-num{font-family:'IBM Plex Mono',monospace;font-size:14.5px;color:rgba(255,255,255,0.65);margin-bottom:8px;}
+  .svc-content h3{color:#fff;font-size:24px;margin-bottom:8px;font-weight:800;line-height:1.15;}
+  .svc-card.long .svc-content h3{font-size:29px;}
+  .svc-content p{font-size:16px;color:rgba(255,255,255,0.85);margin-bottom:12px;max-width:340px;font-weight:400;line-height:1.5;}
+  .svc-link{font-size:15.5px;font-weight:700;color:var(--ochre);display:inline-flex;align-items:center;gap:4px;}
+  .svc-link span{transition:transform .2s ease;}
+  .svc-card:not(.coming-soon):hover .svc-link span{transform:translateX(4px);}
+  .svc-card.coming-soon{cursor:default;}
+  .svc-card.coming-soon .svc-bg::after{background:linear-gradient(180deg,rgba(15,24,48,0.35) 0%,rgba(15,24,48,0.95) 100%);}
+  .svc-badge{font-family:'IBM Plex Mono',monospace;font-size:12px;padding:5px 12px;border-radius:999px;background:rgba(255,255,255,0.15);color:#FFB199;display:inline-block;margin-bottom:10px;border:1px solid rgba(255,255,255,0.25);}
+  @media (max-width:900px){.svc-grid{grid-template-columns:1fr 1fr;}.svc-card.long{grid-column:span 2;}}
+  @media (max-width:600px){.svc-grid{grid-template-columns:1fr;}.svc-card.short,.svc-card.long{grid-column:span 1;}}
+
+</style>
+<link rel="stylesheet" href="assets/css/site-tokens.css?v=5">
+<link rel="stylesheet" href="assets/css/responsive.css?v=46">
+<link rel="stylesheet" href="assets/css/site-header.css?v=21">
+<link rel="stylesheet" href="assets/css/company-pages.css?v=3">
+<link rel="stylesheet" href="assets/css/tech-icons.css">
+<link rel="stylesheet" href="assets/css/nav-drawer-v3.css?v=4">
+</head>
+<body>
+
+<header class="header-solid">
+  <div class="nav">
+    <a href="index.html" class="logo" aria-label="Axtra Labs"><img class="logo-img logo-img--light" src="assets/img/axtra-logo-white.png" alt="" width="148" height="14"><img class="logo-img logo-img--dark" src="assets/img/axtra-logo-dark.png" alt="Axtra Labs" width="148" height="14"></a>
+    <nav class="navlinks">
+      <div class="nav-item">
+        <span>Services <span class="caret">▾</span></span>
+        <div class="dropdown wide">
+          <a href="ai-services.html" class="dd-link"><span class="dd-title">AI Services</span><span class="dd-sub">Gen AI, agents, RAG, LLM fine-tuning</span></a>
+          <a href="data-bi.html" class="dd-link"><span class="dd-title">Data &amp; BI</span><span class="dd-sub">Pipelines, dashboards, decision intelligence</span></a>
+          <a href="embedded-software.html" class="dd-link"><span class="dd-title">Embedded Software Engineering</span><span class="dd-sub">Firmware, RTOS, embedded Linux</span></a>
+          <a href="ai-robotics.html" class="dd-link"><span class="dd-title">AI for Robotics</span><span class="dd-sub">Perception, navigation, edge AI</span></a>
+          <a href="devops.html" class="dd-link"><span class="dd-title">DevOps</span><span class="dd-sub">CI/CD, Kubernetes, MLOps</span></a>
+          <a href="ai-software-development.html" class="dd-link"><span class="dd-title">AI-Software Development</span><span class="dd-sub">Full-stack, AI-native products</span></a>
+          <div class="dd-foot"><span style="font-size:15px;color:var(--slate);">6 services, one team</span><a href="services.html">View all services <span>→</span></a></div>
+        </div>
+      </div>
+      <div class="nav-item">
+        <span>AI Agent Solution <span class="caret">▾</span></span>
+        <div class="dropdown wide">
+          <a href="voice-ai-agent.html" class="dd-link"><span class="dd-title">Voice AI Agent</span><span class="dd-sub">White-label voice AI in your infrastructure</span></a>
+          <a href="document-knowledge-ai-agent.html" class="dd-link"><span class="dd-title">Document and Knowledge AI Agent</span><span class="dd-sub">RAG, docs, enterprise knowledge</span></a>
+          <a href="workflow-ai-agent.html" class="dd-link"><span class="dd-title">Workflow AI Agent</span><span class="dd-sub">Process automation &amp; orchestration</span></a>
+          <a href="sales-ai-agent.html" class="dd-link"><span class="dd-title">Sales AI Agent</span><span class="dd-sub">Outreach, qualification, follow-up</span></a>
+          <a href="multi-agent-system.html" class="dd-link"><span class="dd-title">Multi Agent System</span><span class="dd-sub">Coordinated multi-agent teams</span></a>
+          <div class="dd-foot"><span style="font-size:15px;color:var(--slate);">5 agent solutions</span><a href="voice-ai-agent.html">Explore Voice AI <span>→</span></a></div>
+        </div>
+      </div>
+      <a href="ai-robotics.html">AI for Robotics</a>
+      <div class="nav-item">
+        <span>Industries <span class="caret">▾</span></span>
+        <div class="dropdown grid4">
+          <a href="manufacturing.html" class="dd-link"><span class="dd-title">Manufacturing</span></a>
+          <a href="retail.html" class="dd-link"><span class="dd-title">Retail &amp; E-commerce</span></a>
+          <a href="travel.html" class="dd-link"><span class="dd-title">Travel &amp; Hospitality</span></a>
+          <a href="home-services.html" class="dd-link"><span class="dd-title">Home Services</span></a>
+          <a href="fintech.html" class="dd-link"><span class="dd-title">Fintech</span></a>
+          <a href="agriculture.html" class="dd-link"><span class="dd-title">Agriculture</span></a>
+          <a href="logistics.html" class="dd-link"><span class="dd-title">Logistics</span></a>
+          <a href="healthcare.html" class="dd-link"><span class="dd-title">Healthcare</span></a>
+          <div class="dd-foot"><span style="font-size:15px;color:var(--slate);">8 industries served</span><a href="index.html#industries">View all industries <span>→</span></a></div>
+        </div>
+      </div>
+      <a href="case-study.html">Work</a>
+      <div class="nav-item">
+        <span>About <span class="caret">▾</span></span>
+        <div class="dropdown company">
+          <a href="about.html" class="dd-link"><span class="dd-title">About Us</span><span class="dd-sub">Who we are and how we work</span></a>
+          <a href="insights.html" class="dd-link"><span class="dd-title">Insights</span><span class="dd-sub">Articles, ideas, and industry notes</span></a>
+          <a href="careers.html" class="dd-link"><span class="dd-title">Careers</span><span class="dd-sub">Growth path, roles, and culture</span></a>
+          <a href="our-rd.html" class="dd-link"><span class="dd-title">Our R&amp;D</span><span class="dd-sub">PTIT lab, research, and applied AI</span></a>
+        </div>
+      </div>
+    </nav>
+    <a href="contact.html" class="btn" style="padding:10px 20px;font-size:16px;">Contact Us</a>
+  </div>
+</header>
+
+<section class="csd">
+  <div class="wrap">
+    <div class="breadcrumb"><a href="index.html">Home</a> / <a href="case-study.html">Case Studies</a> / Building an AI-Powered Personal Trainer</div>
+    <div class="csd-hero">
+      <div class="csd-meta"><span>Consumer</span><span>AI-Software Development</span></div>
+      <h1>Building an AI-Powered Personal Trainer</h1>
+      <p class="csd-sub">A smart fitness app with workout generation, form feedback and coach inbox.</p>
+      <div class="csd-related"><a href="ai-driven-personalized-ecommerce-recommendations.html">AI-Driven Personalized E-Commerce Recommendations</a><a href="computer-vision-qc-factory-lines.html">Computer vision QC across 3 factory lines</a><a href="ai-software-development.html">AI-Software Development</a></div>
+    </div>
+    <div class="csd-hero-media">
+      <img src="/assets/img/case-studies/building-ai-powered-personal-trainer.jpg" alt="Building an AI-Powered Personal Trainer" loading="eager">
+    </div>
+
+    <div class="csd-layout">
+      <div class="csd-main">
+        <h2>Key Details</h2>
+        <table class="csd-keys">
+          <tr><th>Challenge</th><td>The product needed plans, form feedback and retention without a huge coaching staff.</td></tr>
+          <tr><th>Solution</th><td>A mobile app with workout generation, computer-vision form hints and a coach inbox.</td></tr>
+          <tr><th>Technologies</th><td>React Native, Python, on-device pose models</td></tr>
+        </table>
+
+        <div class="csd-tech">
+          <h2>Technologies used</h2>
+          <div class="csd-tech-list">
+          <span class="tech-pill has-icon"><img class="tp-icon" src="https://cdn.jsdelivr.net/npm/simple-icons@11.14.0/icons/react.svg" alt="" width="18" height="18" loading="lazy">React</span>
+          <span class="tech-pill has-icon"><img class="tp-icon" src="https://cdn.jsdelivr.net/npm/simple-icons@11.14.0/icons/python.svg" alt="" width="18" height="18" loading="lazy">Python</span>
+          <span class="tech-pill has-icon"><img class="tp-icon" src="https://cdn.jsdelivr.net/npm/simple-icons@11.14.0/icons/tensorflow.svg" alt="" width="18" height="18" loading="lazy">TensorFlow</span>
+          <span class="tech-pill has-icon"><img class="tp-icon" src="https://cdn.jsdelivr.net/npm/simple-icons@11.14.0/icons/postgresql.svg" alt="" width="18" height="18" loading="lazy">PostgreSQL</span>
+          <span class="tech-pill has-icon"><img class="tp-icon" src="https://cdn.jsdelivr.net/npm/simple-icons@11.14.0/icons/docker.svg" alt="" width="18" height="18" loading="lazy">Docker</span>
+          </div>
+        </div>
+
+        <div class="csd-body">
+          <h2>Client background</h2>
+          <p>A consumer fitness startup wanted personalized plans and form feedback without staffing a large coaching bench. Retention dropped after week four when users lost guidance and coaches could not scale 1:1 video review.</p>
+
+          <h2>Key challenges</h2>
+          <ul><li>Workout plans were static and ignored equipment, goals and recovery.</li><li>Form feedback required expensive human video review.</li><li>Coaches lacked a prioritized inbox of sessions that needed attention.</li><li>On-device constraints ruled out heavy cloud vision for every rep.</li></ul>
+
+          <div class="csd-gallery">
+            <figure>
+              <img src="/assets/img/case-studies/building-ai-powered-personal-trainer.jpg" alt="On-device pose cues during workouts" loading="lazy">
+              <figcaption>On-device pose cues during workouts</figcaption>
+            </figure>
+            <figure>
+              <img src="/assets/img/case-studies/building-ai-powered-personal-trainer.jpg" alt="Coach inbox reviewing flagged sessions" loading="lazy">
+              <figcaption>Coach inbox reviewing flagged sessions</figcaption>
+            </figure>
+          </div>
+
+          <h2>What we built</h2>
+          <ul><li>React Native app with adaptive workout generation and progress tracking.</li><li>On-device pose models for form cues without sending every frame to the cloud.</li><li>Coach inbox that surfaces flagged sessions and user questions.</li><li>Backend for plans, subscriptions and privacy-safe telemetry.</li></ul>
+          <p class="team-note"><strong>Project team:</strong> 7 engineers across AI/ML, backend and domain specialists — delivery over 18 weeks.</p>
+
+          <h2>How we delivered</h2>
+          <div class="csd-approach"><div class="csd-step"><div class="sn">01</div><h4>Product</h4><p>Defined the thin coach loop: generate, cue, escalate only when needed.</p></div><div class="csd-step"><div class="sn">02</div><h4>Mobile</h4><p>Shipped RN app with offline-friendly workout flows.</p></div><div class="csd-step"><div class="sn">03</div><h4>Vision</h4><p>Tuned on-device pose hints for a small set of high-value movements.</p></div><div class="csd-step"><div class="sn">04</div><h4>Coach ops</h4><p>Built triage so human coaches spend time where AI is unsure.</p></div></div>
+
+          <h2>Business impact</h2>
+          <div class="csd-impact"><div><strong>On-device</strong>Form cues</div><div><strong>Safer</strong>Plans</div><div><strong>Better</strong>Week-4 retention</div></div>
+
+          <h2>Services used</h2>
+          <div class="csd-services"></div>
+        </div>
+      </div>
+
+      <aside class="csd-side">
+        <div class="csd-side-card">
+          <h3>At a glance</h3>
+          <dl>
+            <dt>Industry</dt><dd>Consumer</dd>
+            <dt>Expertise</dt><dd>AI-Software Development</dd>
+            <dt>Duration</dt><dd>18 weeks</dd>
+            <dt>Team</dt><dd>7 engineers</dd>
+          </dl>
+        </div>
+        <div class="csd-side-card">
+          <h3>Stack highlights</h3>
+          <div class="csd-tech-list" style="gap:8px;">
+          <span class="tech-pill has-icon"><img class="tp-icon" src="https://cdn.jsdelivr.net/npm/simple-icons@11.14.0/icons/react.svg" alt="" width="18" height="18" loading="lazy">React</span>
+          <span class="tech-pill has-icon"><img class="tp-icon" src="https://cdn.jsdelivr.net/npm/simple-icons@11.14.0/icons/python.svg" alt="" width="18" height="18" loading="lazy">Python</span>
+          <span class="tech-pill has-icon"><img class="tp-icon" src="https://cdn.jsdelivr.net/npm/simple-icons@11.14.0/icons/tensorflow.svg" alt="" width="18" height="18" loading="lazy">TensorFlow</span>
+          <span class="tech-pill has-icon"><img class="tp-icon" src="https://cdn.jsdelivr.net/npm/simple-icons@11.14.0/icons/postgresql.svg" alt="" width="18" height="18" loading="lazy">PostgreSQL</span>
+          </div>
+        </div>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<section id="contact" style="padding-top:0;">
+  <div class="cta-banner">
+    <div class="cta-banner-inner">
+      <h2>We empower businesses with AI, ML, and data solutions.</h2>
+      <p>Response within 1 business day. You will hear from an engineer, not a salesperson.</p>
+      <a href="contact.html" class="btn" style="background:#fff;border-color:#fff;">Contact Us <span>→</span></a>
+    </div>
+  </div>
+</section>
+<footer>
+  <div class="wrap">
+    <div class="footer-grid">
+      <div class="footer-col">
+        <a href="index.html" class="logo logo--footer" aria-label="Axtra Labs" style="margin-bottom:16px;display:inline-block;"><img class="logo-img logo-img--light" src="assets/img/axtra-logo-white.png" alt="Axtra Labs" width="148" height="14"></a>
+        <p style="font-size:15.5px;color:var(--slate);margin-bottom:18px;">AI-augmented software engineering from Vietnam.</p>
+        <div class="social-row"><a class="social-dot" href="https://www.linkedin.com/company/axtralabs/" target="_blank" rel="noopener noreferrer" aria-label="Axtra Labs on LinkedIn">in</a><div class="social-dot">X</div><div class="social-dot">f</div></div>
+      </div>
+      <div class="footer-col">
+        <h5>Services</h5>
+        <a href="ai-services.html"><span>AI Services</span></a>
+        <a href="data-bi.html"><span>Data &amp; BI</span></a>
+        <a href="embedded-software.html"><span>Embedded Software Engineering</span></a>
+        <a href="ai-robotics.html"><span>AI for Robotics</span></a>
+        <a href="devops.html"><span>DevOps</span></a>
+        <a href="ai-software-development.html"><span>AI-Software Development</span></a>
+      </div>
+      <div class="footer-col">
+        <h5>Industries</h5>
+        <a href="manufacturing.html"><span>Manufacturing</span></a>
+        <a href="retail.html"><span>Retail &amp; E-commerce</span></a>
+        <a href="travel.html"><span>Travel</span></a>
+        <a href="home-services.html"><span>Home Services</span></a>
+        <a href="fintech.html"><span>Fintech</span></a>
+        <a href="agriculture.html"><span>Agriculture</span></a>
+        <a href="logistics.html"><span>Logistics</span></a>
+        <a href="healthcare.html"><span>Healthcare</span></a>
+      </div>
+      <div class="footer-col">
+        <h5>AI Agent Solution</h5>
+        <a href="voice-ai-agent.html"><span>Voice AI Agent</span></a>
+        <a href="document-knowledge-ai-agent.html"><span>Document &amp; Knowledge</span></a>
+        <a href="workflow-ai-agent.html"><span>Workflow AI Agent</span></a>
+        <a href="sales-ai-agent.html"><span>Sales AI Agent</span></a>
+        <a href="multi-agent-system.html"><span>Multi Agent System</span></a>
+      </div>
+      <div class="footer-col">
+        <h5>Company</h5>
+        <a href="about.html"><span>About Us</span></a>
+        <a href="insights.html"><span>Insights</span></a>
+        <a href="careers.html"><span>Careers</span></a>
+        <a href="our-rd.html"><span>Our R&amp;D</span></a>
+        <a href="case-study.html"><span>Case Studies</span></a>
+        <a href="contact.html"><span>Contact</span></a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div>© 2026 Axtra Labs. All rights reserved.</div>
+      <div style="display:flex;gap:18px;"><span>Privacy Policy</span><span>Terms of Service</span></div>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/js/site.js?v=25"></script>
+</body>
+</html>

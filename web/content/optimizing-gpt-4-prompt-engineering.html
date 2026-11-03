@@ -1,0 +1,99 @@
+<section class="csd">
+  <div class="wrap">
+    <div class="breadcrumb"><a href="/">Home</a> / <a href="/case-study">Case Studies</a> / Optimizing GPT-4 Prompt Engineering</div>
+    <div class="csd-hero">
+      <div class="csd-meta"><span>Support</span><span>AI Services</span></div>
+      <h1>Optimizing GPT-4 Prompt Engineering</h1>
+      <p class="csd-sub">Prompt design and evaluation for virtual support and AI assistant performance.</p>
+      <div class="csd-related"><a href="/chatbot-automated-customer-support">Chatbot for Automated Customer Support</a><a href="/ai-powered-internal-hr-knowledge-talent-search-chatbot">AI-Powered Internal HR Knowledge &amp; Talent Search Chatbot</a><a href="/ai-powered-rfp-tender-response-platform">AI-Powered RFP &amp; Tender Response Platform</a></div>
+    </div>
+    <div class="csd-hero-media">
+      <img src="/assets/img/case-studies/optimizing-gpt-4-prompt-engineering.jpg" alt="Optimizing GPT-4 Prompt Engineering" loading="eager">
+    </div>
+
+    <div class="csd-layout">
+      <div class="csd-main">
+        <h2>Key Details</h2>
+        <table class="csd-keys">
+          <tr><th>Challenge</th><td>A support assistant drifted, hallucinated policy and had no eval harness.</td></tr>
+          <tr><th>Solution</th><td>Prompt packs, golden sets and regression tests before every prompt change.</td></tr>
+          <tr><th>Technologies</th><td>GPT-4, LangSmith, pytest, FastAPI</td></tr>
+        </table>
+
+        <div class="csd-tech">
+          <h2>Technologies used</h2>
+          <div class="csd-tech-list">
+          <span class="tech-pill has-icon"><img class="tp-icon" src="https://cdn.jsdelivr.net/npm/simple-icons@11.14.0/icons/openai.svg" alt="" width="18" height="18" loading="lazy">OpenAI</span>
+          <span class="tech-pill has-icon"><img class="tp-icon" src="https://cdn.jsdelivr.net/npm/simple-icons@11.14.0/icons/python.svg" alt="" width="18" height="18" loading="lazy">Python</span>
+          <span class="tech-pill has-icon"><img class="tp-icon" src="https://cdn.jsdelivr.net/npm/simple-icons@11.14.0/icons/fastapi.svg" alt="" width="18" height="18" loading="lazy">FastAPI</span>
+          <span class="tech-pill no-logo">pytest</span>
+          <span class="tech-pill has-icon"><img class="tp-icon" src="https://cdn.jsdelivr.net/npm/simple-icons@11.14.0/icons/docker.svg" alt="" width="18" height="18" loading="lazy">Docker</span>
+          </div>
+        </div>
+
+        <div class="csd-body">
+          <h2>Client background</h2>
+          <p>A customer-support product shipped an LLM assistant that looked good in demos but drifted in production. Policy answers hallucinated, tone varied by prompt tweak, and nobody could prove a change was safer before release.</p>
+
+          <h2>Key challenges</h2>
+          <ul><li>Prompt changes went live without regression coverage against real tickets.</li><li>Hallucinated policy replies created escalations and trust issues with agents.</li><li>No shared golden set — quality debates were anecdotal.</li><li>Multiple teams edited prompts in isolation, causing conflicting behavior.</li></ul>
+
+          <div class="csd-gallery">
+            <figure>
+              <img src="/assets/img/case-studies/optimizing-gpt-4-prompt-engineering.jpg" alt="Eval harness reviewing support assistant replies" loading="lazy">
+              <figcaption>Eval harness reviewing support assistant replies</figcaption>
+            </figure>
+            <figure>
+              <img src="/assets/img/case-studies/optimizing-gpt-4-prompt-engineering.jpg" alt="Prompt packs versioned alongside product releases" loading="lazy">
+              <figcaption>Prompt packs versioned alongside product releases</figcaption>
+            </figure>
+          </div>
+
+          <h2>What we built</h2>
+          <ul><li>Versioned prompt packs with ownership and changelog discipline.</li><li>Golden evaluation sets drawn from real support transcripts.</li><li>LangSmith + pytest regression gate before every prompt or model change.</li><li>FastAPI serving layer with structured logging for failure review.</li></ul>
+          <p class="team-note"><strong>Project team:</strong> 4 engineers across AI/ML, backend and domain specialists — delivery over 10 weeks.</p>
+
+          <h2>How we delivered</h2>
+          <div class="csd-approach"><div class="csd-step"><div class="sn">01</div><h4>Baseline</h4><p>Captured failure modes from production logs and agent escalations.</p></div><div class="csd-step"><div class="sn">02</div><h4>Golden set</h4><p>Built labeled examples for policy, tone and tool-use correctness.</p></div><div class="csd-step"><div class="sn">03</div><h4>Harness</h4><p>Wired evals into CI so regressions block release.</p></div><div class="csd-step"><div class="sn">04</div><h4>Operate</h4><p>Defined a change process for prompt owners and support leads.</p></div></div>
+
+          <h2>Business impact</h2>
+          <div class="csd-impact"><div><strong>Measurable</strong>Answer quality</div><div><strong>Safer</strong>Policy replies</div><div><strong>Repeatable</strong>Releases</div></div>
+
+          <h2>Services used</h2>
+          <div class="csd-services"><a href="/ai-services">AI Services →</a><a href="/devops">DevOps →</a></div>
+        </div>
+      </div>
+
+      <aside class="csd-side">
+        <div class="csd-side-card">
+          <h3>At a glance</h3>
+          <dl>
+            <dt>Industry</dt><dd>Support</dd>
+            <dt>Expertise</dt><dd>AI Services</dd>
+            <dt>Duration</dt><dd>10 weeks</dd>
+            <dt>Team</dt><dd>4 engineers</dd>
+          </dl>
+        </div>
+        <div class="csd-side-card">
+          <h3>Stack highlights</h3>
+          <div class="csd-tech-list" style="gap:8px;">
+          <span class="tech-pill has-icon"><img class="tp-icon" src="https://cdn.jsdelivr.net/npm/simple-icons@11.14.0/icons/openai.svg" alt="" width="18" height="18" loading="lazy">OpenAI</span>
+          <span class="tech-pill has-icon"><img class="tp-icon" src="https://cdn.jsdelivr.net/npm/simple-icons@11.14.0/icons/python.svg" alt="" width="18" height="18" loading="lazy">Python</span>
+          <span class="tech-pill has-icon"><img class="tp-icon" src="https://cdn.jsdelivr.net/npm/simple-icons@11.14.0/icons/fastapi.svg" alt="" width="18" height="18" loading="lazy">FastAPI</span>
+          <span class="tech-pill no-logo">pytest</span>
+          </div>
+        </div>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<section id="contact" style="padding-top:0;">
+  <div class="cta-banner">
+    <div class="cta-banner-inner">
+      <h2>We empower businesses with AI, ML, and data solutions.</h2>
+      <p>Response within 1 business day. You will hear from an engineer, not a salesperson.</p>
+      <a href="/contact" class="btn" style="background:#fff;border-color:#fff;">Contact Us <span>→</span></a>
+    </div>
+  </div>
+</section>

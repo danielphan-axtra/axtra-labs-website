@@ -176,12 +176,119 @@ export const PAGES: PageEntry[] = [
 
   // Case studies
   {
+    slug: "ai-care-navigation-healthtech-startup",
+    kind: "case-study",
+    title: "AI Care Navigation for a Healthtech Startup",
+    description:
+      "Case study: an LLM care-navigation assistant that cut intake handling time 40% and sped up time-to-appointment for a healthtech startup, with clinician override.",
+  },
+  {
+    slug: "ai-credit-underwriting-fintech-startup",
+    kind: "case-study",
+    title: "AI Credit Underwriting for a Lending Startup",
+    description:
+      "Case study: explainable ML credit underwriting that raised auto-decisions 28% for a Series A lending startup while keeping early delinquency flat.",
+  },
+  {
+    slug: "ai-driven-personalized-ecommerce-recommendations",
+    kind: "case-study",
+    title: "AI-Driven Personalized E-Commerce Recommendations",
+    description:
+      "Case study: a personalization and ranking service using catalog, session and purchase signals that lifted conversion and repeat purchase for a fashion retailer.",
+  },
+  {
+    slug: "ai-fraud-detection-neobank-startup",
+    kind: "case-study",
+    title: "AI Fraud Detection for a Neobank Startup",
+    description:
+      "Case study: real-time graph and behavioral fraud scoring that cut false declines 35% and doubled fraud catch rate for a neobank, at under 80 ms latency.",
+  },
+  {
+    slug: "ai-optimized-logistics-route-planning",
+    kind: "case-study",
+    title: "AI-Optimized Logistics Route Planning",
+    description:
+      "Case study: an AI route optimizer respecting time windows, vehicle capacity and live traffic that lowered cost per stop and raised on-time delivery.",
+  },
+  {
+    slug: "ai-powered-healthcare-diagnosis-system",
+    kind: "case-study",
+    title: "AI-Powered Healthcare Diagnosis System",
+    description:
+      "Case study: a clinical decision-support copilot that summarizes patient history from EHR notes and flags guideline findings, with a human in the loop.",
+  },
+  {
+    slug: "ai-powered-internal-hr-knowledge-talent-search-chatbot",
+    kind: "case-study",
+    title: "AI-Powered Internal HR Knowledge & Talent Search Chatbot",
+    seoTitle: "AI HR Knowledge & Talent Search Chatbot",
+    description:
+      "Case study: a RAG chatbot over HR policies and talent profiles with access control and citations that made policy answers 70% faster.",
+  },
+  {
+    slug: "ai-powered-smart-surveillance-system",
+    kind: "case-study",
+    title: "AI-Powered Smart Surveillance System",
+    description:
+      "Case study: AI video surveillance with threat detection, facial recognition and real-time alerts that cut manual monitoring 50% and sped response 40%.",
+  },
+  {
+    slug: "ai-returns-prevention-ecommerce-startup",
+    kind: "case-study",
+    title: "AI Returns Prevention for a D2C Ecommerce Startup",
+    description:
+      "Case study: size and fit recommendations plus return-risk scoring that lowered the return rate 18% for a fast-growing D2C apparel brand.",
+  },
+  {
+    slug: "big-data-analytics-business-intelligence",
+    kind: "case-study",
+    title: "Big Data Analytics for Business Intelligence",
+    description:
+      "Case study: a modeled data warehouse and Power BI layer that shortened an industrial supplier's reporting cycle from 3 weeks to 2 days.",
+  },
+  {
+    slug: "building-ai-powered-personal-trainer",
+    kind: "case-study",
+    title: "Building an AI-Powered Personal Trainer",
+    description:
+      "Case study: a fitness app with AI workout generation, on-device computer-vision form feedback and a coach inbox that improved week-4 retention.",
+  },
+  {
+    slug: "chatbot-automated-customer-support",
+    kind: "case-study",
+    title: "Chatbot for Automated Customer Support",
+    description:
+      "Case study: a production support and sales chatbot with retrieval, booking tools and clean human handoff that deflected routine tickets for a travel brand.",
+  },
+  {
+    slug: "computer-vision-qc-factory-lines",
+    kind: "case-study",
+    title: "Computer vision QC across 3 factory lines",
+    seoTitle: "Computer Vision Quality Control on 3 Factory Lines",
+    description:
+      "Case study: real-time computer vision defect detection on NVIDIA Jetson, integrated with PLC reject signals, running in production on 3 factory lines.",
+  },
+  {
+    slug: "data-engineering-analytics-insurance-risk",
+    kind: "case-study",
+    title: "Data Engineering and Analytics for Insurance Risk Assessment",
+    seoTitle: "Data Engineering for Insurance Risk Assessment",
+    description:
+      "Case study: a data warehouse, feature pipelines and dashboards giving an insurer daily risk scoring refresh, fewer manual extracts and an audit trail.",
+  },
+  {
+    slug: "optimizing-gpt-4-prompt-engineering",
+    kind: "case-study",
+    title: "Optimizing GPT-4 Prompt Engineering",
+    description:
+      "Case study: prompt packs, golden datasets and regression evals that made a GPT-4 support assistant measurable, safer on policy and repeatable to release.",
+  },
+  {
     slug: "ai-powered-rfp-tender-response-platform",
     kind: "case-study",
     title: "AI-Powered RFP & Tender Response Platform",
-    seoTitle: "AI RFP & Tender Response Platform",
     description:
-      "Case study: tender intelligence and proposal drafting for a Europe-based B2B SaaS startup. Tender prep time reduced by 50%, and time on repetitive tasks by up to 90%.",
+      "Case study: a Gen AI drafting workspace that reuses past wins, pricing and compliance language to cut RFP and tender drafting time by 40%.",
   },
   {
     slug: "uk-infrastructure-project-tracking-portal",

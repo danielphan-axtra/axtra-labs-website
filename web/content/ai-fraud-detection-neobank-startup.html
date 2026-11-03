@@ -1,0 +1,103 @@
+<section class="csd">
+  <div class="wrap">
+    <div class="breadcrumb"><a href="/">Home</a> / <a href="/case-study">Case Studies</a> / AI Fraud Detection for a Neobank Startup</div>
+    <div class="csd-hero">
+      <div class="csd-meta"><span>Fintech</span><span>AI Services</span><span>Startup</span></div>
+      <h1>AI Fraud Detection for a Neobank Startup</h1>
+      <p class="csd-sub">Graph + behavioral fraud scoring that cut false declines while catching account-takeover rings for an early-stage neobank.</p>
+      <div class="csd-related"><a href="/ai-credit-underwriting-fintech-startup">AI Credit Underwriting for a Lending Startup</a><a href="/data-engineering-analytics-insurance-risk">Data Engineering and Analytics for Insurance Risk Assessment</a><a href="/fintech">Fintech industry</a></div>
+    </div>
+    <div class="csd-hero-media">
+      <img src="/assets/img/case-studies/ai-fraud-detection-neobank-startup.jpg" alt="AI Fraud Detection for a Neobank Startup" loading="eager">
+    </div>
+
+    <div class="csd-layout">
+      <div class="csd-main">
+        <h2>Key Details</h2>
+        <table class="csd-keys">
+          <tr><th>Challenge</th><td>Rules-only fraud checks blocked good users and still missed coordinated account-takeover attempts.</td></tr>
+          <tr><th>Solution</th><td>A real-time fraud scorer combining device, velocity and graph features with an investigator console.</td></tr>
+          <tr><th>Technologies</th><td>Python, Kafka, Redis, PostgreSQL, AWS</td></tr>
+        </table>
+
+        <div class="csd-tech">
+          <h2>Technologies used</h2>
+          <div class="csd-tech-list">
+          <span class="tech-pill has-icon"><img class="tp-icon" src="https://cdn.jsdelivr.net/npm/simple-icons@11.14.0/icons/python.svg" alt="" width="18" height="18" loading="lazy">Python</span>
+          <span class="tech-pill has-icon"><img class="tp-icon" src="https://cdn.jsdelivr.net/npm/simple-icons@11.14.0/icons/apachekafka.svg" alt="" width="18" height="18" loading="lazy">Apache Kafka</span>
+          <span class="tech-pill has-icon"><img class="tp-icon" src="https://cdn.jsdelivr.net/npm/simple-icons@11.14.0/icons/redis.svg" alt="" width="18" height="18" loading="lazy">Redis</span>
+          <span class="tech-pill has-icon"><img class="tp-icon" src="https://cdn.jsdelivr.net/npm/simple-icons@11.14.0/icons/postgresql.svg" alt="" width="18" height="18" loading="lazy">PostgreSQL</span>
+          <span class="tech-pill has-icon"><img class="tp-icon" src="https://cdn.jsdelivr.net/npm/simple-icons@11.14.0/icons/amazonaws.svg" alt="" width="18" height="18" loading="lazy">AWS</span>
+          <span class="tech-pill has-icon"><img class="tp-icon" src="https://cdn.jsdelivr.net/npm/simple-icons@11.14.0/icons/docker.svg" alt="" width="18" height="18" loading="lazy">Docker</span>
+          </div>
+        </div>
+
+        <div class="csd-body">
+          <h2>Client background</h2>
+          <p>A neobank startup shipping cards and P2P transfers hit a wall: static rules either annoyed legitimate users with declines or let mule rings through. Fraud ops lived in Slack threads with no shared case model.</p>
+
+          <h2>Key challenges</h2>
+          <ul><li>False declines hurt activation and support costs for a brand still earning trust.</li><li>Coordinated rings shared devices and funding patterns rules could not see.</li><li>No real-time feature path — batch jobs were too slow for card authorizations.</li><li>Investigators lacked a prioritized queue with evidence packs.</li></ul>
+
+          <div class="csd-gallery">
+            <figure>
+              <img src="/assets/img/case-studies/ai-fraud-detection-neobank-startup.jpg" alt="Fraud ops queue prioritized by model risk" loading="lazy">
+              <figcaption>Fraud ops queue prioritized by model risk</figcaption>
+            </figure>
+            <figure>
+              <img src="/assets/img/case-studies/ai-fraud-detection-neobank-startup.jpg" alt="Device and velocity features in the decision path" loading="lazy">
+              <figcaption>Device and velocity features in the decision path</figcaption>
+            </figure>
+          </div>
+
+          <h2>What we built</h2>
+          <ul><li>Streaming features for device fingerprint, velocity and peer-graph risk.</li><li>Online fraud score service with kill-switches and reason codes.</li><li>Investigator console with case notes, linked entities and disposition outcomes.</li><li>Feedback loop so confirmed fraud retrains weekly challenger models.</li></ul>
+          <p class="team-note"><strong>Project team:</strong> 6 engineers across AI/ML, backend and product engineering — delivery over 14 weeks for a startup team that needed to ship, not slide decks.</p>
+
+          <h2>How we delivered</h2>
+          <div class="csd-approach"><div class="csd-step"><div class="sn">01</div><h4>Baseline</h4><p>Measured false decline vs. fraud loss and mapped the hottest attack patterns.</p></div><div class="csd-step"><div class="sn">02</div><h4>Features</h4><p>Stood up streaming feature jobs with latency budgets for auth time.</p></div><div class="csd-step"><div class="sn">03</div><h4>Score</h4><p>Shipped v1 scorer with human review for mid-risk band.</p></div><div class="csd-step"><div class="sn">04</div><h4>Operate</h4><p>Trained fraud ops and locked SLAs for model and rule changes.</p></div></div>
+
+          <h2>Business impact</h2>
+          <div class="csd-impact"><div><strong>-35%</strong>False declines</div><div><strong>+2.1×</strong>Fraud catch rate</div><div><strong>&lt;80ms</strong>Score latency</div></div>
+
+          <h2>Services used</h2>
+          <div class="csd-services"><a href="/ai-services">AI Services →</a><a href="/devops">DevOps →</a></div>
+          <h2>Industries</h2>
+          <div class="csd-services"><a href="/fintech">Fintech →</a></div>
+        </div>
+      </div>
+
+      <aside class="csd-side">
+        <div class="csd-side-card">
+          <h3>At a glance</h3>
+          <dl>
+            <dt>Industry</dt><dd>Fintech</dd>
+            <dt>Stage</dt><dd>Startup</dd>
+            <dt>Expertise</dt><dd>AI Services</dd>
+            <dt>Duration</dt><dd>14 weeks</dd>
+            <dt>Team</dt><dd>6 engineers</dd>
+          </dl>
+        </div>
+        <div class="csd-side-card">
+          <h3>Stack highlights</h3>
+          <div class="csd-tech-list" style="gap:8px;">
+          <span class="tech-pill has-icon"><img class="tp-icon" src="https://cdn.jsdelivr.net/npm/simple-icons@11.14.0/icons/python.svg" alt="" width="18" height="18" loading="lazy">Python</span>
+          <span class="tech-pill has-icon"><img class="tp-icon" src="https://cdn.jsdelivr.net/npm/simple-icons@11.14.0/icons/apachekafka.svg" alt="" width="18" height="18" loading="lazy">Apache Kafka</span>
+          <span class="tech-pill has-icon"><img class="tp-icon" src="https://cdn.jsdelivr.net/npm/simple-icons@11.14.0/icons/redis.svg" alt="" width="18" height="18" loading="lazy">Redis</span>
+          <span class="tech-pill has-icon"><img class="tp-icon" src="https://cdn.jsdelivr.net/npm/simple-icons@11.14.0/icons/postgresql.svg" alt="" width="18" height="18" loading="lazy">PostgreSQL</span>
+          </div>
+        </div>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<section id="contact" style="padding-top:0;">
+  <div class="cta-banner">
+    <div class="cta-banner-inner">
+      <h2>We empower businesses with AI, ML, and data solutions.</h2>
+      <p>Response within 1 business day. You will hear from an engineer, not a salesperson.</p>
+      <a href="/contact" class="btn" style="background:#fff;border-color:#fff;">Contact Us <span>→</span></a>
+    </div>
+  </div>
+</section>
