@@ -326,6 +326,71 @@ export const PAGES: PageEntry[] = [
       "Case study: a crypto iGaming platform with game aggregation, crypto payments, two original games, VIP and loyalty, plus PWA, React Native and a Telegram bot. Team of 12 over 12 months.",
   },
 
+  {
+    slug: "uk-fintech-catalyst-tracker",
+    kind: "case-study",
+    title: "Equity Catalyst Tracker for a UK Fintech",
+    seoTitle: "UK Fintech Equity Catalyst Tracker",
+    description:
+      "Case study: a UK fintech research platform for small-cap and mining equities. Phase 1 delivered a company and catalyst workspace with AI summaries. Phase 2, covering cash runway and reserve extraction, is ongoing.",
+  },
+  {
+    slug: "uk-ecommerce-ads-ambassador-platform",
+    kind: "case-study",
+    title: "Ads and Ambassador Platform for a UK E-commerce Brand",
+    seoTitle: "UK E-commerce Ads and Ambassador Platform",
+    description:
+      "Case study: an ongoing co-development engagement for a UK direct-to-consumer brand. One platform joins ad spend to store revenue. Another replaces a third-party ambassador app with a platform the brand owns.",
+  },
+  {
+    slug: "german-regtech-kyc-platform",
+    kind: "case-study",
+    title: "Digital Identity and KYC Platform",
+    seoTitle: "German RegTech KYC and Digital Identity Platform",
+    description:
+      "Case study: a digital-identity and KYC platform for a German RegTech scale-up serving fintech and insurtech. The MVP shipped in under 4 months. KYC onboarding takes under 2 minutes.",
+  },
+  {
+    slug: "asia-multigame-igaming-platform",
+    kind: "case-study",
+    title: "Multi-Game iGaming Platform",
+    seoTitle: "Multi-Game iGaming Platform for an Asian Operator",
+    description:
+      "Case study: a multi-game platform for sports, slots and cultural games, built for a fast-growing online gaming operator in Asia. Web and mobile, wallet, payments and 24/7 monitoring. Team of 13 over 12 months.",
+  },
+  {
+    slug: "realtime-dice-game-platform",
+    kind: "case-study",
+    title: "Real-Time Dice Game Platform",
+    seoTitle: "Real-Time Multiplayer Dice Game",
+    description:
+      "Case study: a real-time multiplayer over-and-under dice game for an emerging online gaming operator in Asia. Provably fair draws, an in-game wallet and cloud auto-scaling. Team of 9 over 10 months.",
+  },
+  {
+    slug: "mystery-box-gaming-platform",
+    kind: "case-study",
+    title: "Mystery-Box Gaming Platform",
+    seoTitle: "Mystery-Box Gaming Platform",
+    description:
+      "Case study: a mystery-box platform with prize logic, provably fair draws, battle mode, and crypto and card payments. Built for a Singapore gaming and e-commerce product. Team of 7 over 12 months.",
+  },
+  {
+    slug: "civic-survey-ai-insights",
+    kind: "case-study",
+    title: "AI Survey Insights for a Research Platform",
+    seoTitle: "AI Survey Insights for a Civic Research Platform",
+    description:
+      "Case study: AI summaries, sentiment classification and a database-restricted chatbot for open-ended survey answers, plus panel recruitment and management, for an Australian civic-research company.",
+  },
+  {
+    slug: "audiology-clinical-documentation",
+    kind: "case-study",
+    title: "Clinical Documentation for an Audiology Practice",
+    seoTitle: "Audiology Clinical Documentation Platform",
+    description:
+      "Case study: a clinical documentation platform for an audiology practice, replacing a spreadsheet system with forms, phrase libraries, insurance plans, procedure codes and e-signature.",
+  },
+
   // Company
   {
     slug: "services",
