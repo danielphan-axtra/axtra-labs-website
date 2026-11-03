@@ -41,15 +41,20 @@
 
           <div class="csd-shots">
             <h2>Product screenshots</h2>
-            <figure class="csd-shot">
-              <a href="/assets/img/case-studies/product/ai-powered-smart-surveillance-system-1.png" target="_blank" rel="noopener">
-                <picture>
-                  <source srcset="/assets/img/case-studies/product/ai-powered-smart-surveillance-system-1.webp" type="image/webp">
-                  <img src="/assets/img/case-studies/product/ai-powered-smart-surveillance-system-1.png" alt="Mockup of a video surveillance console with a multi-camera grid, highlighted detections, an event timeline and an alert list for operator review." width="1600" height="1000" loading="lazy" decoding="async">
-                </picture>
-              </a>
-              <figcaption>Security operations view: AI flags unusual events across camera feeds so operators review alerts instead of watching every screen.</figcaption>
-            </figure>
+            <div class="csd-shots-grid pair">
+              <figure class="csd-shot">
+                <a href="/assets/img/case-studies/product-v2/ai-powered-smart-surveillance-system-1.webp" target="_blank" rel="noopener">
+                  <img src="/assets/img/case-studies/product-v2/ai-powered-smart-surveillance-system-1.webp" alt="Dark security operations video wall with four camera feeds, a night perimeter camera showing a person and van inside red and cyan detection boxes with confidence labels, a loading-dock feed with tracked workers and a forklift, and an alert rail on the right." width="1600" height="1000" loading="lazy" decoding="async">
+                </a>
+                <figcaption>Operator video wall where on-device detection tags people and vehicles in live feeds and raises a perimeter alert after hours.</figcaption>
+              </figure>
+              <figure class="csd-shot">
+                <a href="/assets/img/case-studies/product-v2/ai-powered-smart-surveillance-system-2.webp" target="_blank" rel="noopener">
+                  <img src="/assets/img/case-studies/product-v2/ai-powered-smart-surveillance-system-2.webp" alt="Light-grey and red incident review page with a large paused frame showing a person inside a detection box, a scrubbable timeline with detection markers, an acknowledge-escalate-dismiss workflow with notes, and a list of edge devices with status and latency." width="1600" height="1000" loading="lazy" decoding="async">
+                </a>
+                <figcaption>Alert review screen: the operator checks the flagged clip and its detection timeline, then acknowledges or escalates while edge-device health stays visible.</figcaption>
+              </figure>
+            </div>
           </div>
           <h2>What we built</h2>
           <ul><li>Edge inference on Jetson devices for person, intrusion and anomaly events.</li><li>YOLO-based detection tuned for site-specific lighting and camera angles.</li><li>Alerting console with priority queues and acknowledgement workflows.</li><li>Optional facial recognition modules with privacy controls and audit logs.</li></ul>

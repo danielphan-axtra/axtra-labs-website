@@ -33,15 +33,20 @@
 
           <div class="csd-shots">
             <h2>Product screenshots</h2>
-            <figure class="csd-shot">
-              <a href="/assets/img/case-studies/product/vika-cube-ai-learning-companion-1.png" target="_blank" rel="noopener">
-                <picture>
-                  <source srcset="/assets/img/case-studies/product/vika-cube-ai-learning-companion-1.webp" type="image/webp">
-                  <img src="/assets/img/case-studies/product/vika-cube-ai-learning-companion-1.png" alt="Product design of an AI learning companion: a rounded cube device with a small screen showing a friendly character and a spoken question, beside two parent app screens showing a conversation transcript and weekly learning progress." width="1600" height="1000" loading="lazy" decoding="async">
-                </picture>
-              </a>
-              <figcaption>AI learning companion: a small cube with a 2.4-inch screen talks with the child by voice, while the parent app shows conversations, learning progress and settings.</figcaption>
-            </figure>
+            <div class="csd-shots-grid pair">
+              <figure class="csd-shot">
+                <a href="/assets/img/case-studies/product-v2/vika-cube-ai-learning-companion-1.webp" target="_blank" rel="noopener">
+                  <img src="/assets/img/case-studies/product-v2/vika-cube-ai-learning-companion-1.webp" alt="Soft sky-blue and lemon scene with a rounded cube-shaped learning device whose small screen shows an animated face and audio waveform, LED ring and buttons, speech bubbles between a child and the device about why the sky is blue, and a strip of four small screen states labelled idle, listening, thinking and speaking or quiz." width="1600" height="1000" loading="lazy" decoding="async">
+                </a>
+                <figcaption>The device: a child asks the cube a question, and the 2.4-inch screen animates through listening, thinking and speaking while the voice reply plays.</figcaption>
+              </figure>
+              <figure class="csd-shot">
+                <a href="/assets/img/case-studies/product-v2/vika-cube-ai-learning-companion-2.webp" target="_blank" rel="noopener">
+                  <img src="/assets/img/case-studies/product-v2/vika-cube-ai-learning-companion-2.webp" alt="Dark technical architecture diagram split into an on-device firmware block with display, button, LED, microphone, speaker and wake-word modules and a cloud block with speech-to-text, language model, text-to-speech, content and OTA update services, connected through Wi-Fi and an MQTT broker, with a latency breakdown and a serial console log underneath." width="1600" height="1000" loading="lazy" decoding="async">
+                </a>
+                <figcaption>Inside the device: firmware modules for the screen, buttons, LEDs, mic and speaker talk to the cloud voice pipeline over MQTT, with a live serial log of one conversation turn.</figcaption>
+              </figure>
+            </div>
           </div>
           <h2>What we built</h2>
           <ul><li>Embedded software for the display, buttons, speaker, microphone, LEDs and core device functions</li><li>Voice interaction so a child can speak to the companion and hear a reply</li><li>2.4-inch TFT interface with animations during interaction</li><li>Hardware integration, including microphone, speaker, buttons, status LEDs, display, USB-C charging and device controls</li><li>Companion flows for learning, storytelling, games, exploration and emotional companionship</li><li>Software tuned for a compact, low-power device</li></ul>

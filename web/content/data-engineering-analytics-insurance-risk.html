@@ -40,15 +40,14 @@
 
           <div class="csd-shots">
             <h2>Product screenshots</h2>
-            <figure class="csd-shot">
-              <a href="/assets/img/case-studies/product/data-engineering-analytics-insurance-risk-1.png" target="_blank" rel="noopener">
-                <picture>
-                  <source srcset="/assets/img/case-studies/product/data-engineering-analytics-insurance-risk-1.webp" type="image/webp">
-                  <img src="/assets/img/case-studies/product/data-engineering-analytics-insurance-risk-1.png" alt="Mockup of an insurance analytics dashboard with a data-pipeline lineage diagram, a regional risk heatmap, loss-ratio trends and a fraud-flag table." width="1600" height="1000" loading="lazy" decoding="async">
-                </picture>
-              </a>
-              <figcaption>Risk data platform: pipeline lineage from source systems to risk models, with regional exposure and fraud flags for analysts.</figcaption>
-            </figure>
+            <div class="csd-shots-grid">
+              <figure class="csd-shot">
+                <a href="/assets/img/case-studies/product-v2/data-engineering-analytics-insurance-risk-1.webp" target="_blank" rel="noopener">
+                  <img src="/assets/img/case-studies/product-v2/data-engineering-analytics-insurance-risk-1.webp" alt="Dark navy data lineage graph with source, staging, mart and feature nodes connected by curved edges, test status badges on each model, and a side panel with run history and column tests for the selected claims feature table." width="1600" height="1000" loading="lazy" decoding="async">
+                </a>
+                <figcaption>Lineage view of the risk warehouse: raw claims and policy sources flow through tested transformation models into feature tables and the risk dashboards.</figcaption>
+              </figure>
+            </div>
           </div>
           <h2>What we built</h2>
           <ul><li>Snowflake warehouse with dbt models for claims, policy and behavioral features.</li><li>Scheduled feature jobs with tests and documentation for model consumers.</li><li>Power BI risk and fraud dashboards with investigation queues.</li><li>Lineage and access patterns designed for audit and least-privilege use.</li></ul>

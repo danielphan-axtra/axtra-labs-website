@@ -40,15 +40,20 @@
 
           <div class="csd-shots">
             <h2>Product screenshots</h2>
-            <figure class="csd-shot">
-              <a href="/assets/img/case-studies/product/ai-driven-personalized-ecommerce-recommendations-1.png" target="_blank" rel="noopener">
-                <picture>
-                  <source srcset="/assets/img/case-studies/product/ai-driven-personalized-ecommerce-recommendations-1.webp" type="image/webp">
-                  <img src="/assets/img/case-studies/product/ai-driven-personalized-ecommerce-recommendations-1.png" alt="Mockup of an e-commerce recommendation dashboard showing personalised product rows for a selected shopper, ranking signals, placement settings and a variant comparison chart." width="1600" height="1000" loading="lazy" decoding="async">
-                </picture>
-              </a>
-              <figcaption>Recommendation studio: the merchandising team previews personalised product picks for a shopper segment, tunes placement rules and compares variants.</figcaption>
-            </figure>
+            <div class="csd-shots-grid pair">
+              <figure class="csd-shot">
+                <a href="/assets/img/case-studies/product-v2/ai-driven-personalized-ecommerce-recommendations-1.webp" target="_blank" rel="noopener">
+                  <img src="/assets/img/case-studies/product-v2/ai-driven-personalized-ecommerce-recommendations-1.webp" alt="Cream and black editorial fashion storefront with a hero banner, a personalised &#x27;Picked for you&#x27; product row with small reason tags, a &#x27;Because you viewed the linen overshirt&#x27; row and a complete-the-look bundle panel." width="1600" height="1000" loading="lazy" decoding="async">
+                </a>
+                <figcaption>Storefront homepage where each module is personalised for the signed-in shopper, with a &#x27;because you viewed&#x27; row and complete-the-look picks.</figcaption>
+              </figure>
+              <figure class="csd-shot">
+                <a href="/assets/img/case-studies/product-v2/ai-driven-personalized-ecommerce-recommendations-2.webp" target="_blank" rel="noopener">
+                  <img src="/assets/img/case-studies/product-v2/ai-driven-personalized-ecommerce-recommendations-2.webp" alt="Light lavender architecture diagram with grouped lanes for data sources, cloud data warehouse, feature pipeline, Redis feature store and ranking service, connected by arrows to storefront placements, plus an A/B experiment panel splitting traffic between control and ranker variants." width="1600" height="1000" loading="lazy" decoding="async">
+                </a>
+                <figcaption>Architecture of the recommendation service: events and catalogue in the warehouse feed a feature pipeline, Redis serves features, and a ranking API splits traffic for A/B tests.</figcaption>
+              </figure>
+            </div>
           </div>
           <h2>What we built</h2>
           <ul><li>Ranking service for homepage and PDP modules using catalog + session features.</li><li>BigQuery pipelines and a Redis-backed feature cache for low-latency serving.</li><li>TensorFlow Recommenders models with offline eval and online A/B hooks.</li><li>Ops dashboards for conversion lift, coverage and cold-start handling.</li></ul>

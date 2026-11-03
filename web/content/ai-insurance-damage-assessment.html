@@ -33,15 +33,20 @@
 
           <div class="csd-shots">
             <h2>Product screenshots</h2>
-            <figure class="csd-shot">
-              <a href="/assets/img/case-studies/product/ai-insurance-damage-assessment-1.png" target="_blank" rel="noopener">
-                <picture>
-                  <source srcset="/assets/img/case-studies/product/ai-insurance-damage-assessment-1.webp" type="image/webp">
-                  <img src="/assets/img/case-studies/product/ai-insurance-damage-assessment-1.png" alt="Mockup of a vehicle damage assessment screen with damage boxes on a car photo, a parts and labour estimate and a claim workflow tracker." width="1600" height="1000" loading="lazy" decoding="async">
-                </picture>
-              </a>
-              <figcaption>Claims adjuster view: detected vehicle damage with severity, an itemised repair estimate and the claim&#x27;s next workflow step.</figcaption>
-            </figure>
+            <div class="csd-shots-grid pair">
+              <figure class="csd-shot">
+                <a href="/assets/img/case-studies/product-v2/ai-insurance-damage-assessment-1.webp" target="_blank" rel="noopener">
+                  <img src="/assets/img/case-studies/product-v2/ai-insurance-damage-assessment-1.webp" alt="Light claims web app showing a photo of a silver sedan with labelled outlines over a door dent, door scratches, a front fender scratch and front bumper scuffs, a severity legend, and a draft repair estimate table listing part, damage type, suggested action and confidence with accept and edit controls." width="1600" height="1000" loading="lazy" decoding="async">
+                </a>
+                <figcaption>Adjuster view: the model outlines each damaged area on the claim photo, names the part and damage type, and drafts a repair line for the adjuster to confirm.</figcaption>
+              </figure>
+              <figure class="csd-shot">
+                <a href="/assets/img/case-studies/product-v2/ai-insurance-damage-assessment-2.webp" target="_blank" rel="noopener">
+                  <img src="/assets/img/case-studies/product-v2/ai-insurance-damage-assessment-2.webp" alt="Two phones on a mint background: the first shows a camera capture screen with a car outline guide, an angle checklist and a shutter button; the second shows the claim tracker with a progress timeline, the uploaded photos, and a message that an adjuster is reviewing the AI assessment." width="1600" height="1000" loading="lazy" decoding="async">
+                </a>
+                <figcaption>Policyholder app: a guided capture flow walks the driver around the car one angle at a time, then shows the claim status as it moves through review.</figcaption>
+              </figure>
+            </div>
           </div>
           <h2>What we built</h2>
           <ul><li>Models that detect scratches, dents, broken parts and impact areas from uploaded photos, and classify severity</li><li>Claim intake, image validation and damage-assessment summaries</li><li>Workflow integration with claim management systems</li><li>Fraud checks for duplicate or suspicious images and abnormal claim patterns</li><li>Dashboards for claim tracking and AI analysis</li></ul>

@@ -40,15 +40,14 @@
 
           <div class="csd-shots">
             <h2>Product screenshots</h2>
-            <figure class="csd-shot">
-              <a href="/assets/img/case-studies/product/ai-optimized-logistics-route-planning-1.png" target="_blank" rel="noopener">
-                <picture>
-                  <source srcset="/assets/img/case-studies/product/ai-optimized-logistics-route-planning-1.webp" type="image/webp">
-                  <img src="/assets/img/case-studies/product/ai-optimized-logistics-route-planning-1.png" alt="Mockup of a logistics route optimisation dashboard with a map showing colour-coded delivery routes, a vehicle list with load and stops, and a timeline of stops with delivery windows." width="1600" height="1000" loading="lazy" decoding="async">
-                </picture>
-              </a>
-              <figcaption>Route planning console: daily delivery stops are grouped into optimised routes per vehicle, with time windows, load and live ETA tracking.</figcaption>
-            </figure>
+            <div class="csd-shots-grid">
+              <figure class="csd-shot">
+                <a href="/assets/img/case-studies/product-v2/ai-optimized-logistics-route-planning-1.webp" target="_blank" rel="noopener">
+                  <img src="/assets/img/case-studies/product-v2/ai-optimized-logistics-route-planning-1.webp" alt="Light map-based dispatch planner with three coloured van routes drawn through numbered stops on a stylised street map, a left list of vehicles with load and time-window status, and a scenario comparison card for manual versus optimised plans." width="1600" height="1000" loading="lazy" decoding="async">
+                </a>
+                <figcaption>Route planner on a map: the optimiser assigns stops to vans within delivery windows, and the dispatcher compares the plan with the manual baseline before publishing.</figcaption>
+              </figure>
+            </div>
           </div>
           <h2>What we built</h2>
           <ul><li>OR-Tools based optimizer respecting windows, capacity and service times.</li><li>Maps API integration for travel times with traffic-aware updates.</li><li>Planner UI for comparing scenarios and locking routes to drivers.</li><li>PostgreSQL operational store with audit of plan changes.</li></ul>

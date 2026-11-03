@@ -41,15 +41,20 @@
 
           <div class="csd-shots">
             <h2>Product screenshots</h2>
-            <figure class="csd-shot">
-              <a href="/assets/img/case-studies/product/ai-fraud-detection-neobank-startup-1.png" target="_blank" rel="noopener">
-                <picture>
-                  <source srcset="/assets/img/case-studies/product/ai-fraud-detection-neobank-startup-1.webp" type="image/webp">
-                  <img src="/assets/img/case-studies/product/ai-fraud-detection-neobank-startup-1.png" alt="Mockup of a fraud risk review console with a flagged-transaction queue, risk scores, a linked-account graph and case details." width="1600" height="1000" loading="lazy" decoding="async">
-                </picture>
-              </a>
-              <figcaption>Risk Console: analysts review flagged transactions, linked-account graphs and behavioural signals in one queue.</figcaption>
-            </figure>
+            <div class="csd-shots-grid pair">
+              <figure class="csd-shot">
+                <a href="/assets/img/case-studies/product-v2/ai-fraud-detection-neobank-startup-1.webp" target="_blank" rel="noopener">
+                  <img src="/assets/img/case-studies/product-v2/ai-fraud-detection-neobank-startup-1.webp" alt="Dark purple investigation console with a force-directed link graph of accounts, devices, IP addresses and payees around a flagged account, a risk-score card listing the model&#x27;s top signals, and a case timeline with freeze and release actions." width="1600" height="1000" loading="lazy" decoding="async">
+                </a>
+                <figcaption>Fraud investigation graph: a flagged transfer is linked to the accounts, devices and payees it shares, so the analyst can see the ring the model picked up.</figcaption>
+              </figure>
+              <figure class="csd-shot">
+                <a href="/assets/img/case-studies/product-v2/ai-fraud-detection-neobank-startup-2.webp" target="_blank" rel="noopener">
+                  <img src="/assets/img/case-studies/product-v2/ai-fraud-detection-neobank-startup-2.webp" alt="Light lilac banking app shown on three phones: a push notification about a paused transfer, a &#x27;Was this you?&#x27; screen with transfer details and yes or no buttons plus face confirmation, and a confirmation screen showing the card frozen and next steps." width="1600" height="1000" loading="lazy" decoding="async">
+                </a>
+                <figcaption>Customer-side step-up: when a transfer looks risky the app pauses it and asks &#x27;Was this you?&#x27;, then confirms or freezes the card in one tap.</figcaption>
+              </figure>
+            </div>
           </div>
           <h2>What we built</h2>
           <ul><li>Streaming features for device fingerprint, velocity and peer-graph risk.</li><li>Online fraud score service with kill-switches and reason codes.</li><li>Investigator console with case notes, linked entities and disposition outcomes.</li><li>Feedback loop so confirmed fraud retrains weekly challenger models.</li></ul>

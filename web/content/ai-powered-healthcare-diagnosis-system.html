@@ -40,15 +40,14 @@
 
           <div class="csd-shots">
             <h2>Product screenshots</h2>
-            <figure class="csd-shot">
-              <a href="/assets/img/case-studies/product/ai-powered-healthcare-diagnosis-system-1.png" target="_blank" rel="noopener">
-                <picture>
-                  <source srcset="/assets/img/case-studies/product/ai-powered-healthcare-diagnosis-system-1.webp" type="image/webp">
-                  <img src="/assets/img/case-studies/product/ai-powered-healthcare-diagnosis-system-1.png" alt="Mockup of a radiology review screen with a chest X-ray, a highlighted region of interest, draft findings awaiting clinician sign-off and a study worklist." width="1600" height="1000" loading="lazy" decoding="async">
-                </picture>
-              </a>
-              <figcaption>Clinical decision support: the model highlights regions of interest on an image and drafts findings for the radiologist to confirm.</figcaption>
-            </figure>
+            <div class="csd-shots-grid">
+              <figure class="csd-shot">
+                <a href="/assets/img/case-studies/product-v2/ai-powered-healthcare-diagnosis-system-1.webp" target="_blank" rel="noopener">
+                  <img src="/assets/img/case-studies/product-v2/ai-powered-healthcare-diagnosis-system-1.webp" alt="Light clinical-cyan review screen with a patient banner showing a redacted name, an AI case summary with numbered citations to notes and labs, a ranked differential list with supporting and missing evidence and accept or reject buttons, and a sources column with highlighted excerpts." width="1600" height="1000" loading="lazy" decoding="async">
+                </a>
+                <figcaption>Clinician review copilot: it summarises the case from the chart, cites the notes and labs it used, and lists suggested differentials that the clinician accepts or rejects.</figcaption>
+              </figure>
+            </div>
           </div>
           <h2>What we built</h2>
           <ul><li>Review copilot that summarizes history with citations into source notes.</li><li>Guideline-aware flags presented as suggestions, never autonomous diagnoses.</li><li>FHIR-oriented integrations and HIPAA-ready hosting with access logging.</li><li>Decision log so every accepted or rejected suggestion is auditable.</li></ul>

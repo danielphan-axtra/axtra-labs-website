@@ -33,15 +33,20 @@
 
           <div class="csd-shots">
             <h2>Product screenshots</h2>
-            <figure class="csd-shot">
-              <a href="/assets/img/case-studies/product/home-robotics-engineering-platform-1.png" target="_blank" rel="noopener">
-                <picture>
-                  <source srcset="/assets/img/case-studies/product/home-robotics-engineering-platform-1.webp" type="image/webp">
-                  <img src="/assets/img/case-studies/product/home-robotics-engineering-platform-1.png" alt="Mockup of a home robotics engineering dashboard with a live occupancy map of a home showing the robot path and detected objects, sensor telemetry charts, perception output and a fleet test run list." width="1600" height="1000" loading="lazy" decoding="async">
-                </picture>
-              </a>
-              <figcaption>Robot engineering console: the team monitors the SLAM map, perception and telemetry of each test robot, and tracks runs across the fleet.</figcaption>
-            </figure>
+            <div class="csd-shots-grid pair">
+              <figure class="csd-shot">
+                <a href="/assets/img/case-studies/product-v2/home-robotics-engineering-platform-1.webp" target="_blank" rel="noopener">
+                  <img src="/assets/img/case-studies/product-v2/home-robotics-engineering-platform-1.webp" alt="Light grey engineering console showing a low camera view of a living room with labelled boxes for sofa, coffee table, armchair, pet bed, plant, door and a highlighted pair of slippers as an obstacle, a translucent green free-space overlay on the floor, small feature-point dots and an orange planned path curving around the obstacle, with side panels listing detections with distances, pose estimate, sensor topics and rates." width="1600" height="1000" loading="lazy" decoding="async">
+                </a>
+                <figcaption>Perception view from the robot’s camera: detected furniture and floor obstacles with distances, free floor space, tracked SLAM features and the planned path around a pair of slippers.</figcaption>
+              </figure>
+              <figure class="csd-shot">
+                <a href="/assets/img/case-studies/product-v2/home-robotics-engineering-platform-2.webp" target="_blank" rel="noopener">
+                  <img src="/assets/img/case-studies/product-v2/home-robotics-engineering-platform-2.webp" alt="Dark navy mapping screen with a top-down occupancy grid of a home floor plan split into coloured rooms, a cyan trajectory line, the robot icon with a field-of-view cone, magenta loop-closure markers and a dotted planned route to a goal, plus panels for localization confidence, sensor fusion inputs, map layers and a run log." width="1600" height="1000" loading="lazy" decoding="async">
+                </a>
+                <figcaption>Map view: the visual SLAM map of the home with the robot’s localized pose, its trajectory, room segmentation and a sensor-fusion panel.</figcaption>
+              </figure>
+            </div>
           </div>
           <h2>What we built</h2>
           <ul><li>Embedded software, firmware and device drivers</li><li>Robot control, autonomy, middleware and system integration</li><li>3D perception, visual SLAM, sensor fusion and localization</li><li>Computer vision, robot learning and model training</li><li>Data pipelines, dataset processing and model evaluation</li><li>Hardware and software integration, simulation, diagnostics and automated testing</li></ul>

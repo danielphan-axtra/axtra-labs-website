@@ -40,15 +40,20 @@
 
           <div class="csd-shots">
             <h2>Product screenshots</h2>
-            <figure class="csd-shot">
-              <a href="/assets/img/case-studies/product/building-ai-powered-personal-trainer-1.png" target="_blank" rel="noopener">
-                <picture>
-                  <source srcset="/assets/img/case-studies/product/building-ai-powered-personal-trainer-1.webp" type="image/webp">
-                  <img src="/assets/img/case-studies/product/building-ai-powered-personal-trainer-1.png" alt="Three phone screens of a fitness app: a live workout with body pose tracking and rep counter, a workout summary with form feedback, and a weekly training plan." width="1600" height="1000" loading="lazy" decoding="async">
-                </picture>
-              </a>
-              <figcaption>AI personal trainer app: the phone camera tracks body pose during each exercise, counts reps, corrects form in real time and adapts the weekly plan.</figcaption>
-            </figure>
+            <div class="csd-shots-grid pair">
+              <figure class="csd-shot">
+                <a href="/assets/img/case-studies/product-v2/building-ai-powered-personal-trainer-1.webp" target="_blank" rel="noopener">
+                  <img src="/assets/img/case-studies/product-v2/building-ai-powered-personal-trainer-1.webp" alt="Dark lime fitness app shown on two phones: one with a live camera view of a man squatting overlaid with a pose skeleton, joint angles and a rep counter, the other with a set summary listing rep-by-rep depth, form cues and the next exercise." width="1600" height="1000" loading="lazy" decoding="async">
+                </a>
+                <figcaption>In-workout form check: the phone camera tracks the squat with pose keypoints and the trainer gives a live cue on depth and knee position.</figcaption>
+              </figure>
+              <figure class="csd-shot">
+                <a href="/assets/img/case-studies/product-v2/building-ai-powered-personal-trainer-2.webp" target="_blank" rel="noopener">
+                  <img src="/assets/img/case-studies/product-v2/building-ai-powered-personal-trainer-2.webp" alt="Light warm-orange coach web app with a client list showing adherence and flags, a selected client&#x27;s week plan grid with completed and missed sessions, a form-trend chart and an AI suggestion card proposing a load change that the coach can apply or edit." width="1600" height="1000" loading="lazy" decoding="async">
+                </a>
+                <figcaption>Coach-side inbox: the trainer reviews flagged sets and adjusts each client&#x27;s plan, with the AI suggesting changes from their recent form data.</figcaption>
+              </figure>
+            </div>
           </div>
           <h2>What we built</h2>
           <ul><li>React Native app with adaptive workout generation and progress tracking.</li><li>On-device pose models for form cues without sending every frame to the cloud.</li><li>Coach inbox that surfaces flagged sessions and user questions.</li><li>Backend for plans, subscriptions and privacy-safe telemetry.</li></ul>
