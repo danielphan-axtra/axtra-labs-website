@@ -52,6 +52,18 @@
           <h2>What we built</h2>
           <ul><li>Versioned prompt packs with ownership and changelog discipline.</li><li>Golden evaluation sets drawn from real support transcripts.</li><li>LangSmith + pytest regression gate before every prompt or model change.</li><li>FastAPI serving layer with structured logging for failure review.</li></ul>
           <p class="team-note"><strong>Project team:</strong> 4 engineers across AI/ML, backend and domain specialists — delivery over 10 weeks.</p>
+          <div class="csd-shots">
+            <h2>Product screenshots</h2>
+            <figure class="csd-shot">
+              <a href="/assets/img/case-studies/product/optimizing-gpt-4-prompt-engineering-1.png" target="_blank" rel="noopener">
+                <picture>
+                  <source srcset="/assets/img/case-studies/product/optimizing-gpt-4-prompt-engineering-1.webp" type="image/webp">
+                  <img src="/assets/img/case-studies/product/optimizing-gpt-4-prompt-engineering-1.png" alt="Mockup of a prompt engineering workbench with a versioned system prompt editor, an evaluation run comparing two prompt versions across quality criteria, and a list of test cases with pass and fail results." width="1600" height="1000" loading="lazy" decoding="async">
+                </picture>
+              </a>
+              <figcaption>Prompt evaluation workbench: each prompt version runs against a labelled test set, and reviewers compare scores and failing cases before promoting it.</figcaption>
+            </figure>
+          </div>
 
           <h2>How we delivered</h2>
           <div class="csd-approach"><div class="csd-step"><div class="sn">01</div><h4>Baseline</h4><p>Captured failure modes from production logs and agent escalations.</p></div><div class="csd-step"><div class="sn">02</div><h4>Golden set</h4><p>Built labeled examples for policy, tone and tool-use correctness.</p></div><div class="csd-step"><div class="sn">03</div><h4>Harness</h4><p>Wired evals into CI so regressions block release.</p></div><div class="csd-step"><div class="sn">04</div><h4>Operate</h4><p>Defined a change process for prompt owners and support leads.</p></div></div>
