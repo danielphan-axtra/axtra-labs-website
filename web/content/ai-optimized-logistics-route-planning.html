@@ -38,20 +38,6 @@
           <h2>Key challenges</h2>
           <ul><li>Spreadsheets could not replan when traffic or cancellations hit midday.</li><li>Capacity and time-window constraints were informal and often violated.</li><li>Empty miles and overlapping zones went unnoticed until month-end.</li><li>Dispatchers lacked a UI to compare scenarios before committing drivers.</li></ul>
 
-          <div class="csd-gallery">
-            <figure>
-              <img src="/assets/img/case-studies/ai-optimized-logistics-route-planning.jpg" alt="Planner UI balancing windows, capacity and traffic" loading="lazy">
-              <figcaption>Planner UI balancing windows, capacity and traffic</figcaption>
-            </figure>
-            <figure>
-              <img src="/assets/img/case-studies/ai-optimized-logistics-route-planning.jpg" alt="Dispatch board with fewer empty miles" loading="lazy">
-              <figcaption>Dispatch board with fewer empty miles</figcaption>
-            </figure>
-          </div>
-
-          <h2>What we built</h2>
-          <ul><li>OR-Tools based optimizer respecting windows, capacity and service times.</li><li>Maps API integration for travel times with traffic-aware updates.</li><li>Planner UI for comparing scenarios and locking routes to drivers.</li><li>PostgreSQL operational store with audit of plan changes.</li></ul>
-          <p class="team-note"><strong>Project team:</strong> 5 engineers across AI/ML, backend and domain specialists — delivery over 14 weeks.</p>
           <div class="csd-shots">
             <h2>Product screenshots</h2>
             <figure class="csd-shot">
@@ -64,7 +50,9 @@
               <figcaption>Route planning console: daily delivery stops are grouped into optimised routes per vehicle, with time windows, load and live ETA tracking.</figcaption>
             </figure>
           </div>
-
+          <h2>What we built</h2>
+          <ul><li>OR-Tools based optimizer respecting windows, capacity and service times.</li><li>Maps API integration for travel times with traffic-aware updates.</li><li>Planner UI for comparing scenarios and locking routes to drivers.</li><li>PostgreSQL operational store with audit of plan changes.</li></ul>
+          <p class="team-note"><strong>Project team:</strong> 5 engineers across AI/ML, backend and domain specialists — delivery over 14 weeks.</p>
           <h2>How we delivered</h2>
           <div class="csd-approach"><div class="csd-step"><div class="sn">01</div><h4>Capture</h4><p>Digitized historical stops, constraints and failure modes.</p></div><div class="csd-step"><div class="sn">02</div><h4>Optimize</h4><p>Tuned objective for cost vs. on-time with dispatcher feedback.</p></div><div class="csd-step"><div class="sn">03</div><h4>UI</h4><p>Shipped a planner console that fits the morning dispatch ritual.</p></div><div class="csd-step"><div class="sn">04</div><h4>Operate</h4><p>Added midday replan hooks and exception alerts.</p></div></div>
 

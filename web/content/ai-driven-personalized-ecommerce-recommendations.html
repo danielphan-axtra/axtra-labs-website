@@ -38,20 +38,6 @@
           <h2>Key challenges</h2>
           <ul><li>Merchandising rules could not keep up with catalog and season changes.</li><li>Session signals were unused beyond basic “recently viewed”.</li><li>No feature store — models could not go live without brittle batch jobs.</li><li>Product teams lacked online metrics tying ranking changes to conversion.</li></ul>
 
-          <div class="csd-gallery">
-            <figure>
-              <img src="/assets/img/case-studies/ai-driven-personalized-ecommerce-recommendations.jpg" alt="Personalized homepage and product-page ranking" loading="lazy">
-              <figcaption>Personalized homepage and product-page ranking</figcaption>
-            </figure>
-            <figure>
-              <img src="/assets/img/case-studies/ai-driven-personalized-ecommerce-recommendations.jpg" alt="Feature store feeding live recommendation services" loading="lazy">
-              <figcaption>Feature store feeding live recommendation services</figcaption>
-            </figure>
-          </div>
-
-          <h2>What we built</h2>
-          <ul><li>Ranking service for homepage and PDP modules using catalog + session features.</li><li>BigQuery pipelines and a Redis-backed feature cache for low-latency serving.</li><li>TensorFlow Recommenders models with offline eval and online A/B hooks.</li><li>Ops dashboards for conversion lift, coverage and cold-start handling.</li></ul>
-          <p class="team-note"><strong>Project team:</strong> 6 engineers across AI/ML, backend and domain specialists — delivery over 15 weeks.</p>
           <div class="csd-shots">
             <h2>Product screenshots</h2>
             <figure class="csd-shot">
@@ -64,7 +50,9 @@
               <figcaption>Recommendation studio: the merchandising team previews personalised product picks for a shopper segment, tunes placement rules and compares variants.</figcaption>
             </figure>
           </div>
-
+          <h2>What we built</h2>
+          <ul><li>Ranking service for homepage and PDP modules using catalog + session features.</li><li>BigQuery pipelines and a Redis-backed feature cache for low-latency serving.</li><li>TensorFlow Recommenders models with offline eval and online A/B hooks.</li><li>Ops dashboards for conversion lift, coverage and cold-start handling.</li></ul>
+          <p class="team-note"><strong>Project team:</strong> 6 engineers across AI/ML, backend and domain specialists — delivery over 15 weeks.</p>
           <h2>How we delivered</h2>
           <div class="csd-approach"><div class="csd-step"><div class="sn">01</div><h4>Baseline</h4><p>Measured current conversion and identified high-traffic modules.</p></div><div class="csd-step"><div class="sn">02</div><h4>Features</h4><p>Built session, catalog and purchase features with freshness SLAs.</p></div><div class="csd-step"><div class="sn">03</div><h4>Serve</h4><p>Deployed ranking APIs behind feature flags for controlled rollout.</p></div><div class="csd-step"><div class="sn">04</div><h4>Learn</h4><p>Ran A/B tests and fed winners back into merchandising defaults.</p></div></div>
 

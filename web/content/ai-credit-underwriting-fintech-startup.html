@@ -39,20 +39,6 @@
           <h2>Key challenges</h2>
           <ul><li>Analysts could not keep up with peak application spikes without adding headcount.</li><li>Thin-file and new-to-credit applicants were over-rejected by rigid bureau rules.</li><li>Founders needed explainability for investors, partners and regulators.</li><li>Shadow models in notebooks never made it into the live decision path.</li></ul>
 
-          <div class="csd-gallery">
-            <figure>
-              <img src="/assets/img/case-studies/ai-credit-underwriting-fintech-startup.jpg" alt="Underwriting console with explainable score drivers" loading="lazy">
-              <figcaption>Underwriting console with explainable score drivers</figcaption>
-            </figure>
-            <figure>
-              <img src="/assets/img/case-studies/ai-credit-underwriting-fintech-startup.jpg" alt="Feature pipelines feeding live decisioning" loading="lazy">
-              <figcaption>Feature pipelines feeding live decisioning</figcaption>
-            </figure>
-          </div>
-
-          <h2>What we built</h2>
-          <ul><li>Feature store for bureau, bank-transaction and application signals with freshness checks.</li><li>Gradient-boosted underwriting model with SHAP-style driver explanations for analysts.</li><li>FastAPI decision service with policy overlays and human review for edge cases.</li><li>Monitoring for approval rate, loss early-warning and score drift.</li></ul>
-          <p class="team-note"><strong>Project team:</strong> 5 engineers across AI/ML, backend and product engineering — delivery over 12 weeks for a startup team that needed to ship, not slide decks.</p>
           <div class="csd-shots">
             <h2>Product screenshots</h2>
             <figure class="csd-shot">
@@ -65,7 +51,9 @@
               <figcaption>Underwriting workspace: each application gets a model score, reason codes and cash-flow view before an underwriter decides.</figcaption>
             </figure>
           </div>
-
+          <h2>What we built</h2>
+          <ul><li>Feature store for bureau, bank-transaction and application signals with freshness checks.</li><li>Gradient-boosted underwriting model with SHAP-style driver explanations for analysts.</li><li>FastAPI decision service with policy overlays and human review for edge cases.</li><li>Monitoring for approval rate, loss early-warning and score drift.</li></ul>
+          <p class="team-note"><strong>Project team:</strong> 5 engineers across AI/ML, backend and product engineering — delivery over 12 weeks for a startup team that needed to ship, not slide decks.</p>
           <h2>How we delivered</h2>
           <div class="csd-approach"><div class="csd-step"><div class="sn">01</div><h4>Scope</h4><p>Aligned risk appetite, excluded populations and what “good approval” meant for the round.</p></div><div class="csd-step"><div class="sn">02</div><h4>Data</h4><p>Joined bureau, KYC and transaction feeds into a decision-ready feature layer.</p></div><div class="csd-step"><div class="sn">03</div><h4>Model</h4><p>Trained and calibrated scores with holdout and time-based validation.</p></div><div class="csd-step"><div class="sn">04</div><h4>Ship</h4><p>Cut over behind feature flags with analyst override and weekly risk reviews.</p></div></div>
 

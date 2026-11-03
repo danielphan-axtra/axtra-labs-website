@@ -38,20 +38,6 @@
           <h2>Key challenges</h2>
           <ul><li>Manual extracts delayed risk refresh and created untracked copies of sensitive data.</li><li>Feature definitions differed between data science notebooks and production jobs.</li><li>Fraud investigators lacked a prioritized queue tied to model scores.</li><li>No reliable audit trail from source system to dashboard metric.</li></ul>
 
-          <div class="csd-gallery">
-            <figure>
-              <img src="/assets/img/case-studies/data-engineering-analytics-insurance-risk.jpg" alt="Risk dashboards refreshed daily for investigators" loading="lazy">
-              <figcaption>Risk dashboards refreshed daily for investigators</figcaption>
-            </figure>
-            <figure>
-              <img src="/assets/img/case-studies/data-engineering-analytics-insurance-risk.jpg" alt="Feature jobs feeding scoring models" loading="lazy">
-              <figcaption>Feature jobs feeding scoring models</figcaption>
-            </figure>
-          </div>
-
-          <h2>What we built</h2>
-          <ul><li>Snowflake warehouse with dbt models for claims, policy and behavioral features.</li><li>Scheduled feature jobs with tests and documentation for model consumers.</li><li>Power BI risk and fraud dashboards with investigation queues.</li><li>Lineage and access patterns designed for audit and least-privilege use.</li></ul>
-          <p class="team-note"><strong>Project team:</strong> 8 engineers across AI/ML, backend and domain specialists — delivery over 18 weeks.</p>
           <div class="csd-shots">
             <h2>Product screenshots</h2>
             <figure class="csd-shot">
@@ -64,7 +50,9 @@
               <figcaption>Risk data platform: pipeline lineage from source systems to risk models, with regional exposure and fraud flags for analysts.</figcaption>
             </figure>
           </div>
-
+          <h2>What we built</h2>
+          <ul><li>Snowflake warehouse with dbt models for claims, policy and behavioral features.</li><li>Scheduled feature jobs with tests and documentation for model consumers.</li><li>Power BI risk and fraud dashboards with investigation queues.</li><li>Lineage and access patterns designed for audit and least-privilege use.</li></ul>
+          <p class="team-note"><strong>Project team:</strong> 8 engineers across AI/ML, backend and domain specialists — delivery over 18 weeks.</p>
           <h2>How we delivered</h2>
           <div class="csd-approach"><div class="csd-step"><div class="sn">01</div><h4>Map</h4><p>Traced source systems, SLAs and which metrics risk leadership actually used.</p></div><div class="csd-step"><div class="sn">02</div><h4>Model</h4><p>Built a star schema and feature contracts shared by analytics and ML.</p></div><div class="csd-step"><div class="sn">03</div><h4>Pipeline</h4><p>Automated daily refresh with tests for freshness and null rates.</p></div><div class="csd-step"><div class="sn">04</div><h4>Enable</h4><p>Trained investigators and risk ops on the new dashboards and queues.</p></div></div>
 

@@ -39,20 +39,6 @@
           <h2>Key challenges</h2>
           <ul><li>Lighting drift and vibration made naive models unstable between shifts.</li><li>Latency budgets left little room for cloud round-trips.</li><li>False rejects vs. misses required careful threshold and UX design.</li><li>Reject signals had to integrate cleanly with existing PLC logic.</li></ul>
 
-          <div class="csd-gallery">
-            <figure>
-              <img src="/assets/img/case-studies/computer-vision-qc-factory-lines.jpg" alt="Vision station with operator review UI" loading="lazy">
-              <figcaption>Vision station with operator review UI</figcaption>
-            </figure>
-            <figure>
-              <img src="/assets/img/case-studies/computer-vision-qc-factory-lines.jpg" alt="Edge inference integrated with PLC reject signals" loading="lazy">
-              <figcaption>Edge inference integrated with PLC reject signals</figcaption>
-            </figure>
-          </div>
-
-          <h2>What we built</h2>
-          <ul><li>Edge inference on Jetson per line with OpenCV/PyTorch defect models.</li><li>Operator review UI for ambiguous cases without stopping the line.</li><li>OPC-UA / PLC reject pulse with safe defaults on model uncertainty.</li><li>Monitoring for lighting drift, latency and false-reject rates.</li></ul>
-          <p class="team-note"><strong>Project team:</strong> 8 engineers across AI/ML, backend and domain specialists — delivery over 24 weeks.</p>
           <div class="csd-shots">
             <h2>Product screenshots</h2>
             <figure class="csd-shot">
@@ -65,7 +51,9 @@
               <figcaption>Vision QC station: cameras over each production line inspect every part in real time, flag defects with their location and log results per line and shift.</figcaption>
             </figure>
           </div>
-
+          <h2>What we built</h2>
+          <ul><li>Edge inference on Jetson per line with OpenCV/PyTorch defect models.</li><li>Operator review UI for ambiguous cases without stopping the line.</li><li>OPC-UA / PLC reject pulse with safe defaults on model uncertainty.</li><li>Monitoring for lighting drift, latency and false-reject rates.</li></ul>
+          <p class="team-note"><strong>Project team:</strong> 8 engineers across AI/ML, backend and domain specialists — delivery over 24 weeks.</p>
           <h2>How we delivered</h2>
           <div class="csd-approach"><div class="csd-step"><div class="sn">01</div><h4>Floor</h4><p>Assessed lighting, camera mounts and PLC interfaces on each line.</p></div><div class="csd-step"><div class="sn">02</div><h4>Pilot</h4><p>Validated on one line before touching the other two.</p></div><div class="csd-step"><div class="sn">03</div><h4>Integrate</h4><p>Wired reject signals and trained operators on the review UX.</p></div><div class="csd-step"><div class="sn">04</div><h4>Scale</h4><p>Cloned the station design across three lines with shared model ops.</p></div></div>
 

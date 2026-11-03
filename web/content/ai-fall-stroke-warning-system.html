@@ -41,17 +41,6 @@
           </ul>
           <p>The goal was a hands-free system with nothing to wear and nothing to press. It had to react in real time, run entirely on-premise, and be simple enough for a non-technical family to install.</p>
 
-          <h2>The solution</h2>
-          <p>Axtra Labs designed and built the Fall &amp; Stroke Warning System, a real-time computer vision application that runs 24/7 on an ordinary PC or laptop with a local GPU.</p>
-          <ul>
-            <li><strong>Pose estimation.</strong> Each video frame goes through a 17-keypoint (COCO) pose estimation model, which finds every person in view and maps their skeleton.</li>
-            <li><strong>Multi-person tracking.</strong> ByteTrack gives each person a stable ID, so the system can follow several people in the same room.</li>
-            <li><strong>Temporal kinematic analysis.</strong> The system looks at a sliding window of movement rather than single frames. It measures how fast the body drops, the torso angle, body shape and how close the hips are to the floor. This lets it tell a real fall apart from bending down, sitting or lying down on purpose.</li>
-            <li><strong>Stroke sign recognition.</strong> The system watches for posture asymmetry, weakness in the limbs on one side and sudden loss of balance, and treats them as early warning signs.</li>
-            <li><strong>Conservative alert logic.</strong> Several signals are combined, and risk has to stay high for a sustained period before an alarm fires. A single noisy frame cannot trigger an alert.</li>
-            <li><strong>Multi-channel alerts.</strong> When an event is confirmed, the system sounds an alarm through the PC speakers, flashes a red indicator on the dashboard and pushes the event over a real-time WebSocket feed that other systems can subscribe to.</li>
-          </ul>
-          <p>The system flags observable warning signs and asks a person to check. It does not diagnose medical conditions, and it supports caregivers rather than replacing them.</p>
           <div class="csd-shots">
             <h2>Product screenshots</h2>
             <figure class="csd-shot">
@@ -64,7 +53,17 @@
               <figcaption>Fall and stroke warning dashboard: live camera view with on-device fall detection, instant alert card, system status and alert history.</figcaption>
             </figure>
           </div>
-
+          <h2>The solution</h2>
+          <p>Axtra Labs designed and built the Fall &amp; Stroke Warning System, a real-time computer vision application that runs 24/7 on an ordinary PC or laptop with a local GPU.</p>
+          <ul>
+            <li><strong>Pose estimation.</strong> Each video frame goes through a 17-keypoint (COCO) pose estimation model, which finds every person in view and maps their skeleton.</li>
+            <li><strong>Multi-person tracking.</strong> ByteTrack gives each person a stable ID, so the system can follow several people in the same room.</li>
+            <li><strong>Temporal kinematic analysis.</strong> The system looks at a sliding window of movement rather than single frames. It measures how fast the body drops, the torso angle, body shape and how close the hips are to the floor. This lets it tell a real fall apart from bending down, sitting or lying down on purpose.</li>
+            <li><strong>Stroke sign recognition.</strong> The system watches for posture asymmetry, weakness in the limbs on one side and sudden loss of balance, and treats them as early warning signs.</li>
+            <li><strong>Conservative alert logic.</strong> Several signals are combined, and risk has to stay high for a sustained period before an alarm fires. A single noisy frame cannot trigger an alert.</li>
+            <li><strong>Multi-channel alerts.</strong> When an event is confirmed, the system sounds an alarm through the PC speakers, flashes a red indicator on the dashboard and pushes the event over a real-time WebSocket feed that other systems can subscribe to.</li>
+          </ul>
+          <p>The system flags observable warning signs and asks a person to check. It does not diagnose medical conditions, and it supports caregivers rather than replacing them.</p>
           <h2>Key features</h2>
           <ul>
             <li>Instant fall detection: temporal kinematic analysis separates real falls from everyday movement such as bending, sitting and picking things up.</li>
