@@ -199,6 +199,14 @@ export const PAGES: PageEntry[] = [
       "Case study: real-time computer vision defect detection on NVIDIA Jetson, integrated with PLC reject signals, running in production on 3 factory lines.",
   },
   {
+    slug: "ai-predictive-maintenance-power-grid-sensors",
+    kind: "case-study",
+    title: "AI Predictive Maintenance for Power Grid Equipment",
+    seoTitle: "AI Predictive Maintenance with Retrofit IoT Sensors",
+    description:
+      "Case study: retrofit vibration and EMF sensors, a solar-powered gateway and per-machine machine learning that warn utility teams early about transformer, turbine and pump faults, with 3D fault localisation and plain-language alerts.",
+  },
+  {
     slug: "vika-cube-ai-learning-companion",
     kind: "case-study",
     title: "Vika Cube AI Learning Companion",
@@ -252,12 +260,28 @@ export const PAGES: PageEntry[] = [
       "Case study: computer vision across 20+ skin parameters, recommendations and an LLM beauty copilot for a Singapore skincare startup. Team of 7 over 12 months.",
   },
   {
+    slug: "ai-canine-cancer-liquid-biopsy-platform",
+    kind: "case-study",
+    title: "AI Liquid Biopsy Platform for Canine Cancer Care",
+    seoTitle: "AI Liquid Biopsy for Canine Cancer Detection",
+    description:
+      "Case study: an AI-native veterinary diagnostics platform that models cell-free DNA methylation, fragment and genome-wide signals from a blood draw to screen and monitor cancer in dogs.",
+  },
+  {
     slug: "grafa-ai-market-intelligence",
     kind: "case-study",
     title: "AI Market Intelligence Platform for Grafa",
     seoTitle: "Grafa AI Market Intelligence Platform",
     description:
       "Case study: Next.js web and React Native apps with AI screening and trading signals for Grafa, a market-intelligence product in Australia. Team of 7, ongoing.",
+  },
+  {
+    slug: "ai-personal-investing-agent-platform",
+    kind: "case-study",
+    title: "AI Personal Investing Agent Platform",
+    seoTitle: "AI Investing Agents and Research Copilot",
+    description:
+      "Case study: an AI-native investing platform with a research copilot, thesis-to-portfolio builder and AI agents that trade at the user's own brokers inside set limits, on web and by text.",
   },
   {
     slug: "ai-recruiting-agent-platform",
@@ -280,6 +304,14 @@ export const PAGES: PageEntry[] = [
     seoTitle: "AI HR Knowledge & Talent Search Chatbot",
     description:
       "Case study: a RAG chatbot over HR policies and talent profiles with access control and citations that made policy answers 70% faster.",
+  },
+  {
+    slug: "ai-voice-interview-employee-insights-platform",
+    kind: "case-study",
+    title: "AI Voice Interview Platform for Employee Insights",
+    seoTitle: "AI Voice Interviews for Employee Insights",
+    description:
+      "Case study: an AI voice platform that interviews everyone in an organisation by phone or browser in their own language, then uses agreeing AI agents to turn conversations into counted, quote-backed themes and next steps.",
   },
   {
     slug: "civic-survey-ai-insights",

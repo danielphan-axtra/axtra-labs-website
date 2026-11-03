@@ -1,0 +1,135 @@
+<section class="csd">
+  <div class="wrap">
+    <div class="breadcrumb"><a href="/">Home</a> / <a href="/case-study">Case Studies</a> / AI Personal Investing Agent Platform</div>
+    <div class="csd-hero">
+      <div class="csd-meta"><span>Fintech</span><span>AI Services</span></div>
+      <h1>AI Personal Investing Agent Platform</h1>
+      <p class="csd-sub">An AI-native investing platform that brings every brokerage account into one view. It explains what moved and why, turns a plain-language idea into a reasoned portfolio, and runs AI agents that trade at the user's own broker inside limits they set.</p>
+      <div class="csd-related"><a href="/grafa-ai-market-intelligence">AI Market Intelligence Platform for Grafa</a><a href="/ai-recruiting-agent-platform">AI Recruiting Agent Platform</a><a href="/fintech">Fintech industry</a></div>
+    </div>
+    <div class="csd-hero-media">
+      <img src="/assets/img/case-studies/ai-personal-investing-agent-platform.jpg" alt="AI Personal Investing Agent Platform" loading="eager">
+    </div>
+
+    <div class="csd-layout">
+      <div class="csd-main">
+        <h2>Key Details</h2>
+        <table class="csd-keys">
+          <tr><th>Challenge</th><td>Self-directed investors keep money across several brokers and apps, with no single view and none of the research and monitoring a professional desk has. Handing trades to AI is only acceptable if every action has a reason, every number is traceable, the user's money never leaves their broker, and the AI can't act outside the rules the user agreed to.</td></tr>
+          <tr><th>Solution</th><td>An agentic investing platform with four parts. A research Copilot works on the user's own connected accounts. Idea to trade turns a thesis into a reasoned multi-asset book. Server-side AI agents run on schedules or market events and trade at the user's broker in one of three modes, from report-only to automatic within limits. Users can also trade by text with an exact-order echo and an explicit yes. Limits are checked by the server at every step, and every order is logged with its reason.</td></tr>
+          <tr><th>Technologies</th><td>LLM research copilot, agentic workflows, event-driven scheduling, brokerage aggregation APIs, market and filings data feeds, backtesting engine, iMessage / SMS / WhatsApp messaging, push notifications, web and mobile web; built with Next.js, React and TypeScript, Python and Node.js services, LLM orchestration with tool calling, PostgreSQL and Redis-backed job queues</td></tr>
+        </table>
+
+        <div class="csd-tech">
+          <h2>Technologies used</h2>
+          <div class="csd-tech-list">
+          <span class="tech-pill no-logo">LLM copilot</span><span class="tech-pill no-logo">AI agents</span><span class="tech-pill no-logo">Event-driven scheduling</span><span class="tech-pill no-logo">Brokerage APIs</span><span class="tech-pill no-logo">Market data feeds</span><span class="tech-pill no-logo">Backtesting engine</span><span class="tech-pill no-logo">iMessage / SMS / WhatsApp</span><span class="tech-pill no-logo">Mobile web</span><span class="tech-pill no-logo">Next.js</span><span class="tech-pill no-logo">React</span><span class="tech-pill no-logo">TypeScript</span><span class="tech-pill no-logo">Python</span><span class="tech-pill no-logo">Node.js</span><span class="tech-pill no-logo">LLM orchestration</span><span class="tech-pill no-logo">PostgreSQL</span><span class="tech-pill no-logo">Redis</span>
+          </div>
+        </div>
+
+        <div class="csd-body">
+          <h2>Overview</h2>
+          <p>Axtra Labs engineered an AI-native personal investing platform for a consumer fintech startup. It gives individual investors the kind of support a professional desk has: something watching the whole portfolio, doing the research before they ask, and acting on their decisions. Users connect the brokerage and bank accounts they already have. The platform explains what moved and why, suggests what to do next and, once the user agrees, places trades at their own broker. It runs on a web terminal, in the phone browser and over text. The client is not named.</p>
+
+          <h2>The challenge</h2>
+          <p>Most people who invest their own money do it alone, with an app at one broker, an old account at another and a feed of opinions. Building an AI that can help, and act, raised hard problems:</p>
+          <ul>
+            <li>Holdings are scattered across many brokers, so no single tool sees the whole portfolio, exposures or tax position.</li>
+            <li>Research is repetitive: pull the filings, read the news, check each position against the plan, then do it again tomorrow.</li>
+            <li>A chatbot answers and stops. Investors needed something that keeps watching and acts on events, without ever acting beyond what they agreed to.</li>
+            <li>Trust: language models must not make up figures. Every number had to come from code and data, with a source the user can follow.</li>
+            <li>Safety: money had to stay at the user's broker, and every automated order had to respect budgets, order sizes and loss stops, even when a confirmation arrives by text.</li>
+          </ul>
+          <p>The goal was one product that researches, explains and trades across every account, in the open, inside limits the user can read and change.</p>
+
+          <div class="csd-shots">
+            <h2>Product screenshots</h2>
+            <div class="csd-shots-grid pair">
+              <figure class="csd-shot">
+                <a href="/assets/img/case-studies/product-v2/ai-personal-investing-agent-platform-1.webp" target="_blank" rel="noopener">
+                  <img src="/assets/img/case-studies/product-v2/ai-personal-investing-agent-platform-1.webp" alt="Dark graphite web terminal with lime accents: a typed investment thesis at the top, a reasoned multi-asset book listing fictional tickers with weights and a one-line reason each, an illustrative backtest line, thesis signal sliders marked met, and an AI agent card showing approve-each-batch mode, monthly budget, largest order, loss stop and triggers; the system name area is blurred." width="1600" height="1000" loading="lazy" decoding="async">
+                </a>
+                <figcaption>Idea to trade: a plain-language thesis becomes a researched book across asset classes, with a reason for every line, and one step turns it into an AI agent with its limits on the card.</figcaption>
+              </figure>
+              <figure class="csd-shot">
+                <a href="/assets/img/case-studies/product-v2/ai-personal-investing-agent-platform-2.webp" target="_blank" rel="noopener">
+                  <img src="/assets/img/case-studies/product-v2/ai-personal-investing-agent-platform-2.webp" alt="Portrait phone on a pale lilac gradient showing a text thread: an AI agent proposes a two-order batch with fictional tickers, prices and the reason, notes the remaining budget and a ten-minute expiry, the user replies YES, and the agent confirms both fills with a link to the run report; floating chips note limits checked and yes read by code; the sender name and avatar are blurred." width="1024" height="1536" loading="lazy" decoding="async">
+                </a>
+                <figcaption>Trade by text: an AI agent texts its proposed batch and reason, and only the user's explicit yes to that exact order places it at their own broker.</figcaption>
+              </figure>
+            </div>
+          </div>
+          <h2>The solution</h2>
+          <p>Axtra Labs designed and built the platform around one rule: the AI does the assembly, shows its work and acts only inside limits the user can read.</p>
+          <ul>
+            <li><strong>Unified portfolio.</strong> Brokerage and bank accounts connect through aggregation APIs, so the user's cash and shares stay at their broker. The platform never sees broker logins. Holdings are combined into one view, so a stock held in three accounts shows as one position and one exposure.</li>
+            <li><strong>Research Copilot.</strong> A conversational assistant that knows the user's accounts. It researches with live filings, insider trades, fund holdings, news, rates and prices across stocks, ETFs, bonds, commodities and other asset classes, and answers in plain words with each figure traced to its source. It can also run a backtest described in words or start an agent in the same conversation.</li>
+            <li><strong>Idea to trade.</strong> A typed thesis is researched and turned into a reasoned book across stocks, ETFs, options, bonds, currencies, commodities and crypto. Each line says what the asset does, why it fits and the evidence behind it, and the thesis signals can be tested interactively.</li>
+            <li><strong>Server-side AI agents.</strong> Each agent runs one idea: a book, a copied investor or politician, a typed rule or a tax-loss harvesting job. Agents run on a schedule, on market events (new filings, insider trades, disclosures, news, earnings), on price rules or on demand. Each run starts from fresh data, ends in a decision with a written reason (including "do nothing"), and resumes on another server if one restarts.</li>
+            <li><strong>Three autonomy modes and hard limits.</strong> Report only, approve each batch, or trade automatically within limits. Monthly budget, largest order, loss stop, position size, orders per day and an AI cost cap are checked by the server when an order is prepared, when it is approved and again just before it is placed. Anything outside a limit comes back to the user.</li>
+            <li><strong>Trade by text.</strong> iMessage, SMS or WhatsApp from a verified number. Every order is echoed back exactly. The yes is read by code, not by a model, and is bound to that order, used once and time-limited. The price is re-checked at confirmation.</li>
+            <li><strong>Tax-aware investing.</strong> Tax lots, harvestable losses and wash-sale checks across every connected account, a tax-loss harvesting agent, and the tax impact on the order ticket before the user confirms.</li>
+          </ul>
+          <p>Numbers come from code and data, and the AI writes the words around them. The platform never promises a return, and the user owns every decision.</p>
+          <h2>Key features</h2>
+          <ul>
+            <li>One portfolio across many brokers, with trades placed at the user's own broker.</li>
+            <li>Copilot research with sourced figures, backtests from plain-language rules, and image understanding for screenshots.</li>
+            <li>Idea to trade: thesis to reasoned multi-asset book in one step.</li>
+            <li>Event-driven AI agents with a readable rule card, their own budget, their own record and a report after every run.</li>
+            <li>Copy trading of public disclosures and fund holdings, sized to the user's limits.</li>
+            <li>Practice money at live quotes, so agents build a record before they touch real money.</li>
+            <li>Trade and approve by text, with quiet hours, undo and pause.</li>
+            <li>Cross-account tax-loss harvesting and wash-sale checks.</li>
+            <li>Usage-based AI credits with a hard cost cap per agent.</li>
+          </ul>
+
+          <h2>What was delivered</h2>
+          <ul>
+            <li>A web terminal, mobile web experience and text channel that share one portfolio and one set of agents.</li>
+            <li>An LLM research Copilot grounded in live market, filings and account data.</li>
+            <li>An agent runtime with schedules, event triggers, three autonomy modes, server-checked limits and full audit logs.</li>
+            <li>Brokerage aggregation and order routing to the user's own accounts.</li>
+            <li>A conversational trading channel with exact-order confirmation.</li>
+            <li>Tax views and a tax-loss harvesting agent working across accounts.</li>
+          </ul>
+
+          <h2>Services used</h2>
+          <div class="csd-services"><a href="/ai-services">AI Services →</a><a href="/ai-software-development">AI-Software Development →</a><a href="/multi-agent-system">Multi-Agent Systems →</a><a href="/workflow-ai-agent">Workflow AI Agents →</a></div>
+          <h2>Industries</h2>
+          <div class="csd-services"><a href="/fintech">Fintech →</a></div>
+        </div>
+      </div>
+
+      <aside class="csd-side">
+        <div class="csd-side-card">
+          <h3>At a glance</h3>
+          <dl>
+            <dt>Industry</dt><dd>Fintech (wealth &amp; investing)</dd>
+            <dt>Client</dt><dd>Consumer investing startup</dd>
+            <dt>Expertise</dt><dd>AI Services</dd>
+            <dt>Duration</dt><dd>10 months, ongoing</dd>
+            <dt>Team</dt><dd>7 engineers</dd>
+            <dt>Model</dt><dd>Time &amp; materials, Agile/Scrum</dd>
+          </dl>
+        </div>
+        <div class="csd-side-card">
+          <h3>Stack highlights</h3>
+          <div class="csd-tech-list" style="gap:8px;">
+          <span class="tech-pill no-logo">AI agents</span><span class="tech-pill no-logo">LLM orchestration</span><span class="tech-pill no-logo">Brokerage APIs</span><span class="tech-pill no-logo">Next.js</span><span class="tech-pill no-logo">Python</span><span class="tech-pill no-logo">PostgreSQL</span>
+          </div>
+        </div>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<section id="contact" style="padding-top:0;">
+  <div class="cta-banner">
+    <div class="cta-banner-inner">
+      <h2>We empower businesses with AI, ML, and data solutions.</h2>
+      <p>Response within 1 business day. You will hear from an engineer, not a salesperson.</p>
+      <a href="/contact" class="btn" style="background:#fff;border-color:#fff;">Contact Us <span>→</span></a>
+    </div>
+  </div>
+</section>

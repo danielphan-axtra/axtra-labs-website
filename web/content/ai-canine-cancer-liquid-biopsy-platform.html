@@ -1,0 +1,133 @@
+<section class="csd">
+  <div class="wrap">
+    <div class="breadcrumb"><a href="/">Home</a> / <a href="/case-study">Case Studies</a> / AI Liquid Biopsy Platform for Canine Cancer Care</div>
+    <div class="csd-hero">
+      <div class="csd-meta"><span>Healthtech</span><span>AI Services</span></div>
+      <h1>AI Liquid Biopsy Platform for Canine Cancer Care</h1>
+      <p class="csd-sub">An AI-native veterinary diagnostics platform that reads cell-free DNA from a routine blood draw to screen dogs for cancer, bank a genomic health baseline and track cancer through treatment, with reports a veterinarian can act on.</p>
+      <div class="csd-related"><a href="/ai-fall-stroke-warning-system">AI Fall &amp; Stroke Warning System for Elderly Care</a><a href="/ai-powered-healthcare-diagnosis-system">AI-Powered Healthcare Diagnosis System</a><a href="/healthcare">Healthcare industry</a></div>
+    </div>
+    <div class="csd-hero-media">
+      <img src="/assets/img/case-studies/ai-canine-cancer-liquid-biopsy-platform.jpg" alt="AI Liquid Biopsy Platform for Canine Cancer Care" loading="eager">
+    </div>
+
+    <div class="csd-layout">
+      <div class="csd-main">
+        <h2>Key Details</h2>
+        <table class="csd-keys">
+          <tr><th>Challenge</th><td>Cancer is a leading cause of death in dogs, and it is often found late. Tissue biopsies and imaging are invasive, costly and hard to repeat, so vets rarely get an early or ongoing view of how a cancer is behaving. Single blood markers miss too much, and methods built for human blood do not transfer to dogs without being re-tested on canine data.</td></tr>
+          <tr><th>Solution</th><td>An end-to-end liquid biopsy platform. Cell-free DNA from a small blood sample is sequenced, and several molecular signals (methylation, fragment lengths and genome-wide changes) are measured and modelled together as one pattern. The platform turns that pattern into screening results, a banked genomic baseline and longitudinal monitoring reports that vets read alongside the wider clinical picture. It supports clinical decisions and does not replace the vet.</td></tr>
+          <tr><th>Technologies</th><td>Cell-free DNA sequencing, DNA methylation profiling, fragment-length analysis, genome-wide signal analysis, integrated machine learning model (Python, PyTorch, scikit-learn), containerised bioinformatics pipeline, Next.js and React front end, Node.js APIs, PostgreSQL, AWS</td></tr>
+        </table>
+
+        <div class="csd-tech">
+          <h2>Technologies used</h2>
+          <div class="csd-tech-list">
+          <span class="tech-pill no-logo">cfDNA sequencing</span><span class="tech-pill no-logo">Methylation profiling</span><span class="tech-pill no-logo">Fragment-length analysis</span><span class="tech-pill no-logo">Genome-wide signals</span><span class="tech-pill no-logo">Machine learning</span><span class="tech-pill no-logo">Longitudinal modelling</span><span class="tech-pill no-logo">Python</span><span class="tech-pill no-logo">PyTorch</span><span class="tech-pill no-logo">scikit-learn</span><span class="tech-pill no-logo">Bioinformatics pipeline</span><span class="tech-pill no-logo">Next.js</span><span class="tech-pill no-logo">React</span><span class="tech-pill no-logo">Node.js</span><span class="tech-pill no-logo">PostgreSQL</span><span class="tech-pill no-logo">AWS</span>
+          </div>
+        </div>
+
+        <div class="csd-body">
+          <h2>Overview</h2>
+          <p>Axtra Labs engineered an AI-native veterinary diagnostics platform for a veterinary diagnostics startup that brings advances in human precision oncology to dogs. A vet takes a routine blood sample. The lab sequences the cell-free DNA in the plasma, and the platform's model reads the genetic, epigenetic and physical signals that DNA carries. The result is a report that helps pet parents and veterinarians catch cancer earlier, keep a personal health reference for each dog and follow cancer through treatment and recovery. The client is not named.</p>
+
+          <h2>The challenge</h2>
+          <p>Cancer is a leading cause of death in dogs, and caught early it is far more treatable than caught late. In practice, most dogs are diagnosed when signs are already visible. The usual tools each fall short:</p>
+          <ul>
+            <li>Tissue biopsies and imaging are invasive and expensive, so they are hard to repeat often enough to see change over time.</li>
+            <li>Single markers in blood miss many cancers. Cancer leaves traces across many regions of DNA, not in one place.</li>
+            <li>Liquid biopsy is already part of human cancer care, but dog and human DNA differ, so methods developed for people have to be rebuilt and validated on canine data.</li>
+            <li>Every dog's "normal" is different. Without a personal baseline, a single result is hard to read.</li>
+            <li>Results have to fit real veterinary workflows: a routine draw with no on-site processing, clear reports and a team that reviews findings with the vet.</li>
+          </ul>
+          <p>The goal was a platform that turns one small blood sample into clinically useful information for screening, a lifelong baseline and monitoring, delivered through a simple ordering experience for pet parents and vets.</p>
+
+          <div class="csd-shots">
+            <h2>Product screenshots</h2>
+            <div class="csd-shots-grid pair">
+              <figure class="csd-shot">
+                <a href="/assets/img/case-studies/product-v2/ai-canine-cancer-liquid-biopsy-platform-1.webp" target="_blank" rel="noopener">
+                  <img src="/assets/img/case-studies/product-v2/ai-canine-cancer-liquid-biopsy-platform-1.webp" alt="Teal and white veterinary monitoring report for a dog in cancer treatment: a line chart of estimated tumour fraction across five blood draws with surgery and chemotherapy markers, a signal falling badge, a panel of methylation, fragment and genome-wide signal contributions, and an AI summary reviewed with the vet; the system name area is blurred." width="1600" height="1000" loading="lazy" decoding="async">
+                </a>
+                <figcaption>Monitoring report: the integrated model estimates the cancer signal at each blood draw and plots it against treatment dates, so the vet can see whether it is falling, holding or returning.</figcaption>
+              </figure>
+              <figure class="csd-shot">
+                <a href="/assets/img/case-studies/product-v2/ai-canine-cancer-liquid-biopsy-platform-2.webp" target="_blank" rel="noopener">
+                  <img src="/assets/img/case-studies/product-v2/ai-canine-cancer-liquid-biopsy-platform-2.webp" alt="Two phone screens on a warm sand background: the first shows a dog profile with a cancer screening result reading no cancer signal detected and a baseline banked chip, the second shows biological age against calendar age and tiles for inherited conditions, traits, drug responses and ancestry, with a plain-language AI explanation; the app name area is blurred." width="1600" height="1000" loading="lazy" decoding="async">
+                </a>
+                <figcaption>Health baseline: one blood sample gives a cancer screening result, biological age and genetic health findings, and banks the dog's molecular profile for future comparison.</figcaption>
+              </figure>
+            </div>
+          </div>
+          <h2>The solution</h2>
+          <p>Axtra Labs designed and built the platform around a single idea: measure several kinds of molecular signal from the same blood sample and model them together, rather than reading one marker at a time.</p>
+          <ul>
+            <li><strong>Sample-to-signal pipeline.</strong> Plasma is separated, cell-free DNA is extracted and sequenced so each fragment can be read individually, and epigenetic, physical and genome-wide properties are measured across the reads.</li>
+            <li><strong>Integrated AI model.</strong> Methylation patterns, fragment lengths and genome-wide changes are combined into one biological pattern. The model was developed on data from canine cancer studies and evaluated with nested cross-validation and testing on held-out studies, so performance is not measured on the data it learned from.</li>
+            <li><strong>Multi-cancer screening.</strong> The model looks for cancer-associated signals across multiple cancer types from one draw.</li>
+            <li><strong>Genomic health baseline.</strong> Alongside screening, the platform records each dog's genetics, methylation profile and cfDNA signals as a personal reference, so later results are compared against the dog's own starting point.</li>
+            <li><strong>Treatment and relapse monitoring.</strong> For dogs already diagnosed, repeated draws produce a signal status, an estimated tumour fraction and the change across visits, including a look for residual disease after treatment.</li>
+            <li><strong>Vet-ready reporting.</strong> Results are presented for a veterinarian to read with treatment dates, examination findings and imaging, and the client's team reviews each report with the vet.</li>
+            <li><strong>Ordering and logistics.</strong> Pet parents order online and choose how the blood is drawn: a group draw day, a mobile vet at home or their own vet using a shipped collection kit with a written protocol.</li>
+          </ul>
+          <p>The platform reports molecular signals to support veterinary decisions. It does not diagnose on its own, and findings are confirmed by the vet.</p>
+          <h2>Key features</h2>
+          <ul>
+            <li>Cancer screening from a routine blood draw, with no on-site processing at the clinic.</li>
+            <li>Multi-signal AI: methylation, fragment-length and genome-wide signals modelled together.</li>
+            <li>Genomic health baseline: inherited conditions, traits, drug responses, ancestry, biological age and epigenetic markers from the same sample.</li>
+            <li>Longitudinal monitoring: estimated tumour fraction and signal change across visits, with residual-disease and relapse tracking.</li>
+            <li>Three test tiers on one platform: focused screening, screening plus full baseline, and monitoring for diagnosed dogs.</li>
+            <li>Flexible blood draw options and a collection kit the dog's own vet can use.</li>
+            <li>Evidence hub: a research library that links each claim to the original study, its population and methods.</li>
+            <li>Consent-based data use: data is de-identified, used for research only with consent and deleted on request.</li>
+          </ul>
+
+          <h2>What was delivered</h2>
+          <ul>
+            <li>An end-to-end liquid biopsy workflow, from blood draw to vet-ready report.</li>
+            <li>An integrated AI model that combines several cfDNA signals, validated with nested cross-validation and held-out studies.</li>
+            <li>Screening, baseline and monitoring products running on one shared pipeline.</li>
+            <li>Longitudinal reports that show how a dog's cancer signal changes through treatment and follow-up.</li>
+            <li>A customer-facing site with online ordering, draw scheduling options, vet resources and a research library.</li>
+          </ul>
+
+          <h2>Services used</h2>
+          <div class="csd-services"><a href="/ai-services">AI Services →</a><a href="/ai-software-development">AI-Software Development →</a><a href="/data-bi">Data &amp; BI →</a></div>
+          <h2>Industries</h2>
+          <div class="csd-services"><a href="/healthcare">Healthcare →</a></div>
+        </div>
+      </div>
+
+      <aside class="csd-side">
+        <div class="csd-side-card">
+          <h3>At a glance</h3>
+          <dl>
+            <dt>Industry</dt><dd>Healthtech (veterinary diagnostics)</dd>
+            <dt>Client</dt><dd>Veterinary diagnostics startup</dd>
+            <dt>Expertise</dt><dd>AI Services</dd>
+            <dt>Duration</dt><dd>9 months</dd>
+            <dt>Team</dt><dd>6 engineers</dd>
+            <dt>Model</dt><dd>Time &amp; materials</dd>
+          </dl>
+        </div>
+        <div class="csd-side-card">
+          <h3>Stack highlights</h3>
+          <div class="csd-tech-list" style="gap:8px;">
+          <span class="tech-pill no-logo">cfDNA sequencing</span><span class="tech-pill no-logo">Methylation profiling</span><span class="tech-pill no-logo">PyTorch</span><span class="tech-pill no-logo">Next.js</span><span class="tech-pill no-logo">PostgreSQL</span>
+          </div>
+        </div>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<section id="contact" style="padding-top:0;">
+  <div class="cta-banner">
+    <div class="cta-banner-inner">
+      <h2>We empower businesses with AI, ML, and data solutions.</h2>
+      <p>Response within 1 business day. You will hear from an engineer, not a salesperson.</p>
+      <a href="/contact" class="btn" style="background:#fff;border-color:#fff;">Contact Us <span>→</span></a>
+    </div>
+  </div>
+</section>
