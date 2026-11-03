@@ -1,0 +1,137 @@
+<section class="csd">
+  <div class="wrap">
+    <div class="breadcrumb"><a href="/">Home</a> / <a href="/case-study">Case Studies</a> / AI Predictive Maintenance for Power Grid Equipment</div>
+    <div class="csd-hero">
+      <div class="csd-meta"><span>Industrial</span><span>Embedded Software</span></div>
+      <h1>AI Predictive Maintenance for Power Grid Equipment</h1>
+      <p class="csd-sub">Retrofit sensors, a solar-powered gateway and machine learning that learn each machine's normal behaviour and warn utility teams early when transformers, turbines, pumps or poles start to change. Each alert says what happened, why and what to do next.</p>
+      <div class="csd-related"><a href="/computer-vision-qc-factory-lines">Computer vision QC across 3 factory lines</a><a href="/home-robotics-engineering-platform">Home Robotics Engineering Platform</a><a href="/manufacturing">Manufacturing</a></div>
+    </div>
+    <div class="csd-hero-media">
+      <img src="/assets/img/case-studies/ai-predictive-maintenance-power-grid-sensors.jpg" alt="AI Predictive Maintenance for Power Grid Equipment" loading="eager">
+    </div>
+
+    <div class="csd-layout">
+      <div class="csd-main">
+        <h2>Key Details</h2>
+        <table class="csd-keys">
+          <tr><th>Challenge</th><td>Grid and plant equipment is often old, spread across remote sites and checked on a fixed schedule. Faults that start slowly are usually found only when something trips or fails, and an unplanned outage costs far more than a planned repair. Most assets were never built with sensors, field crews are stretched thin, and raw vibration data means little to the people who decide what to fix first.</td></tr>
+          <tr><th>Solution</th><td>An end-to-end condition-monitoring system. Magnetic-mount sensors clip onto existing equipment without downtime and measure vibration, magnetic field, temperature, humidity and motion. A solar-powered outdoor gateway sends the data to the cloud. Machine learning learns a baseline for each machine and flags changes early. Engineers see where on the asset the change comes from in 3D, and plain-language alerts and an AI assistant explain what is happening and what to do next.</td></tr>
+          <tr><th>Technologies</th><td>Embedded C/C++ firmware, low-power wireless sensor network, solar-powered cellular gateway, MQTT, Python, signal processing (FFT, spectral features), PyTorch anomaly detection, time-series database, React, Three.js 3D visualisation, LLM assistant with retrieval over asset history, mobile web, cloud deployment with CI/CD</td></tr>
+        </table>
+
+        <div class="csd-tech">
+          <h2>Technologies used</h2>
+          <div class="csd-tech-list">
+          <span class="tech-pill no-logo">C/C++ firmware</span><span class="tech-pill no-logo">Vibration sensing</span><span class="tech-pill no-logo">Low-power wireless</span><span class="tech-pill no-logo">Edge gateway</span><span class="tech-pill no-logo">MQTT</span><span class="tech-pill no-logo">Python</span><span class="tech-pill no-logo">FFT / signal processing</span><span class="tech-pill no-logo">PyTorch</span><span class="tech-pill no-logo">Anomaly detection</span><span class="tech-pill no-logo">Time-series database</span><span class="tech-pill no-logo">React</span><span class="tech-pill no-logo">Three.js</span><span class="tech-pill no-logo">LLM assistant</span><span class="tech-pill no-logo">CI/CD</span>
+          </div>
+        </div>
+
+        <div class="csd-body">
+          <h2>Overview</h2>
+          <p>Axtra Labs engineered a predictive maintenance platform for an industrial AI startup that serves electric utilities and heavy-industry operators. The system covers everything from hardware to explanation: retrofit sensors, an outdoor gateway, per-machine learned baselines, 3D fault localisation and alerts written for field engineers. It watches transformers, generators, turbines, pump motors and utility poles, so teams can plan repairs before a slow fault becomes an outage. The client is not named.</p>
+
+          <h2>The challenge</h2>
+          <p>Utilities run large fleets of ageing equipment across sites that are hard to reach. The client wanted to give these teams early, trustworthy warning without replacing a single machine.</p>
+          <ul>
+            <li>Most assets have no built-in sensors, and installing wired monitoring means downtime and site work.</li>
+            <li>Outdoor sites often have no convenient power or network, so the hardware must run on its own for long periods.</li>
+            <li>Every machine behaves differently. Fixed thresholds either miss early faults or raise constant false alarms.</li>
+            <li>Vibration spectra and sensor graphs are hard to act on for anyone who isn't a specialist.</li>
+            <li>Crews need to know which asset needs attention first, where on it the problem is and what to check when they arrive.</li>
+          </ul>
+          <p>The goal was a system that installs in minutes, learns each machine on its own and turns raw signals into decisions a maintenance planner can make with confidence.</p>
+
+          <div class="csd-shots">
+            <h2>Product screenshots</h2>
+            <div class="csd-shots-grid pair">
+              <figure class="csd-shot">
+                <a href="/assets/img/case-studies/product-v2/ai-predictive-maintenance-power-grid-sensors-1.webp" target="_blank" rel="noopener">
+                  <img src="/assets/img/case-studies/product-v2/ai-predictive-maintenance-power-grid-sensors-1.webp" alt="Dark industrial console with amber and cyan accents: an asset list of transformers, pumps and turbines with health dots, an isometric 3D transformer with a glowing fault marker on the tank wall, an FFT waterfall heatmap where one frequency band brightens over recent days, and readouts for vibration, band energy against baseline, temperature and humidity; the system name area is blurred." width="1600" height="1000" loading="lazy" decoding="async">
+                </a>
+                <figcaption>Fleet console: a 3D view marks where on the asset the change is coming from, next to a vibration spectrum waterfall that shows a band rising above the machine's learned baseline.</figcaption>
+              </figure>
+              <figure class="csd-shot">
+                <a href="/assets/img/case-studies/product-v2/ai-predictive-maintenance-power-grid-sensors-2.webp" target="_blank" rel="noopener">
+                  <img src="/assets/img/case-studies/product-v2/ai-predictive-maintenance-power-grid-sensors-2.webp" alt="Tablet on a light steel background with safety-orange and navy accents showing an alert for a transformer: sections for what happened, likely causes ranked and next steps as a checklist, a small band-energy trend against baseline, sensor and gateway health, and an AI assistant chat where the engineer asks if it is safe to wait for the planned outage and gets a reasoned answer with an escalation rule; the system name area is blurred." width="1600" height="1000" loading="lazy" decoding="async">
+                </a>
+                <figcaption>Field alert on a tablet: what changed, why it may be happening and what to do next, with an AI assistant that answers the engineer's question using this asset's own trend and history.</figcaption>
+              </figure>
+            </div>
+          </div>
+          <h2>The solution</h2>
+          <p>Axtra Labs designed and built the full stack, from sensor firmware to the AI assistant.</p>
+          <ul>
+            <li><strong>Retrofit sensor nodes.</strong> Magnetic-mount nodes attach to existing equipment in minutes with no downtime. Low-power embedded firmware samples vibration, magnetic and electromagnetic field, temperature, humidity and motion (IMU), and computes spectral features on the device so only compact data goes over the radio.</li>
+            <li><strong>Solar-powered gateway.</strong> An outdoor gateway collects data from nearby nodes over a low-power wireless link and forwards it to the cloud over cellular. It buffers data during connection drops, and sensors and gateway are updated remotely over the air.</li>
+            <li><strong>Per-machine learned baselines.</strong> Machine learning models learn what normal looks like for each individual asset across load, temperature and season. Anomaly detection flags early drift, such as a frequency band rising above its baseline, instead of relying on fixed thresholds.</li>
+            <li><strong>3D fault localisation.</strong> Readings from several sensors on the same asset are combined to estimate where the change originates and display it on an interactive 3D model.</li>
+            <li><strong>Spectral analytics.</strong> FFT waterfalls and band-energy trends let specialists see how a machine's signature evolves over weeks.</li>
+            <li><strong>Plain-language alerts.</strong> Every alert explains what happened, the likely causes and the recommended next steps, so planners can prioritise and crews arrive prepared.</li>
+            <li><strong>AI assistant.</strong> Engineers ask questions in plain language and get answers grounded in the asset's own sensor history, alerts and maintenance notes.</li>
+            <li><strong>Fleet and mobile views.</strong> A fleet dashboard ranks which assets have changed. Field crews look up any asset on a phone or tablet.</li>
+          </ul>
+          <p>The platform supports the engineer's decision. It does not take control of grid equipment.</p>
+          <h2>Key features</h2>
+          <ul>
+            <li>Install in minutes without downtime: magnetic-mount, battery-powered sensor nodes.</li>
+            <li>Multi-signal sensing: vibration, magnetic/EMF, temperature, humidity and motion.</li>
+            <li>Solar-powered outdoor gateway with cellular backhaul and over-the-air updates.</li>
+            <li>Per-machine learned baselines and early anomaly detection.</li>
+            <li>3D fault localisation on the asset model.</li>
+            <li>FFT waterfall and band-energy trends.</li>
+            <li>Alerts that explain what happened, why and what to do next.</li>
+            <li>AI assistant grounded in each asset's own history.</li>
+            <li>Fleet overview and mobile asset lookup.</li>
+          </ul>
+
+          <h2>What was delivered</h2>
+          <ul>
+            <li>Embedded firmware for the sensor nodes, with on-device feature extraction and power management.</li>
+            <li>Gateway software for wireless collection, buffering, cellular uplink and over-the-air updates.</li>
+            <li>A streaming ingestion pipeline and time-series storage.</li>
+            <li>ML baselining and anomaly detection models, plus a training and evaluation pipeline.</li>
+            <li>A web console with fleet view, FFT waterfall and 3D fault localisation.</li>
+            <li>An alerting and explanation layer, an AI assistant, and mobile views for field crews.</li>
+            <li>Cloud deployment with CI/CD and device fleet management.</li>
+          </ul>
+
+          <h2>Services used</h2>
+          <div class="csd-services"><a href="/embedded-software">Embedded Software →</a><a href="/ai-robotics">AI for Robotics →</a><a href="/ai-services">AI Services →</a><a href="/data-bi">Data &amp; BI →</a><a href="/devops">DevOps →</a></div>
+          <h2>Industries</h2>
+          <div class="csd-services"><a href="/manufacturing">Manufacturing →</a></div>
+        </div>
+      </div>
+
+      <aside class="csd-side">
+        <div class="csd-side-card">
+          <h3>At a glance</h3>
+          <dl>
+            <dt>Industry</dt><dd>Energy &amp; utilities (industrial)</dd>
+            <dt>Client</dt><dd>Industrial AI startup</dd>
+            <dt>Expertise</dt><dd>Embedded Software, AI Services</dd>
+            <dt>Duration</dt><dd>8 months</dd>
+            <dt>Team</dt><dd>5 engineers</dd>
+            <dt>Model</dt><dd>Time &amp; materials, Agile/Scrum</dd>
+          </dl>
+        </div>
+        <div class="csd-side-card">
+          <h3>Stack highlights</h3>
+          <div class="csd-tech-list" style="gap:8px;">
+          <span class="tech-pill no-logo">C/C++ firmware</span><span class="tech-pill no-logo">Edge gateway</span><span class="tech-pill no-logo">FFT</span><span class="tech-pill no-logo">PyTorch</span><span class="tech-pill no-logo">Three.js</span><span class="tech-pill no-logo">LLM assistant</span>
+          </div>
+        </div>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<section id="contact" style="padding-top:0;">
+  <div class="cta-banner">
+    <div class="cta-banner-inner">
+      <h2>We empower businesses with AI, ML, and data solutions.</h2>
+      <p>Response within 1 business day. You will hear from an engineer, not a salesperson.</p>
+      <a href="/contact" class="btn" style="background:#fff;border-color:#fff;">Contact Us <span>→</span></a>
+    </div>
+  </div>
+</section>
