@@ -1,6 +1,7 @@
 import { existsSync, readFileSync } from "fs";
 import { join } from "path";
 import { cache } from "react";
+import { architectureMarkdown } from "@/lib/architecture/markdown";
 
 const SLUG_RE = /^[a-z0-9]+(?:-[a-z0-9]+)*$/;
 
@@ -121,7 +122,7 @@ export const contentMarkdown = cache((slug: string): string => {
     .replace(/<\/(div|section|article|header|footer|aside|ul|ol|table|figure|a)>/gi, "\n")
     .replace(/<[^>]+>/g, " ");
 
-  return decode(html)
+  const body = decode(html)
     .split("\n")
     .map((l) => l.replace(/[ \t]+/g, " ").trim())
     .filter((l, i, arr) => l !== "" || (arr[i - 1] ?? "") !== "")
@@ -129,4 +130,6 @@ export const contentMarkdown = cache((slug: string): string => {
     .join("\n")
     .replace(/\n{3,}/g, "\n\n")
     .trim();
+  const architecture = architectureMarkdown(slug);
+  return architecture ? `${body}\n\n${architecture}` : body;
 });
